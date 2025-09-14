@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies Carousel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #1a1a1a;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .case-studies-section {
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+            position: relative;
+        }
+
+        .fixed-card {
+            width: 400px;
+            height: 500px;
+            background: linear-gradient(135deg, #666 0%, #888 100%);
+            padding: 40px;
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .case-studies-tag {
+            background: #2a2a2a;
+            color: white;
+            padding: 8px 16px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            width: fit-content;
+            margin-bottom: 30px;
+        }
+
+        .fixed-card h2 {
+            font-size: 2.2em;
+            line-height: 1.3;
+            color: #2a2a2a;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+
+        .more-case-studies {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #2a2a2a;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .more-case-studies:hover {
+            gap: 15px;
+        }
+
+        .arrow {
+            width: 20px;
+            height: 20px;
+            border-right: 2px solid #2a2a2a;
+            border-bottom: 2px solid #2a2a2a;
+            transform: rotate(-45deg);
+            transition: transform 0.3s ease;
+        }
+
+        .more-case-studies:hover .arrow {
+            transform: rotate(-45deg) translateX(5px);
+        }
+
+        .carousel-container {
+            flex: 1;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+            background: #1a1a1a;
+        }
+
+        .carousel-track {
+            display: flex;
+            height: 100%;
+            animation: slideCarousel 24s infinite linear;
+        }
+
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes slideCarousel {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .case-card {
+            min-width: 400px;
+            height: 100%;
+            background: #2a2a2a;
+            margin-right: 2px;
+            padding: 40px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .case-card:hover {
+            transform: scale(1.02);
+            z-index: 5;
+        }
+
+        .category-tag {
+            background: #f4d03f;
+            color: #1a1a1a;
+            padding: 6px 12px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: fit-content;
+            margin-bottom: 20px;
+        }
+
+        .case-card h3 {
+            font-size: 1.8em;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            color: white;
+            font-weight: 300;
+        }
+
+        .case-card p {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #ccc;
+            font-weight: 300;
+        }
+
+        .icon-container {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .warning-icon {
+            width: 40px;
+            height: 40px;
+            background: #f4d03f;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a1a1a;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .gear-icon {
+            width: 40px;
+            height: 40px;
+            color: #f4d03f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .connecting-lines {
+            position: absolute;
+            top: 50%;
+            right: 100px;
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, #f4d03f 0%, transparent 100%);
+            transform: translateY(-50%);
+        }
+
+        .connecting-lines::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -10px;
+            width: 2px;
+            height: 20px;
+            background: #f4d03f;
+        }
+
+        .cloud-icon {
+            position: absolute;
+            top: 60px;
+            right: 120px;
+            width: 30px;
+            height: 20px;
+            background: #f4d03f;
+            border-radius: 10px;
+        }
+
+        .cloud-icon::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 5px;
+            width: 20px;
+            height: 20px;
+            background: #f4d03f;
+            border-radius: 50%;
+        }
+
+        .cloud-icon::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: 3px;
+            width: 15px;
+            height: 15px;
+            background: #f4d03f;
+            border-radius: 50%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .case-studies-section {
+                flex-direction: column;
+            }
+
+            .fixed-card {
+                width: 100%;
+                height: auto;
+                padding: 30px;
+            }
+
+            .carousel-container {
+                height: 400px;
+                width: 100%;
+            }
+
+            .case-card {
+                min-width: 350px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .fixed-card {
+                padding: 20px;
+            }
+
+            .fixed-card h2 {
+                font-size: 1.8em;
+            }
+
+            .carousel-container {
+                height: 350px;
+            }
+
+            .case-card {
+                min-width: 300px;
+                padding: 30px;
+            }
+
+            .case-card h3 {
+                font-size: 1.5em;
+            }
+
+            .case-card p {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .case-card {
+                min-width: 280px;
+                padding: 20px;
+            }
+
+            .carousel-track {
+                animation-duration: 20s;
+            }
+        }
+
+        /* Navigation dots */
+        .carousel-nav {
+            position: absolute;
+            bottom: 20px;
+            right: 40px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .nav-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(244, 208, 63, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-dot.active {
+            background: #f4d03f;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <section class="case-studies-section">
+        <!-- Fixed Left Card -->
+        <div class="fixed-card">
+            <div>
+                <div class="case-studies-tag">CASE STUDIES</div>
+                <h2>Real success stories from enterprise clients who transformed their data capabilities and achieved measurable business outcomes.</h2>
+            </div>
+            <div class="more-case-studies">
+                <span>MORE CASE STUDIES</span>
+                <div class="arrow"></div>
+            </div>
+        </div>
+
+        <!-- Carousel Container -->
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <!-- Financial Services Card -->
+                <div class="case-card">
+                    <div class="category-tag">FINANCIAL SERVICES</div>
+                    <div class="icon-container">
+                        <div class="warning-icon">!</div>
+                    </div>
+                    <div class="connecting-lines"></div>
+                    <div class="cloud-icon"></div>
+                    <div>
+                        <h3>Real-time Risk Analytics Platform</h3>
+                        <p>Implemented Dremo-powered lakehouse with real-time streaming analytics, enabling sub-second risk calculations and automated compliance reporting.</p>
+                    </div>
+                </div>
+
+                <!-- Manufacturing Card -->
+                <div class="case-card">
+                    <div class="category-tag">MANUFACTURING</div>
+                    <div class="icon-container">
+                        <div class="gear-icon">⚙</div>
+                    </div>
+                    <div class="connecting-lines"></div>
+                    <div class="cloud-icon"></div>
+                    <div>
+                        <h3>Predictive Maintenance AI</h3>
+                        <p>Deployed ML models for predictive maintenance with 95% accuracy in failure prediction, reducing downtime by 60% and maintenance costs by 40%.</p>
+                    </div>
+                </div>
+
+                <!-- Retail Card -->
+                <div class="case-card">
+                    <div class="category-tag">RETAIL</div>
+                    <div class="icon-container">
+                        <div class="gear-icon">🛒</div>
+                    </div>
+                    <div class="connecting-lines"></div>
+                    <div class="cloud-icon"></div>
+                    <div>
+                        <h3>Customer Intelligence Platform</h3>
+                        <p>Built unified customer 360 platform with real-time personalization engine, increasing conversion rates by 35% and customer lifetime value by 28%.</p>
+                    </div>
+                </div>
+
+                <!-- Healthcare Card -->
+                <div class="case-card">
+                    <div class="category-tag">HEALTHCARE</div>
+                    <div class="icon-container">
+                        <div class="warning-icon">+</div>
+                    </div>
+                    <div class="connecting-lines"></div>
+                    <div class="cloud-icon"></div>
+                    <div>
+                        <h3>Patient Data Analytics Hub</h3>
+                        <p>Developed HIPAA-compliant data platform enabling real-time patient monitoring and predictive health analytics, improving patient outcomes by 45%.</p>
+                    </div>
+                </div>
+
+                <!-- Duplicate cards for seamless loop -->
+                <div class="case-card">
+                    <div class="category-tag">FINANCIAL SERVICES</div>
+                    <div class="icon-container">
+                        <div class="warning-icon">!</div>
+                    </div>
+                    <div class="connecting-lines"></div>
+                    <div class="cloud-icon"></div>
+                    <div>
+                        <h3>Real-time Risk Analytics Platform</h3>
+                        <p>Implemented Dremo-powered lakehouse with real-time streaming analytics, enabling sub-second risk calculations and automated compliance reporting.</p>
+                    </div>
+                </div>
+
+                <div class="case-card">
+                    <div class="category-tag">MANUFACTURING</div>
+                    <div class="icon-container">
+                        <div class="gear-icon">⚙</div>
+                    </div>
+                    <div class="connecting-lines"></div>
+                    <div class="cloud-icon"></div>
+                    <div>
+                        <h3>Predictive Maintenance AI</h3>
+                        <p>Deployed ML models for predictive maintenance with 95% accuracy in failure prediction, reducing downtime by 60% and maintenance costs by 40%.</p>
+                    </div>
+                </div>
+
+                <div class="case-card">
+                    <div class="category-tag">RETAIL</div>
+                    <div class="icon-container">
+                        <div class="gear-icon">🛒</div>
+                    </div>
+                    <div class="connecting-lines"></div>
+                    <div class="cloud-icon"></div>
+                    <div>
+                        <h3>Customer Intelligence Platform</h3>
+                        <p>Built unified customer 360 platform with real-time personalization engine, increasing conversion rates by 35% and customer lifetime value by 28%.</p>
+                    </div>
+                </div>
+
+                <div class="case-card">
+                    <div class="category-tag">HEALTHCARE</div>
+                    <div class="icon-container">
+                        <div class="warning-icon">+</div>
+                    </div>
+                    <div class="connecting-lines"></div>
+                    <div class="cloud-icon"></div>
+                    <div>
+                        <h3>Patient Data Analytics Hub</h3>
+                        <p>Developed HIPAA-compliant data platform enabling real-time patient monitoring and predictive health analytics, improving patient outcomes by 45%.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Dots -->
+            <div class="carousel-nav">
+                <div class="nav-dot active"></div>
+                <div class="nav-dot"></div>
+                <div class="nav-dot"></div>
+                <div class="nav-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Auto-update active dot based on animation
+        let currentDot = 0;
+        setInterval(() => {
+            dots.forEach(d => d.classList.remove('active'));
+            dots[currentDot].classList.add('active');
+            currentDot = (currentDot + 1) % 4;
+        }, 6000); // 24s / 4 cards = 6s per card
+    </script>
+</body>
+</html>

@@ -2588,545 +2588,457 @@
         </div>
     </main>
 
-
     <!-- Services Section -->
-    <section  class="services" id="services" aria-labelledby="services-title">
-        <a href="../services/servicesDetails.html">
-        <div class="section-header">
-            <div class="kicker">Client voices, trusted choices</div>
-            <h2
-                style="font-size: clamp(32px, 4vw, 48px); font-weight: 300; text-align: left;  line-height: 1.2; letter-spacing: -0.02em; color: #FFFFFF;">
-                Our Core <span style="font-weight: 700; color: #F1BC00;">Service</span>
-            </h2>
-            <p class="intro">We deliver end‑to‑end data solutions—from strategy and governance to engineering, science,
-                and Generative AI. Leveraging modern cloud data platforms and MLOps, we help you turn raw data into
-                reliable insights and production‑grade intelligence that drives measurable outcomes.</p>
-        </div>
+    <style>
+        .services-page {
+            max-width: 1200px;
+            margin: 0 auto 96px;
+            padding: 0 24px;
+        }
 
-        <div class="services-grid" aria-label="Service list">
-            <!-- 1 -->
-            <div class="service-card" aria-label="Data Engineering">
-                <div class="icon iso-icon" aria-hidden="true">
+        .service-section {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 0;
+            margin-bottom: 44px;
+            padding: 40px 32px;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+    
+
+        .service-title {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .service-intro {
+            color: #c7c7c7;
+            font-size: 17px;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .service-block {
+            margin-bottom: 32px;
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .service-block h3 {
+            color: #F1BC00;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .service-block ul {
+            line-height: 1.7;
+            margin: 0 0 0 1.25rem;
+            color: #ededed;
+            font-size: 15.5px;
+            padding-left: 0;
+        }
+
+        .service-block li {
+            margin-bottom: 12px;
+            padding-left: 8px;
+        }
+
+        .service-block li b {
+            color: #FFD84D;
+            font-weight: 600;
+        }
+
+        .service-summary {
+            color: #FFD84D;
+            margin-top: 32px;
+            font-size: 16px;
+            font-style: italic;
+            padding: 24px;
+            background: rgba(241, 188, 0, 0.05);
+            border: 1px solid rgba(241, 188, 0, 0.1);
+        }
+
+        @media (max-width: 750px) {
+            .service-section {
+                padding: 24px 16px;
+                margin-bottom: 34px;
+            }
+
+            .service-block {
+                padding: 16px;
+            }
+
+            .service-summary {
+                padding: 16px;
+            }
+        }
+    </style>
+    <section class="services-page">
+
+        <!-- Data Engineering -->
+        <section class="service-section" id="data-engineering"
+            style="padding: 80px 40px; background: linear-gradient(180deg, rgba(26,26,26,1) 0%, rgba(31,31,31,1) 100%);">
+            <header style="text-align: center; margin-bottom: 60px;">
+                <div class="icon iso-icon" aria-hidden="true"
+                    style="position: relative; width: 200px; height: 200px; margin: 0 auto 40px;">
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 180px; height: 180px; background: rgba(241,188,0,0.1); border-radius: 50%; filter: blur(20px);">
+                    </div>
                     <img src="../Images/IMGServ2/data Eng.png" alt="Service Icon"
-                        style="width: 80px; height: 80px; object-fit: contain; margin-bottom: 1.5rem;">
+                        style="width: 160px; height: 160px; object-fit: contain; position: relative; z-index: 1; transition: all 0.3s ease; filter: drop-shadow(0 0 10px rgba(241,188,0,0.3));"
+                        onmouseover="this.style.transform='scale(1.1)'; this.style.filter='drop-shadow(0 0 20px rgba(241,188,0,0.5))'"
+                        onmouseout="this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 0 10px rgba(241,188,0,0.3))'">
                 </div>
+                <h2 class="service-title"
+                    style="color:#F1BC00; font-size: 48px; margin-bottom: 20px; line-height: 1.2;">
+                    Data Engineering: <span
+                        style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">Building
+                        the Foundation for Intelligent Enterprises</span>
+                </h2>
+            </header>
 
-                <div class="content-wrapper">
-                    <header class="service-header">
-                        <h3 class="service-title"
-                            style="color: #F1BC00; font-size: 1.8rem; font-weight: 600; margin-bottom: 0.5rem;">
-                            Data Engineering
-                            <span class="service-subtitle"
-                                style="color: #FFFFFF; font-size: 1.2rem; font-weight: 400; display: block; margin-top: 0.25rem;">Building
-                                the Foundation for Intelligent Enterprises</span>
-                        </h3>
-                    </header>
-
-                    <div class="service-description">
-                        <p>Data engineering is the bedrock of successful data initiatives. We design, build, and
-                            maintain
-                            scalable pipelines delivering clean, accessible data for analytics, ML, and BI.</p>
-                    </div>
-
-                    <div class="service-details">
-                        <section class="service-section">
-                            <h3 class="section-title">What We Do</h3>
-                            <ul class="feature-list">
-                                <li>Data Pipeline Development (ETL/ELT)</li>
-                                <li>Data Warehouse & Lakehouse Design (AWS, Azure, GCP, On-Prem)</li>
-                                <li>Data Governance & Quality Frameworks</li>
-                                <li>Real-time Streaming Solutions (Kafka, Kinesis)</li>
-                                <li>Cloud Migration & Optimization</li>
-                                <li>Data Security & Privacy by Design</li>
-                            </ul>
-                        </section>
-
-                        <section class="service-section">
-                            <h3 class="section-title">Outcomes</h3>
-                            <ul class="benefits-list">
-                                <li>Reliable, scalable data infrastructure</li>
-                                <li>High-quality, trusted data</li>
-                                <li>Faster time-to-insight</li>
-                                <li>AI/ML readiness</li>
-                                <li>Reduced manual prep work</li>
-                                <li>Cost-effective storage and scalability</li>
-                            </ul>
-                        </section>
-                    </div>
-                </div>
-
-                <style>
-                    .service-card {
-                        background: rgba(255, 255, 255, 0.03);
-                        border-radius: 12px;
-                        padding: 2.5rem;
-                        transition: transform 0.3s ease;
-                    }
-
-                    .service-card:hover {
-                        transform: translateY(-4px);
-                    }
-
-                    .service-header {
-                        margin-bottom: 2rem;
-                    }
-
-                    .service-title {
-                        font-size: 2.25rem;
-                        font-weight: 700;
-                        color: var(--primary-yellow);
-                        margin-bottom: 0.5rem;
-                    }
-
-                    .service-subtitle {
-                        display: block;
-                        font-size: 1.25rem;
-                        color: var(--text-primary);
-                        font-weight: 400;
-                        margin-top: 0.75rem;
-                    }
-
-                    .service-description {
-                        font-size: 1.1rem;
-                        line-height: 1.6;
-                        color: var(--text-secondary);
-                        margin-bottom: 2.5rem;
-                    }
-
-                    .service-section {
-                        margin-bottom: 2rem;
-                    }
-
-                    .section-title {
-                        font-size: 1.5rem;
-                        font-weight: 600;
-                        color: var(--text-primary);
-                        margin-bottom: 1rem;
-                    }
-
-                    .feature-list,
-                    .benefits-list {
-                        list-style: none;
-                        padding-left: 1.25rem;
-                    }
-
-                    .feature-list li,
-                    .benefits-list li {
-                        position: relative;
-                        padding-left: 1.5rem;
-                        margin-bottom: 0.75rem;
-                        color: var(--text-secondary);
-                    }
-
-                    .feature-list li::before,
-                    .benefits-list li::before {
-                        content: "→";
-                        position: absolute;
-                        left: 0;
-                        color: var(--primary-yellow);
-                    }
-
-                    .benefits-list li::before {
-                        content: "✓";
-                    }
-                </style>
+            <div class="service-intro"
+                style="max-width: 800px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
+                <p>Data engineering is the bedrock of all successful data initiatives. It involves designing, building,
+                    and maintaining robust, scalable, and reliable pipelines that deliver clean, transformed, and
+                    accessible data to fuel analytics, machine learning, and business intelligence. Without efficient
+                    data engineering, even the most sophisticated data science models remain theoretical.</p>
             </div>
 
-            <!-- 2 -->
-            <div class="service-card" aria-label="Data Engineering">
-                <div class="icon iso-icon" aria-hidden="true">
-                    <img src="../Images/IMGServ2/data strategy.png" alt="Service Icon"
-                        style="width: 80px; height: 80px; object-fit: contain; margin-bottom: 1.5rem;">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Why This Service Matters</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Proliferation of Data
+                                Sources:</b> From IoT devices to social media, managing diverse streams will be
+                            critical.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Rise of Real-time
+                                Analytics:</b> Businesses need immediate insights via advanced streaming data pipelines.
+                        </li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Scaling AI & ML
+                                Operations (MLOps):</b> Reliable data delivery at scale is essential for productionizing
+                            AI models.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Cloud Data
+                                Evolution:</b> Optimizing warehouses, lakes, and lakehouses for performance and cost.
+                        </li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Data Democratization:</b> Making data
+                            accessible to both technical and business users.</li>
+                    </ul>
                 </div>
 
-                <div class="content-wrapper">
-                    <header class="service-header">
-                        <h3 class="service-title"
-                            style="color: #F1BC00; font-size: 1.8rem; font-weight: 600; margin-bottom: 0.5rem;">
-                            Data Strategy
-                            <span class="service-subtitle"
-                                style="color: #FFFFFF; font-size: 1.2rem; font-weight: 400; display: block; margin-top: 0.25rem;">
-                                Charting Your Course to Data-Driven Success</span>
-                        </h3>
-                    </header>
-
-                    <div class="service-description">
-                        <p>A robust data strategy is the blueprint that turns raw data into business advantage. We align
-                            vision, governance, and technology to drive long-term impact.</p>
-                    </div>
-
-                    <div class="service-details">
-                        <section class="service-section">
-                            <h3 class="section-title">What We Do</h3>
-                            <ul class="feature-list">
-                                <li>Current State Assessment</li>
-                                <li>Vision & Roadmap Definition</li>
-                                <li>Data Governance Frameworks</li>
-                                <li>Technology & Tooling Alignment </li>
-                                <li>Organizational Enablement & Culture Shift </li>
-                            </ul>
-                        </section>
-
-                        <section class="service-section">
-                            <h3 class="section-title">Outcomes</h3>
-                            <ul class="benefits-list">
-                                <li>Clear, actionable roadmap </li>
-                                    <li>Improved data trust and compliance </li>
-                                    <li>Reduced operational risks </li>
-                                    <li>Accelerated AI/ML adoption </li>
-                                    <li>Maximized ROI on data investments </li>
-                            </ul>
-                        </section>
-                    </div>
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">How We Help</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Data Pipeline
+                                Development:</b> Automated, scalable ETL/ELT pipelines.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Data Warehouse &
+                                Lakehouse Design:</b> Cloud and on-premise solutions.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Data Governance &
+                                Quality:</b> Ensuring accuracy, consistency, and compliance.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Real-time Data
+                                Streaming:</b> Powered by Kafka, Kinesis, and more.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Cloud Data
+                                Migration:</b> Seamless movement and optimization in the cloud.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Data Security & Privacy:</b> Protecting
+                            sensitive data throughout its lifecycle.</li>
+                    </ul>
                 </div>
 
-                <style>
-                    .service-card {
-                        background: rgba(255, 255, 255, 0.03);
-                        border-radius: 12px;
-                        padding: 2.5rem;
-                        transition: transform 0.3s ease;
-                    }
-
-                    .service-card:hover {
-                        transform: translateY(-4px);
-                    }
-
-                    .service-header {
-                        margin-bottom: 2rem;
-                    }
-
-                    .service-title {
-                        font-size: 2.25rem;
-                        font-weight: 700;
-                        color: var(--primary-yellow);
-                        margin-bottom: 0.5rem;
-                    }
-
-                    .service-subtitle {
-                        display: block;
-                        font-size: 1.25rem;
-                        color: var(--text-primary);
-                        font-weight: 400;
-                        margin-top: 0.75rem;
-                    }
-
-                    .service-description {
-                        font-size: 1.1rem;
-                        line-height: 1.6;
-                        color: var(--text-secondary);
-                        margin-bottom: 2.5rem;
-                    }
-
-                    .service-section {
-                        margin-bottom: 2rem;
-                    }
-
-                    .section-title {
-                        font-size: 1.5rem;
-                        font-weight: 600;
-                        color: var(--text-primary);
-                        margin-bottom: 1rem;
-                    }
-
-                    .feature-list,
-                    .benefits-list {
-                        list-style: none;
-                        padding-left: 1.25rem;
-                    }
-
-                    .feature-list li,
-                    .benefits-list li {
-                        position: relative;
-                        padding-left: 1.5rem;
-                        margin-bottom: 0.75rem;
-                        color: var(--text-secondary);
-                    }
-
-                    .feature-list li::before,
-                    .benefits-list li::before {
-                        content: "→";
-                        position: absolute;
-                        left: 0;
-                        color: var(--primary-yellow);
-                    }
-
-                    .benefits-list li::before {
-                        content: "✓";
-                    }
-                </style>
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Key Benefits</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Reliable, scalable, and secure infrastructure
+                        </li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Access to high-quality, analysis-ready data</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Faster time to insights and decisions</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Reduced manual preparation effort</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Advanced analytics and AI readiness</li>
+                        <li style="margin-bottom: 30px; color: #fff;">✓ Cost-efficient storage and processing</li>
+                        <p style="color: #A0A0A0; margin-bottom: 20px;"><b style="color: #F1BC00;">Who Benefits:</b>
+                            Data architects, scientists, BI teams, IT managers, and enterprises modernizing
+                            infrastructure.</p>
+                        <p style="color: #A0A0A0;"><b style="color: #F1BC00;">Future Outlook:</b> Expect more
+                            automation, stronger observability, unified lakehouse adoption, and decentralized ownership
+                            through data mesh principles.</p>
+                    </ul>
+                </div>
             </div>
 
+            <div class="service-summary"
+                style="text-align: center; padding: 40px; background: rgba(241,188,0,0.1); border-radius: 10px; margin-top: 60px;">
+                <em style="font-size: 20px; color: #F1BC00; font-style: normal; font-weight: 500;">Build a solid data
+                    foundation for your future. Connect with our specialists today.</em>
+            </div>
+        </section>
 
-        </div>
-        <div class="services-grid" aria-label="Service list">
-            <!-- 3 -->
-            <div class="service-card" aria-label="Data Engineering">
-                <div class="icon iso-icon" aria-hidden="true">
-                    <img src="../Images/IMGServ2/data science.png" alt="Service Icon"
-                        style="width: 80px; height: 80px; object-fit: contain; margin-bottom: 1.5rem;">
-                </div>
-
-                <div class="content-wrapper">
-                    <header class="service-header">
-                        <h3 class="service-title"
-                            style="color: #F1BC00; font-size: 1.8rem; font-weight: 600; margin-bottom: 0.5rem;">
-                            Data Science
-                            <span class="service-subtitle"
-                                style="color: #FFFFFF; font-size: 1.2rem; font-weight: 400; display: block; margin-top: 0.25rem;">Transforming
-                                Data into Actionable Intelligence</span>
-                        </h3>
-                    </header>
-
-                    <div class="service-description">
-                        <p>Data science uncovers insights, predicts trends, and powers intelligent decision-making
-                            across industries..</p>
+        <!-- Rest of the sections remain unchanged -->
+        <!-- Data Strategy -->
+        <section class="service-section" id="data-strategy"
+            style="padding: 80px 40px; background: linear-gradient(180deg, rgba(26,26,26,1) 0%, rgba(31,31,31,1) 100%);">
+            <header style="text-align: center; margin-bottom: 60px;">
+                <div class="icon iso-icon" aria-hidden="true"
+                    style="position: relative; width: 200px; height: 200px; margin: 0 auto 40px;">
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 180px; height: 180px; background: rgba(241,188,0,0.1); border-radius: 50%; filter: blur(20px);">
                     </div>
-
-                    <div class="service-details">
-                        <section class="service-section">
-                            <h3 class="section-title">What We Do</h3>
-                            <ul class="feature-list">
-                                <li>Problem Definition & Hypotheses</li>
-                                <li>Exploratory Data Analysis</li>
-                                <li>Machine Learning & Statistical Models</li>
-                                <li>Model Deployment (MLOps)</li>
-                                <li>Ongoing Performance Monitoring</li>
-                                <li>Storytelling & Visualization for Impact</li>
-                            </ul>
-                        </section>
-
-                        <section class="service-section">
-                            <h3 class="section-title">Outcomes</h3>
-                            <ul class="benefits-list">
-                                <li>Actionable insights from complex datasets</li>
-                                <li>Enhanced forecasting & predictive accuracy</li>
-                                <li>Optimized processes and reduced risks</li>
-                                <li>Stronger competitive advantage through intelligence</li>
-                            </ul>
-                        </section>
-                    </div>
+                    <img src="../Images/IMGServ2/data Eng.png" alt="Service Icon"
+                        style="width: 160px; height: 160px; object-fit: contain; position: relative; z-index: 1; transition: all 0.3s ease; filter: drop-shadow(0 0 10px rgba(241,188,0,0.3));"
+                        onmouseover="this.style.transform='scale(1.1)'; this.style.filter='drop-shadow(0 0 20px rgba(241,188,0,0.5))'"
+                        onmouseout="this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 0 10px rgba(241,188,0,0.3))'">
                 </div>
+                <h2 class="service-title"
+                    style="color:#F1BC00; font-size: 48px; margin-bottom: 20px; line-height: 1.2;">
+                    Data Strategy: <span
+                        style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">Charting
+                        Your Course to Data-Driven Success</span>
+                </h2>
+            </header>
 
-                <style>
-                    .service-card {
-                        background: rgba(255, 255, 255, 0.03);
-                        border-radius: 12px;
-                        padding: 2.5rem;
-                        transition: transform 0.3s ease;
-                    }
-
-                    .service-card:hover {
-                        transform: translateY(-4px);
-                    }
-
-                    .service-header {
-                        margin-bottom: 2rem;
-                    }
-
-                    .service-title {
-                        font-size: 2.25rem;
-                        font-weight: 700;
-                        color: var(--primary-yellow);
-                        margin-bottom: 0.5rem;
-                    }
-
-                    .service-subtitle {
-                        display: block;
-                        font-size: 1.25rem;
-                        color: var(--text-primary);
-                        font-weight: 400;
-                        margin-top: 0.75rem;
-                    }
-
-                    .service-description {
-                        font-size: 1.1rem;
-                        line-height: 1.6;
-                        color: var(--text-secondary);
-                        margin-bottom: 2.5rem;
-                    }
-
-                    .service-section {
-                        margin-bottom: 2rem;
-                    }
-
-                    .section-title {
-                        font-size: 1.5rem;
-                        font-weight: 600;
-                        color: var(--text-primary);
-                        margin-bottom: 1rem;
-                    }
-
-                    .feature-list,
-                    .benefits-list {
-                        list-style: none;
-                        padding-left: 1.25rem;
-                    }
-
-                    .feature-list li,
-                    .benefits-list li {
-                        position: relative;
-                        padding-left: 1.5rem;
-                        margin-bottom: 0.75rem;
-                        color: var(--text-secondary);
-                    }
-
-                    .feature-list li::before,
-                    .benefits-list li::before {
-                        content: "→";
-                        position: absolute;
-                        left: 0;
-                        color: var(--primary-yellow);
-                    }
-
-                    .benefits-list li::before {
-                        content: "✓";
-                    }
-                </style>
+            <div class="service-intro"
+                style="max-width: 800px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
+                <p>Simply collecting data is not enough. A robust data strategy transforms raw information into
+                    actionable insights, enabling sustainable growth and competitive advantage.</p>
             </div>
 
-            <!-- 4 -->
-            <div class="service-card" aria-label="Data Engineering">
-                <div class="icon iso-icon" aria-hidden="true">
-                    <img src="../Images/IMGServ2/genai.png" alt="Service Icon"
-                        style="width: 80px; height: 80px; object-fit: contain; margin-bottom: 1.5rem;">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Why This Service Matters</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Regulatory Compliance:</b> Stay ahead of evolving laws (GDPR, CCPA, etc.)</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Maximizing ROI:</b> Ensure infrastructure, tools, and talent deliver real outcomes.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">AI Readiness:</b> Provide the foundation for AI and Generative AI adoption.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Culture Shift:</b> Foster a data-first mindset across the organization.</li>
+                    </ul>
                 </div>
 
-                <div class="content-wrapper">
-                    <header class="service-header">
-                        <h3 class="service-title"
-                            style="color: #F1BC00; font-size: 1.8rem; font-weight: 600; margin-bottom: 0.5rem;">
-                            Generative AI
-                            <span class="service-subtitle"
-                                style="color: #FFFFFF; font-size: 1.2rem; font-weight: 400; display: block; margin-top: 0.25rem;">Unleashing
-                                New Dimensions of Creativity</span>
-                        </h3>
-                    </header>
-
-                    <div class="service-description">
-                        <p>Generative AI redefines how businesses innovate, design, and interact — transforming
-                            industries from content creation to customer engagement.</p>
-                    </div>
-
-                    <div class="service-details">
-                        <section class="service-section">
-                            <h3 class="section-title">What We Do</h3>
-                            <ul class="feature-list">
-                                <li> Strategy & Use Case Identification </li>
-                                <li> Model Selection & Customization </li>
-                                <li> Proof-of-Concept Development
-                                <li> Responsible AI Frameworks & Compliance </li>
-                                <li> Integration & Scalability into Products/Workflows </li>
-                                <li> Talent Upskilling & Change Management </li>
-                            </ul>
-                        </section>
-
-                        <section class="service-section">
-                            <h3 class="section-title">Outcomes</h3>
-                            <ul class="benefits-list">
-                                <li> Faster content creation and automation </li>
-                                <li> Enhanced customer engagement and personalization </li>
-                                <li> Accelerated innovation and product cycles </li>
-                                <li> New revenue streams and business models</li>
-                                <li> Competitive disruption through AI-first solutions </li>
-                            </ul>
-                        </section>
-                    </div>
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">How We Help</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Current State Assessment:</b> Understand your data landscape and challenges.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Vision & Roadmap:</b> Define governance, architecture, technology, and talent strategy.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Governance Framework:</b> Policies for quality, security, privacy, and accessibility.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Technology Alignment:</b> Recommend scalable platforms and solutions.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Organizational Enablement:</b> Guide cultural and operational shifts.</li>
+                    </ul>
                 </div>
 
-                <style>
-                    .service-card {
-                        background: rgba(255, 255, 255, 0.03);
-                        border-radius: 0px;
-                        padding: 2.5rem;
-                        transition: transform 0.3s ease;
-                    }
-
-                    .service-card:hover {
-                        transform: translateY(-4px);
-                    }
-
-                    .service-header {
-                        margin-bottom: 2rem;
-                    }
-
-                    .service-title {
-                        font-size: 2.25rem;
-                        font-weight: 700;
-                        color: var(--primary-yellow);
-                        margin-bottom: 0.5rem;
-                    }
-
-                    .service-subtitle {
-                        display: block;
-                        font-size: 1.25rem;
-                        color: var(--text-primary);
-                        font-weight: 400;
-                        margin-top: 0.75rem;
-                    }
-
-                    .service-description {
-                        font-size: 1.1rem;
-                        line-height: 1.6;
-                        color: var(--text-secondary);
-                        margin-bottom: 2.5rem;
-                    }
-
-                    .service-section {
-                        margin-bottom: 2rem;
-                    }
-
-                    .section-title {
-                        font-size: 1.5rem;
-                        font-weight: 600;
-                        color: var(--text-primary);
-                        margin-bottom: 1rem;
-                    }
-
-                    .feature-list,
-                    .benefits-list {
-                        list-style: none;
-                        padding-left: 1.25rem;
-                    }
-
-                    .feature-list li,
-                    .benefits-list li {
-                        position: relative;
-                        padding-left: 1.5rem;
-                        margin-bottom: 0.75rem;
-                        color: var(--text-secondary);
-                    }
-
-                    .feature-list li::before,
-                    .benefits-list li::before {
-                        content: "→";
-                        position: absolute;
-                        left: 0;
-                        color: var(--primary-yellow);
-                    }
-
-                    .benefits-list li::before {
-                        content: "✓";
-                    }
-                </style>
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Key Benefits</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 15px; color: #fff;">✓ A clear 3–5 year roadmap</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Improved trust and quality in data</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Better decision-making and insights</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Reduced compliance risks</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Accelerated analytics and AI adoption</li>
+                        <li style="margin-bottom: 30px; color: #fff;">✓ Maximized data-driven value</li>
+                        <p style="color: #A0A0A0; margin-bottom: 20px;"><b style="color: #F1BC00;">Who Benefits:</b>
+                            Executives, business leaders, IT directors, and organizations pursuing digital transformation.</p>
+                        <p style="color: #A0A0A0;"><b style="color: #F1BC00;">Future Outlook:</b> Greater focus on data mesh, real-time strategies, and ethical use of data.</p>
+                    </ul>
+                </div>
             </div>
 
+            <div class="service-summary"
+                style="text-align: center; padding: 40px; background: rgba(241,188,0,0.1); border-radius: 10px; margin-top: 60px;">
+                <em style="font-size: 20px; color: #F1BC00; font-style: normal; font-weight: 500;">Build a solid data
+                    foundation for your future. Connect with our specialists today.</em>
+            </div>
+        </section>
 
-        </div>
+        <!-- Data Science -->/
+        <section class="service-section" id="data-science"
+            style="padding: 80px 40px; background: linear-gradient(180deg, rgba(26,26,26,1) 0%, rgba(31,31,31,1) 100%);">
+            <header style="text-align: center; margin-bottom: 60px;">
+                <div class="icon iso-icon" aria-hidden="true"
+                    style="position: relative; width: 200px; height: 200px; margin: 0 auto 40px;">
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 180px; height: 180px; background: rgba(241,188,0,0.1); border-radius: 50%; filter: blur(20px);">
+                    </div>
+                    <img src="../Images/IMGServ2/data Eng.png" alt="Service Icon"
+                        style="width: 160px; height: 160px; object-fit: contain; position: relative; z-index: 1; transition: all 0.3s ease; filter: drop-shadow(0 0 10px rgba(241,188,0,0.3));"
+                        onmouseover="this.style.transform='scale(1.1)'; this.style.filter='drop-shadow(0 0 20px rgba(241,188,0,0.5))'"
+                        onmouseout="this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 0 10px rgba(241,188,0,0.3))'">
+                </div>
+                <h2 class="service-title"
+                    style="color:#F1BC00; font-size: 48px; margin-bottom: 20px; line-height: 1.2;">
+                    Data Science: <span
+                        style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">Transforming Data into Actionable Intelligence and Innovation</span>
+                </h2>
+            </header>
 
-        <div class="services-cta-wrap">
-            <a style="text-decoration: none !important; " class="services-cta" href="../services/servicesDetails.html">
-                <span>All Services<b>in Detail</b></span>
-                <svg class="arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true">
-                    <path d="M5 12h12" stroke="#0c0c0c" stroke-width="2" />
-                    <path d="M13 6l6 6-6 6" stroke="#0c0c0c" stroke-width="2" />
-                </svg>
-            </a>
-        </div>
-        </a>
+            <div class="service-intro"
+                style="max-width: 800px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
+                <p>Data science is about extracting meaningful insights from complex datasets using advanced analytics, machine learning, and statistical modeling. It empowers smarter, faster decisions and drives innovation.</p>
+            </div>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Why This Service Matters</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Hyper-Personalization:</b> Deliver tailored experiences at scale.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Predictive Analytics:</b> Forecast market shifts and customer behavior.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Automated Decision-Making:</b> Embed intelligence into operations.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Risk Mitigation & Fraud Detection:</b> Identify threats proactively.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Operational Optimization:</b> Improve efficiency across the value chain.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Generative AI Synergy:</b> Provide analytical rigor for advanced AI applications.</li>
+                    </ul>
+                </div>
+
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">How We Help</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Problem Definition & Hypothesis Generation</b></li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Exploratory Data Analysis</b></li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Advanced Modeling & Machine Learning</b></li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Model Deployment & Integration</b></li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Performance Monitoring & Optimization</b></li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Storytelling & Visualization</b> with clear dashboards and reports</li>
+                    </ul>
+                </div>
+
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Key Benefits</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Actionable insights for decisions</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Enhanced customer engagement</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Accurate forecasting</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Optimized resource allocation</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Reduced risks and new opportunity identification</li>
+                        <li style="margin-bottom: 30px; color: #fff;">✓ Competitive differentiation</li>
+                        <p style="color: #A0A0A0; margin-bottom: 20px;"><b style="color: #F1BC00;">Who Benefits:</b>
+                            Marketing, operations, product, finance, and innovation teams.</p>
+                        <p style="color: #A0A0A0;"><b style="color: #F1BC00;">Future Outlook:</b> Growth of explainable AI, reinforcement learning, and ML operationalization (MLOps). Expect tighter integration with large language models for more intuitive analysis.</p>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-summary"
+                style="text-align: center; padding: 40px; background: rgba(241,188,0,0.1); border-radius: 10px; margin-top: 60px;">
+                <em style="font-size: 20px; color: #F1BC00; font-style: normal; font-weight: 500;">Turn your data into your most powerful asset. Explore how we can help today.</em>
+            </div>
+        </section>
+
+        <!-- Generative AI -->
+        <section class="service-section" id="gen-ai"
+            style="padding: 80px 40px; background: linear-gradient(180deg, rgba(26,26,26,1) 0%, rgba(31,31,31,1) 100%);">
+            <header style="text-align: center; margin-bottom: 60px;">
+                <div class="icon iso-icon" aria-hidden="true"
+                    style="position: relative; width: 200px; height: 200px; margin: 0 auto 40px;">
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 180px; height: 180px; background: rgba(241,188,0,0.1); border-radius: 50%; filter: blur(20px);">
+                    </div>
+                    <img src="../Images/IMGServ2/data Eng.png" alt="Service Icon"
+                        style="width: 160px; height: 160px; object-fit: contain; position: relative; z-index: 1; transition: all 0.3s ease; filter: drop-shadow(0 0 10px rgba(241,188,0,0.3));"
+                        onmouseover="this.style.transform='scale(1.1)'; this.style.filter='drop-shadow(0 0 20px rgba(241,188,0,0.5))'"
+                        onmouseout="this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 0 10px rgba(241,188,0,0.3))'">
+                </div>
+                <h2 class="service-title"
+                    style="color:#F1BC00; font-size: 48px; margin-bottom: 20px; line-height: 1.2;">
+                    Generative AI: <span
+                        style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">Unleashing New Dimensions of Creativity and Efficiency</span>
+                </h2>
+            </header>
+
+            <div class="service-intro"
+                style="max-width: 800px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
+                <p>Generative AI goes beyond analysis — creating entirely new content, designs, code, and experiences. It's redefining how businesses innovate, engage, and operate.</p>
+            </div>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Why This Service Matters</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Accelerated Content Creation:</b> Generate text, images, video, and audio.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Enhanced Customer Experience:</b> Sophisticated chatbots and assistants.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Automated Code Generation:</b> Faster cycles and rapid prototyping.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Innovative Design:</b> Novel products and simulations.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Process Automation:</b> From legal docs to data synthesis.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Competitive Edge:</b> Early adopters disrupt and lead markets.</li>
+                    </ul>
+                </div>
+
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">How We Help</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Strategy & Use Case Identification</b></li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Model Selection & Customization:</b> LLMs, diffusion models, and fine-tuning.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Proof-of-Concept & Pilots</b></li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Responsible AI Frameworks:</b> Ethics, bias detection, safety protocols.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Integration & Scalability</b></li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Talent Upskilling & Change Management</b></li>
+                    </ul>
+                </div>
+
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Key Benefits</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Reduced costs and faster content creation</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Deeper customer engagement</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Accelerated product innovation</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Intelligent process automation</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ New revenue streams</li>
+                        <li style="margin-bottom: 30px; color: #fff;">✓ Competitive advantage</li>
+                        <p style="color: #A0A0A0; margin-bottom: 20px;"><b style="color: #F1BC00;">Who Benefits:</b>
+                            Marketing, product, development, customer service, and creative teams.</p>
+                        <p style="color: #A0A0A0;"><b style="color: #F1BC00;">Future Outlook:</b> More multimodal models, real-time generation, specialized smaller models, and stronger ethical/regulatory frameworks.</p>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-summary"
+                style="text-align: center; padding: 40px; background: rgba(241,188,0,0.1); border-radius: 10px; margin-top: 60px;">
+                <em style="font-size: 20px; color: #F1BC00; font-style: normal; font-weight: 500;">Don't just adapt to the future — create it. Discover how Generative AI can transform your business.</em>
+            </div>
+        </section>
     </section>
-
 
 
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - NeuroGig</title>
+    <title>Services - NeuroGig</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,12 +17,13 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            text-decoration: none;
         }
 
         :root {
             --primary-yellow: #F1BC00;
             --dark-bg: #1A1A1A;
-            --darker-bg: #0F0F0F;
+            /* --darker-bg: #0F0F0F; */
             --text-primary: #FFFFFF;
             --text-secondary: #A0A0A0;
             --nav-text: #808080;
@@ -36,6 +37,13 @@
             line-height: 1.6;
             padding-top: 85px;
             zoom: 0.8;
+        }
+
+        h2 {
+            font-size: clamp(32px, 5vw, 56px);
+            line-height: 1.05;
+            margin: 0 0 16px;
+            color: var(--text-primary);
         }
 
         .container {
@@ -399,7 +407,7 @@
         .hero-image {
             width: 100%;
             height: 100%;
-            background: url('/Images/home.Image/Dedicated\ _br_Development\ Team.png') center/contain no-repeat;
+            background: url('/NeuroGig Web/Images/imgHero6.png') center/contain no-repeat;
         }
 
         /* Social Links */
@@ -1512,12 +1520,12 @@
             font-weight: 700;
         }
 
-        .services h2 {
+        /* .services h2 {
             font-size: clamp(32px, 5vw, 56px);
             line-height: 1.05;
             margin: 0 0 16px;
             color: var(--text-primary);
-        }
+        } */
 
         .services .intro {
             max-width: 950px;
@@ -2286,28 +2294,79 @@
         <nav class="navbar" role="navigation" aria-label="Main navigation">
             <!-- Logo Section -->
             <div class="logo-section">
-                <a href="#home" class="logo-link" aria-label="NeuroGig Home">
-                    <img class="logo-image" src="/Images/IMG Acc/Asset 1.svg" alt="NeuroGig Logo" />
+                <a href="../home/index.html" class="logo-link" aria-label="NeuroGig Home">
+                    <img class="logo-image" src="../Images/Logo.svg" alt="NeuroGig Logo" />
                     <span class="logo-text">Neurogig</span>
                 </a>
             </div>
 
             <!-- Desktop Navigation Menu -->
-            <ul class="nav-menu desktop-nav" role="menubar">
-                <li class="nav-item" role="none">
-                    <a href="/NeuroGig Web/services/servicesPage.html" class="nav-link" role="menuitem" tabindex="0">SERVICES</a>
+            <ul class="nav-menu desktop-nav" role="menubar" style="position: relative;">
+                <li class="nav-item" role="none" style="position: relative;">
+                    <a href="../services/servicesPage.html" class="nav-link" role="menuitem" tabindex="0">SERVICES</a>
+                    <ul
+                        style="position: absolute; top: 100%; left: 0; background: #1A1A1A; min-width: 200px; padding: 10px 0; display: none; box-shadow: 0 2px 10px rgba(0,0,0,0.2); z-index: 1000;">
+                        <li style="padding: 8px 20px;"><a href="../services/servicesPage.html"
+                                style="color: #f0f0f0; text-decoration: none; font-size: 14px;">Data Engineering</a>
+                        </li>
+                        <li style="padding: 8px 20px;"><a href="../services/servicesPage.html"
+                                style="color: #f0f0f0; text-decoration: none; font-size: 14px;">Data Science</a></li>
+                        <li style="padding: 8px 20px;"><a href="../services/servicesPage.html"
+                                style="color: #f0f0f0; text-decoration: none; font-size: 14px;">Data Strategy</a></li>
+                        <li style="padding: 8px 20px;"><a href="../services/servicesPage.html"
+                                style="color: #f0f0f0; text-decoration: none; font-size: 14px;">Generative AI</a></li>
+                    </ul>
                 </li>
-                <li class="nav-item" role="none">
-                    <a href="/NeuroGig Web/indsustries/industries.html" class="nav-link" role="menuitem" tabindex="0">INDUSTRIES</a>
+                <li class="nav-item" role="none" style="position: relative;">
+                    <a href="../industries/industries.html" class="nav-link" role="menuitem" tabindex="0">INDUSTRIES</a>
+                    <ul
+                        style="position: absolute; top: 100%; left: 0; background: #1A1A1A; min-width: 200px; padding: 10px 0; display: none; box-shadow: 0 2px 10px rgba(0,0,0,0.2); z-index: 1000;">
+                        <li style="padding: 8px 20px;"><a href="../industries/industries.html"
+                                style="color: #f0f0f0; text-decoration: none; font-size: 14px;">Finance & Banking</a>
+                        </li>
+                        <li style="padding: 8px 20px;"><a href="../industries/industries.html"
+                                style="color: #f0f0f0; text-decoration: none; font-size: 14px;">Healthcare</a></li>
+                        <li style="padding: 8px 20px;"><a href="../industries/industries.html"
+                                style="color: #f0f0f0; text-decoration: none; font-size: 14px;">Retail</a></li>
+                        <li style="padding: 8px 20px;"><a href="../industries/industries.html"
+                                style="color: #f0f0f0; text-decoration: none; font-size: 14px;">Manufacturing</a></li>
+                    </ul>
                 </li>
-                <li class="nav-item" role="none">
-                    <a href="/NeuroGig Web/accelerators/accl.html" class="nav-link" role="menuitem" tabindex="0">ACCELERATORS</a>
+                <li class="nav-item" role="none" style="position: relative;">
+                    <a href="../accelerators/accl.html" class="nav-link" role="menuitem" tabindex="0">ACCELERATORS</a>
+                    <ul
+                        style="position: absolute; top: 100%; left: 0; background: #1A1A1A; min-width: 240px; padding: 10px 0; display: none; box-shadow: 0 2px 10px rgba(0,0,0,0.2); z-index: 1000;">
+                        <li style="padding: 8px 20px;"><a href="../industries/industries.html"
+                                style="color: #f0f0f0; text-decoration: none; font-size: 14px;">Real-time Data
+                                Platform</a></li>
+                        <li style="padding: 8px 20px;"><a href="../industries/industries.html"
+                                style="color: #f0f0f0; text-decoration: none; font-size: 14px;">AI Ops Framework</a>
+                        </li>
+                        <li style="padding: 8px 20px;"><a href="../industries/industries.html"
+                                style="color: #f0f0f0; text-decoration: none; font-size: 14px;">Generative AI Studio</a>
+                        </li>
+                        <li style="padding: 8px 20px;"><a href="../industries/industries.html"
+                                style="color: #f0f0f0; text-decoration: none; font-size: 14px;">Predictive Intelligence
+                                Hub</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item" role="none">
                     <a href="#insights" class="nav-link" role="menuitem" tabindex="0">INSIGHTS</a>
                 </li>
-                <li class="nav-item" role="none">
-                    <a href="/NeuroGig Web/aboutUs/aboutUs.html" class="nav-link" role="menuitem" tabindex="0">ABOUT US</a>
+                <li class="nav-item" role="none" style="position: relative;">
+                    <a href="../aboutUs/aboutUs.html" class="nav-link" role="menuitem" tabindex="0">ABOUT
+                        US</a>
+                    <ul
+                        style="position: absolute; top: 100%; left: 0; background: #1A1A1A; min-width: 200px; padding: 10px 0; display: none; box-shadow: 0 2px 10px rgba(0,0,0,0.2); z-index: 1000;">
+                        <li style="padding: 8px 20px;"><a href="../aboutUs/aboutUs.html"
+                                style="color: #f0f0f0; text-decoration: none; font-size: 14px;">Our Story</a></li>
+                        <li style="padding: 8px 20px;"><a href="../aboutUs/aboutUs.html"
+                                style="color: #f0f0f0; text-decoration: none; font-size: 14px;">Our Core Values</a></li>
+                        <li style="padding: 8px 20px;"><a href="../aboutUs/aboutUs.html"
+                                style="color: #f0f0f0; text-decoration: none; font-size: 14px;">Leadership</a></li>
+                        <li style="padding: 8px 20px;"><a href="../aboutUs/aboutUs.html"
+                                style="color: #f0f0f0; text-decoration: none; font-size: 14px;">Careers</a></li>
+                    </ul>
                 </li>
             </ul>
 
@@ -2321,7 +2380,7 @@
 
             <!-- CTA Button -->
             <div class="cta-section">
-                <a href="#consultation" class="cta-button" role="button">
+                <a href="#consultation-form" class="cta-button" role="button">
                     <span class="cta-text">FREE CONSULTATION</span>
                     <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19 14V1H1V14H6L10 17L14 14H19Z" stroke="#373835" stroke-width="2"
@@ -2332,8 +2391,6 @@
                         <path d="M6 9C6.6667 9.6667 8 11 10 11C12 11 13.3333 9.6667 14 9" stroke="#373835"
                             stroke-width="2" />
                     </svg>
-
-
                 </a>
             </div>
         </nav>
@@ -2348,555 +2405,852 @@
             </div>
             <ul class="mobile-nav-list" role="menubar">
                 <li class="mobile-nav-item" role="none">
-                    <a href="#services" class="mobile-nav-link" role="menuitem" tabindex="-1">SERVICES</a>
+                    <a href="#" class="mobile-nav-link" role="menuitem" tabindex="-1">SERVICES</a>
+                    <ul style="display: none; padding-left: 20px; background: #222;">
+                        <li><a href="#data-engineering"
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data
+                                Engineering</a></li>
+                        <li><a href="#data-science"
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data
+                                Science</a></li>
+                        <li><a href="#data-strategy"
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data
+                                Strategy</a></li>
+                        <li><a href="#generative-ai"
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Generative
+                                AI</a></li>
+                    </ul>
                 </li>
                 <li class="mobile-nav-item" role="none">
-                    <a href="#industries" class="mobile-nav-link" role="menuitem" tabindex="-1">INDUSTRIES</a>
+                    <a href="#" class="mobile-nav-link" role="menuitem" tabindex="-1">INDUSTRIES</a>
+                    <ul style="display: none; padding-left: 20px; background: #222;">
+                        <li><a href="#finance"
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Finance &
+                                Banking</a></li>
+                        <li><a href="#healthcare"
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Healthcare</a>
+                        </li>
+                        <li><a href="#retail"
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Retail</a>
+                        </li>
+                        <li><a href="#manufacturing"
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Manufacturing</a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="mobile-nav-item" role="none">
-                    <a href="#accelerators" class="mobile-nav-link" role="menuitem" tabindex="-1">ACCELERATORS</a>
+                    <a href="#" class="mobile-nav-link" role="menuitem" tabindex="-1">ACCELERATORS</a>
+                    <ul style="display: none; padding-left: 20px; background: #222;">
+                        <li><a href="#real-time-platform"
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Real-time
+                                Data Platform</a></li>
+                        <li><a href="#ai-ops"
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">AI Ops
+                                Framework</a></li>
+                        <li><a href="#gen-ai-studio"
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Generative
+                                AI Studio</a></li>
+                        <li><a href="#predictive-hub"
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Predictive
+                                Intelligence Hub</a></li>
+                    </ul>
                 </li>
                 <li class="mobile-nav-item" role="none">
                     <a href="#insights" class="mobile-nav-link" role="menuitem" tabindex="-1">INSIGHTS</a>
                 </li>
                 <li class="mobile-nav-item" role="none">
-                    <a href="#company" class="mobile-nav-link" role="menuitem" tabindex="-1">COMPANY</a>
+                    <a href="#" class="mobile-nav-link" role="menuitem" tabindex="-1">ABOUT US</a>
+                    <ul style="display: none; padding-left: 20px; background: #222;">
+                        <li><a href="#our-story"
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Our
+                                Story</a></li>
+                        <li><a href="#core-values"
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Our Core
+                                Values</a></li>
+                        <li><a href="#leadership"
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Leadership</a>
+                        </li>
+                        <li><a href="#careers"
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Careers</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </nav>
+
+        <style>
+            /* Desktop dropdown hover effects */
+            .nav-item:hover>ul {
+                display: block !important;
+            }
+
+            /* Mobile menu dropdown toggle */
+            @media (max-width: 768px) {
+                .mobile-nav-item>a {
+                    position: relative;
+                }
+
+                .mobile-nav-item>a:after {
+                    content: '+';
+                    position: absolute;
+                    right: 20px;
+                }
+
+                .mobile-nav-item.active>a:after {
+                    content: '-';
+                }
+
+                .mobile-nav-item.active>ul {
+                    display: block !important;
+                }
+            }
+        </style>
+
+        <script>
+            // Mobile menu dropdown toggle
+            document.querySelectorAll('.mobile-nav-item > a').forEach(item => {
+                item.addEventListener('click', (e) => {
+                    if (e.currentTarget.nextElementSibling) {
+                        e.preventDefault();
+                        e.currentTarget.parentElement.classList.toggle('active');
+                    }
+                });
+            });
+        </script>
     </header>
 
-    <!-- Hero Section -->
-    <main class="hero-section" id="home">
-        <div class="container">
-            <div class="hero-content-wrapper">
-                <div class="hero-text">
-                    <style>
-                        @media (max-width: 768px) {
-                            .hero-heading {
-                                text-align: center !important;
-                            }
-                        }
-                    </style>
-                    <h2 class="hero-heading"
-                        style="font-weight: 300; text-align: left; line-height: 1.2; letter-spacing: -0.02em; color: #FFFFFF;">
-                        Engineering the <br>future of <span style="font-weight: 700; color: #F1BC00;">Data</span>
-                    </h2>
-
-                    <p class="hero-subtitle">
-                        Transform enterprise data into actionable outcomes with <span
-                            class="highlight-text">cloud-native</span> infrastructure, <span
-                            class="highlight-text">real-time insights</span>, and <span
-                            class="highlight-text">AI-readiness</span> for operational excellence.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#consultation" class="btn-primary">Get a Free Consultation
-                            <span>
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 14V1H1V14H6L10 17L14 14H19Z" stroke="#373835" stroke-width="2"
-                                        stroke-linecap="square" />
-                                    <path d="M5 5H7" stroke="#373835" stroke-width="2" />
-                                    <path d="M13 5H15" stroke="#373835" stroke-width="2" />
-                                    <path d="M9 20H11" stroke="#373835" stroke-width="2" />
-                                    <path d="M6 9C6.6667 9.6667 8 11 10 11C12 11 13.3333 9.6667 14 9" stroke="#373835"
-                                        stroke-width="2" />
-                                </svg>
-                            </span>
-                        </a>
-                        <a href="#how-we-work" class="btn-secondary">See How We Work</a>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="hero-image"></div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-
-
 
 
     <!-- Services Section -->
-    <!-- Services Section -->
-    <section class="services" id="services" aria-labelledby="services-title">
-        <div class="section-header">
-            <div class="kicker">Client voices, trusted choices</div>
-            <h2 id="services-title">Our Story</h2>
-            <p class="intro">In <b></b>October 2024</b>, Neurongig Technologies was founded with a vision to empower
-                enterprises through data-driven insights.
-                <br>
-                <br>
-                We began by building a team of talented engineers and strategists dedicated to solving complex business
-                challenges. From our first solutions in data integration and AI to pioneering cutting-edge
-                architectures, our journey has always been about driving clarity from chaos.
-            </p>
-        </div>
-
-        <div class="services-grid" aria-label="Service list">
-            <!-- 1 -->
-            <div class="service-card" aria-label="Data Engineering">
-                <div class="icon iso-icon" aria-hidden="true">
-                    <img src="/Images/IMGServ2/data Eng.png" alt="Service Icon"
-                        style="width: 64px; height: 64px; object-fit: contain;">
-                </div>
-                <div class="content-wrapper">
-                    <h3>Our Team</h3>
-                    <p>Our strength lies in our people a diverse group of engineers, data scientists, designers, and
-                        strategists united by a passion for solving complex challenges with innovation and
-                        collaboration.</p>
-                </div>
-            </div>
-
-            <!-- 2 -->
-            <div class="service-card" aria-label="Data Strategy">
-                <div class="icon iso-icon" aria-hidden="true">
-                    <img src="/Images/IMGServ2/data strategy.png" alt="Service Icon"
-                        style="width: 64px; height: 64px; object-fit: contain;">
-                </div>
-                <div class="content-wrapper">
-                    <h3>Our Advisors</h3>
-                    <p>We are guided by a network of trusted advisors industry experts who bring strategic vision and
-                        deep expertise to help us shape the future of data and AI. </p>
-                </div>
-            </div>
-
-            <!-- 3 -->
-            <div class="service-card" aria-label="Data Science">
-                <div class="icon iso-icon" aria-hidden="true">
-                    <img src="/Images/IMGServ2/data science.png" alt="Service Icon"
-                        style="width: 64px; height: 64px; object-fit: contain;">
-                </div>
-                <div class="content-wrapper">
-                    <h3>Our Partners</h2>
-                    <h3>Dremio – Powering the Next Generation of Data Analytics</h3>
-                    <p>
-                        Our strategic partnership with Dremio enables us to deliver faster, more scalable, and
-                        cost-efficient solutions through an open data lakehouse platform — fueling analytics, AI, and
-                        innovation at scale. </p>
-                </div>
-            </div>
-
-
-        </div>
-
-        <div class="services-cta-wrap">
-            <a class="services-cta" href="#consultation">
-                <span>Schedule a <b>FREE CONSULTAION</b></span>
-                <svg class="arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true">
-                    <path d="M5 12h12" stroke="#0c0c0c" stroke-width="2" />
-                    <path d="M13 6l6 6-6 6" stroke="#0c0c0c" stroke-width="2" />
-                </svg>
-            </a>
-        </div>
-    </section>
-
-
-
-
-
-
-
-    <!-- Accelerators Section -->
-    <section class="accelerators" aria-labelledby="accelerators-title">
-        <div class="container">
-            <h1 id="accelerators-title">
-                Our Core<br>
-                <strong>Values</strong>
-            </h1>
-
-            <div class="frameworks-grid" aria-label="Framework list">
-                <!-- Dremio Quickstart Kit -->
-                <div class="framework-card" aria-label="Dremio <br Quickstart Kit">
-
-                    <div style="display: flex; flex-direction: column;">
-                        <h2 class="framework-name">Client-Centric <span style="color: var(--text-secondary);">Innovation
-                                Kit</span>
-                        </h2>
-                        <p class="framework-subtitle">We design every solution with the client’s unique needs in mind.
-                            Innovation is not just about technology, it’s about solving real problems that drive
-                            measurable impact</p>
-                    </div>
-                    <div class="illustration" aria-hidden="true">
-                        <img src="/Images/IMG Acc/Dremio.png" alt="Dremio Quickstart Kit"
-                            style="width: 100%; height: 100%; object-fit: contain;">
-                    </div>
-                </div>
-
-                <!-- AI Readiness Framework -->
-                <div class="framework-card" aria-label="AI Readiness Framework">
-                    <div style="display: flex; flex-direction: column;">
-                        <h2 class="framework-name"> Agility & <span
-                                style="color: var(--text-secondary);">Iteration</span>
-                        </h2>
-                        <p class="framework-subtitle">We embrace flexibility and rapid iteration, ensuring that our solutions adapt as your business and technology landscapes evolve.</p>
-                    </div>
-                    <div class="illustration" aria-hidden="true">
-                        <img src="/Images/IMG Acc/framework.png" alt="AI Readiness Framework"
-                            style="width: 100%; height: 100%; object-fit: contain;">
-                    </div>
-
-                </div>
-
-                <!-- CloudOps Toolkit -->
-                <div class="framework-card" aria-label="CloudOps Toolkit">
-                    <div style="display: flex; flex-direction: column;">
-                        <h2 class="framework-name">Transparency & <span
-                                style="color: var(--text-secondary);">Collaboration</span>
-                        </h2>
-                        <p class="framework-subtitle">Strong partnerships are built on openness. We work side by side with our clients, sharing progress, challenges, and solutions at every stage. </p>
-                    </div>
-                    <div class="illustration" aria-hidden="true">
-                        <img src="/Images/IMG Acc/cloudkit.png" alt="CloudOps Toolkit"
-                            style="width: 100%; height: 100%; object-fit: contain;">
-                    </div>
-
-                </div>
-
-                <!-- Data Driven decision making -->
-                <div class="framework-card" aria-label="Data Governance Blueprint">
-
-                    <div style="display: flex; flex-direction: column;">
-                        <h2 class="framework-name">Data-Driven  <span
-                                style="color: var(--text-secondary);">Decision Making</span></h2>
-                        <p class="framework-subtitle">Every decision, from strategy to execution, is rooted in evidence and analytics. We believe data is the compass that guides meaningful transformation. </p>
-                    </div>
-                    <div class="illustration" aria-hidden="true">
-                        <img src="/Images/IMG Acc/Blueprints.png" alt="Data Governance Blueprint"
-                            style="width: 100%; height: 100%; object-fit: contain;">
-
-                    </div>
-                </div>
-
-                <!-- Future-Proofing -->
-                <div class="framework-card" aria-label="Data Governance Blueprint">
-
-                    <div style="display: flex; flex-direction: column;">
-                        <h2 class="framework-name">Future  <span
-                                style="color: var(--text-secondary);">Proofing</span></h2>
-                        <p class="framework-subtitle">Technology evolves fast. Our solutions are designed to scale and adapt — ensuring you stay competitive and resilient in an ever-changing environment.</p>
-                    </div>
-                    <div class="illustration" aria-hidden="true">
-                        <img src="/Images/IMG Acc/Blueprints.png" alt="Data Governance Blueprint"
-                            style="width: 100%; height: 100%; object-fit: contain;">
-
-                    </div>
-                </div>
-
-                <!-- Ethical Ai -->
-                <div class="framework-card" aria-label="Data Governance Blueprint">
-
-                    <div style="display: flex; flex-direction: column;">
-                        <h2 class="framework-name">Ethical AI &  <span
-                                style="color: var(--text-secondary);">Data Practices</span></h2>
-                        <p class="framework-subtitle">We are committed to responsible innovation, ensuring that our AI and data solutions are built with fairness, accountability, and sustainability at their core.</p>
-                    </div>
-                    <div class="illustration" aria-hidden="true">
-                        <img src="/Images/IMG Acc/Blueprints.png" alt="Data Governance Blueprint"
-                            style="width: 100%; height: 100%; object-fit: contain;">
-
-                    </div>
-                </div>
-            </div>
-
-            
-        </div>
-    </section>
-
     <style>
-        /* Responsive Design */
-        @media (max-width: 1200px) {
-            .arc-carousel-container {
-                width: 800px !important;
-                height: 600px !important;
-            }
-
-            .background-svg {
-                width: 650px !important;
-                height: 355px !important;
-            }
-
-            .industry-card.active {
-                width: 320px !important;
-                height: 320px !important;
-            }
-
-            .industry-card.active img {
-                width: 280px !important;
-                height: 280px !important;
-            }
+        .services-page {
+            max-width: 1200px;
+            margin: 0 auto 96px;
+            padding: 0 24px;
         }
 
-        @media (max-width: 992px) {
-            .arc-carousel-container {
-                width: 700px !important;
-                height: 500px !important;
-            }
-
-            .background-svg {
-                width: 550px !important;
-                height: 300px !important;
-            }
-
-            .industry-card {
-                width: 150px !important;
-                height: 150px !important;
-            }
-
-            .industry-card img {
-                width: 120px !important;
-                height: 120px !important;
-            }
-
-            .industry-card.active {
-                width: 280px !important;
-                height: 280px !important;
-            }
-
-            .industry-card.active img {
-                width: 240px !important;
-                height: 240px !important;
-            }
+        .service-section {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 0;
+            margin-bottom: 44px;
+            padding: 40px 32px;
+            color: #fff;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        @media (max-width: 768px) {
-            .industries-section {
-                padding: 60px 20px !important;
-            }
-
-            .arc-carousel-container {
-                width: 500px !important;
-                height: 400px !important;
-            }
-
-            .background-svg {
-                width: 400px !important;
-                height: 220px !important;
-            }
-
-            .industry-card {
-                width: 120px !important;
-                height: 120px !important;
-            }
-
-            .industry-card img {
-                width: 100px !important;
-                height: 100px !important;
-            }
-
-            .industry-card.active {
-                width: 220px !important;
-                height: 220px !important;
-            }
-
-            .industry-card.active img {
-                width: 180px !important;
-                height: 180px !important;
-            }
-
-            .center-title {
-                font-size: 24px !important;
-            }
+        .service-section:hover {
+            box-shadow: 0 4px 40px rgba(241, 188, 0, 0.07);
+            border-color: rgba(241, 188, 0, 0.1);
         }
 
-        @media (max-width: 480px) {
-            .arc-carousel-container {
-                width: 380px !important;
-                height: 320px !important;
-            }
-
-            .background-svg {
-                width: 320px !important;
-                height: 175px !important;
-            }
-
-            .industry-card {
-                width: 100px !important;
-                height: 100px !important;
-            }
-
-            .industry-card img {
-                width: 80px !important;
-                height: 80px !important;
-            }
-
-            .industry-card.active {
-                width: 180px !important;
-                height: 180px !important;
-            }
-
-            .industry-card.active img {
-                width: 150px !important;
-                height: 150px !important;
-            }
-
-            .center-title {
-                font-size: 20px !important;
-            }
+        .service-title {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
         }
 
-        /* Hover effects for CTA button */
-        .cta-button:hover::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #F1BC00;
-            transition: left 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-            z-index: -1;
+        .service-intro {
+            color: #c7c7c7;
+            font-size: 17px;
+            margin-bottom: 32px;
+            line-height: 1.6;
         }
 
-        .cta-button:hover {
-            color: #0C0C0C !important;
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(241, 188, 0, 0.3);
+        .service-block {
+            margin-bottom: 32px;
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .cta-button:hover span {
-            transform: translateX(6px);
+        .service-block h3 {
+            color: #F1BC00;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .service-block ul {
+            line-height: 1.7;
+            margin: 0 0 0 1.25rem;
+            color: #ededed;
+            font-size: 15.5px;
+            padding-left: 0;
+        }
+
+        .service-block li {
+            margin-bottom: 12px;
+            padding-left: 8px;
+        }
+
+        .service-block li b {
+            color: #FFD84D;
+            font-weight: 600;
+        }
+
+        .service-summary {
+            color: #FFD84D;
+            margin-top: 32px;
+            font-size: 16px;
+            font-style: italic;
+            padding: 24px;
+            background: rgba(241, 188, 0, 0.05);
+            border: 1px solid rgba(241, 188, 0, 0.1);
+        }
+
+        @media (max-width: 750px) {
+            .service-section {
+                padding: 24px 16px;
+                margin-bottom: 34px;
+            }
+
+            .service-block {
+                padding: 16px;
+            }
+
+            .service-summary {
+                padding: 16px;
+            }
         }
     </style>
 
-    <script>
-            const cards = document.querySelectorAll('.industry-card');
-            const title = document.getElementById('industry-title');
-            let current = 0;
-            const total = cards.length;
-            let autoRotateInterval;
-            let isAnimating = false;
 
-            function updateCarousel() {
-            if (isAnimating) return;
 
-            isAnimating = true;
 
-            cards.forEach((card, i) => {
-                // Calculate smooth arc positioning - exactly like your reference
-                const angle = ((i - current) * 60) * (Math.PI / 180); // 60 degrees spacing for 6 items
-            const radiusX = 320; // Horizontal radius
-            const radiusY = 140; // Vertical radius for elliptical arc
 
-            const x = radiusX * Math.sin(angle);
-            const y = radiusY * Math.cos(angle);
+    <!-- serveices section -->
+    <section class="services-page">
 
-            // Apply smooth transforms with proper scaling - 3x size when active
-            const scale = i === current ? 1.0 : 0.7; // Active items use their natural enlarged size
-            const opacity = i === current ? 1 : 0.4;
-            const zIndex = i === current ? 20 : 10;
+        <!-- Data Engineering -->
+        <section class="service-section" id="data-engineering"
+            style="padding: 80px 40px; background: linear-gradient(180deg, rgba(26,26,26,1) 0%, rgba(31,31,31,1) 100%);">
+            <header style="text-align: center; margin-bottom: 60px;">
+                <div class="icon iso-icon" aria-hidden="true"
+                    style="position: relative; width: 200px; height: 200px; margin: 0 auto 40px;">
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 180px; height: 180px; background: rgba(241,188,0,0.1); border-radius: 50%; filter: blur(20px);">
+                    </div>
+                    <img src="../Images/IMGServ2/data Eng.png" alt="Service Icon"
+                        style="width: 160px; height: 160px; object-fit: contain; position: relative; z-index: 1; transition: all 0.3s ease; filter: drop-shadow(0 0 10px rgba(241,188,0,0.3));"
+                        onmouseover="this.style.transform='scale(1.1)'; this.style.filter='drop-shadow(0 0 20px rgba(241,188,0,0.5))'"
+                        onmouseout="this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 0 10px rgba(241,188,0,0.3))'">
+                </div>
+                <h2 class="service-title"
+                    style="color:#F1BC00; font-size: 48px; margin-bottom: 20px; line-height: 1.2;">
+                    Data Engineering: <span
+                        style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">Building
+                        the Foundation for Intelligent Enterprises</span>
+                </h2>
+            </header>
 
-            // Perfect centering with the calculated positions
-            card.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${scale})`;
-            card.style.opacity = opacity;
-            card.style.zIndex = zIndex;
+            <div class="service-intro"
+                style="max-width: 800px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
+                <p>Data engineering is the bedrock of all successful data initiatives. It involves designing, building,
+                    and maintaining robust, scalable, and reliable pipelines that deliver clean, transformed, and
+                    accessible data to fuel analytics, machine learning, and business intelligence. Without efficient
+                    data engineering, even the most sophisticated data science models remain theoretical.</p>
+            </div>
 
-            // Add/remove active class
-            card.classList.toggle('active', i === current);
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Why This Service Matters</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Proliferation of Data
+                                Sources:</b> From IoT devices to social media, managing diverse streams will be
+                            critical.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Rise of Real-time
+                                Analytics:</b> Businesses need immediate insights via advanced streaming data pipelines.
+                        </li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Scaling AI & ML
+                                Operations (MLOps):</b> Reliable data delivery at scale is essential for productionizing
+                            AI models.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Cloud Data
+                                Evolution:</b> Optimizing warehouses, lakes, and lakehouses for performance and cost.
+                        </li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Data Democratization:</b> Making data
+                            accessible to both technical and business users.</li>
+                    </ul>
+                </div>
 
-            // Staggered animation delays for smoother movement
-            card.style.transitionDelay = `${Math.abs(i - current) * 0.05}s`;
-            });
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">How We Help</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Data Pipeline
+                                Development:</b> Automated, scalable ETL/ELT pipelines.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Data Warehouse &
+                                Lakehouse Design:</b> Cloud and on-premise solutions.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Data Governance &
+                                Quality:</b> Ensuring accuracy, consistency, and compliance.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Real-time Data
+                                Streaming:</b> Powered by Kafka, Kinesis, and more.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Cloud Data
+                                Migration:</b> Seamless movement and optimization in the cloud.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Data Security & Privacy:</b> Protecting
+                            sensitive data throughout its lifecycle.</li>
+                    </ul>
+                </div>
 
-            // Update center title with smooth transition
-            title.style.opacity = '0';
-            title.style.transform = 'translateY(20px)';
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Key Benefits</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Reliable, scalable, and secure infrastructure
+                        </li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Access to high-quality, analysis-ready data</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Faster time to insights and decisions</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Reduced manual preparation effort</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Advanced analytics and AI readiness</li>
+                        <li style="margin-bottom: 30px; color: #fff;">✓ Cost-efficient storage and processing</li>
+                        <p style="color: #A0A0A0; margin-bottom: 20px;"><b style="color: #F1BC00;">Who Benefits:</b>
+                            Data architects, scientists, BI teams, IT managers, and enterprises modernizing
+                            infrastructure.</p>
+                        <p style="color: #A0A0A0;"><b style="color: #F1BC00;">Future Outlook:</b> Expect more
+                            automation, stronger observability, unified lakehouse adoption, and decentralized ownership
+                            through data mesh principles.</p>
+                    </ul>
+                </div>
+            </div>
 
-            setTimeout(() => {
-                title.textContent = cards[current].dataset.title;
-            title.style.opacity = '1';
-            title.style.transform = 'translateY(0)';
-            }, 300);
+            <div class="service-summary"
+                style="text-align: center; padding: 40px; background: rgba(241,188,0,0.1); border-radius: 10px; margin-top: 60px;">
+                <em style="font-size: 20px; color: #F1BC00; font-style: normal; font-weight: 500;">Build a solid data
+                    foundation for your future. Connect with our specialists today.</em>
+            </div>
+        </section>
 
-            setTimeout(() => {
-                isAnimating = false;
-            }, 600);
-        }
+        <!-- Rest of the sections remain unchanged -->
+        <!-- Data Strategy -->
+        <section class="service-section" id="data-strategy"
+            style="padding: 80px 40px; background: linear-gradient(180deg, rgba(26,26,26,1) 0%, rgba(31,31,31,1) 100%);">
+            <header style="text-align: center; margin-bottom: 60px;">
+                <div class="icon iso-icon" aria-hidden="true"
+                    style="position: relative; width: 200px; height: 200px; margin: 0 auto 40px;">
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 180px; height: 180px; background: rgba(241,188,0,0.1); border-radius: 50%; filter: blur(20px);">
+                    </div>
+                    <img src="../Images/IMGServ2/data Eng.png" alt="Service Icon"
+                        style="width: 160px; height: 160px; object-fit: contain; position: relative; z-index: 1; transition: all 0.3s ease; filter: drop-shadow(0 0 10px rgba(241,188,0,0.3));"
+                        onmouseover="this.style.transform='scale(1.1)'; this.style.filter='drop-shadow(0 0 20px rgba(241,188,0,0.5))'"
+                        onmouseout="this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 0 10px rgba(241,188,0,0.3))'">
+                </div>
+                <h2 class="service-title"
+                    style="color:#F1BC00; font-size: 48px; margin-bottom: 20px; line-height: 1.2;">
+                    Data Strategy: <span
+                        style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">Charting
+                        Your Course to Data-Driven Success</span>
+                </h2>
+            </header>
 
-            function nextSlide() {
-            if (isAnimating) return;
-            current = (current + 1) % total;
-            updateCarousel();
-        }
+            <div class="service-intro"
+                style="max-width: 800px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
+                <p>Simply collecting data is not enough. A robust data strategy transforms raw information into
+                    actionable insights, enabling sustainable growth and competitive advantage.</p>
+            </div>
 
-            function goToSlide(index) {
-            if (isAnimating || index === current) return;
-            current = index;
-            updateCarousel();
-        }
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Why This Service Matters</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Regulatory Compliance:</b> Stay ahead of evolving laws (GDPR, CCPA, etc.)</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Maximizing ROI:</b> Ensure infrastructure, tools, and talent deliver real outcomes.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">AI Readiness:</b> Provide the foundation for AI and Generative AI adoption.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Culture Shift:</b> Foster a data-first mindset across the organization.</li>
+                    </ul>
+                </div>
 
-            function startAutoRotate() {
-                autoRotateInterval = setInterval(nextSlide, 3000);
-        }
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">How We Help</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Current State Assessment:</b> Understand your data landscape and challenges.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Vision & Roadmap:</b> Define governance, architecture, technology, and talent strategy.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Governance Framework:</b> Policies for quality, security, privacy, and accessibility.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Technology Alignment:</b> Recommend scalable platforms and solutions.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Organizational Enablement:</b> Guide cultural and operational shifts.</li>
+                    </ul>
+                </div>
 
-            function stopAutoRotate() {
-                clearInterval(autoRotateInterval);
-        }
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Key Benefits</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 15px; color: #fff;">✓ A clear 3–5 year roadmap</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Improved trust and quality in data</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Better decision-making and insights</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Reduced compliance risks</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Accelerated analytics and AI adoption</li>
+                        <li style="margin-bottom: 30px; color: #fff;">✓ Maximized data-driven value</li>
+                        <p style="color: #A0A0A0; margin-bottom: 20px;"><b style="color: #F1BC00;">Who Benefits:</b>
+                            Executives, business leaders, IT directors, and organizations pursuing digital transformation.</p>
+                        <p style="color: #A0A0A0;"><b style="color: #F1BC00;">Future Outlook:</b> Greater focus on data mesh, real-time strategies, and ethical use of data.</p>
+                    </ul>
+                </div>
+            </div>
 
-        // Enhanced event listeners
-        cards.forEach((card, index) => {
-                card.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    stopAutoRotate();
-                    goToSlide(index);
-                    setTimeout(startAutoRotate, 5000);
-                });
+            <div class="service-summary"
+                style="text-align: center; padding: 40px; background: rgba(241,188,0,0.1); border-radius: 10px; margin-top: 60px;">
+                <em style="font-size: 20px; color: #F1BC00; font-style: normal; font-weight: 500;">Build a solid data
+                    foundation for your future. Connect with our specialists today.</em>
+            </div>
+        </section>
 
-            card.addEventListener('mouseenter', () => {
-                stopAutoRotate();
-            });
+        <!-- Data Science -->/
+        <section class="service-section" id="data-science"
+            style="padding: 80px 40px; background: linear-gradient(180deg, rgba(26,26,26,1) 0%, rgba(31,31,31,1) 100%);">
+            <header style="text-align: center; margin-bottom: 60px;">
+                <div class="icon iso-icon" aria-hidden="true"
+                    style="position: relative; width: 200px; height: 200px; margin: 0 auto 40px;">
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 180px; height: 180px; background: rgba(241,188,0,0.1); border-radius: 50%; filter: blur(20px);">
+                    </div>
+                    <img src="../Images/IMGServ2/data Eng.png" alt="Service Icon"
+                        style="width: 160px; height: 160px; object-fit: contain; position: relative; z-index: 1; transition: all 0.3s ease; filter: drop-shadow(0 0 10px rgba(241,188,0,0.3));"
+                        onmouseover="this.style.transform='scale(1.1)'; this.style.filter='drop-shadow(0 0 20px rgba(241,188,0,0.5))'"
+                        onmouseout="this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 0 10px rgba(241,188,0,0.3))'">
+                </div>
+                <h2 class="service-title"
+                    style="color:#F1BC00; font-size: 48px; margin-bottom: 20px; line-height: 1.2;">
+                    Data Science: <span
+                        style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">Transforming Data into Actionable Intelligence and Innovation</span>
+                </h2>
+            </header>
 
-            card.addEventListener('mouseleave', () => {
-                setTimeout(startAutoRotate, 2000);
-            });
-        });
+            <div class="service-intro"
+                style="max-width: 800px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
+                <p>Data science is about extracting meaningful insights from complex datasets using advanced analytics, machine learning, and statistical modeling. It empowers smarter, faster decisions and drives innovation.</p>
+            </div>
 
-            // Initialize with entrance animation
-            function initializeCarousel() {
-                cards.forEach((card, index) => {
-                    card.style.opacity = '0';
-                    card.style.transform = 'translate(-50%, -50%) translateY(100px) scale(0.8)';
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Why This Service Matters</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Hyper-Personalization:</b> Deliver tailored experiences at scale.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Predictive Analytics:</b> Forecast market shifts and customer behavior.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Automated Decision-Making:</b> Embed intelligence into operations.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Risk Mitigation & Fraud Detection:</b> Identify threats proactively.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Operational Optimization:</b> Improve efficiency across the value chain.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Generative AI Synergy:</b> Provide analytical rigor for advanced AI applications.</li>
+                    </ul>
+                </div>
 
-                    setTimeout(() => {
-                        card.style.opacity = '0.4';
-                        card.style.transform = 'translate(-50%, -50%) scale(0.9)';
-                    }, index * 150);
-                });
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">How We Help</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Problem Definition & Hypothesis Generation</b></li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Exploratory Data Analysis</b></li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Advanced Modeling & Machine Learning</b></li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Model Deployment & Integration</b></li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Performance Monitoring & Optimization</b></li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Storytelling & Visualization</b> with clear dashboards and reports</li>
+                    </ul>
+                </div>
 
-            setTimeout(() => {
-                updateCarousel();
-            setTimeout(startAutoRotate, 2000);
-            }, cards.length * 150 + 500);
-        }
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Key Benefits</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Actionable insights for decisions</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Enhanced customer engagement</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Accurate forecasting</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Optimized resource allocation</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Reduced risks and new opportunity identification</li>
+                        <li style="margin-bottom: 30px; color: #fff;">✓ Competitive differentiation</li>
+                        <p style="color: #A0A0A0; margin-bottom: 20px;"><b style="color: #F1BC00;">Who Benefits:</b>
+                            Marketing, operations, product, finance, and innovation teams.</p>
+                        <p style="color: #A0A0A0;"><b style="color: #F1BC00;">Future Outlook:</b> Growth of explainable AI, reinforcement learning, and ML operationalization (MLOps). Expect tighter integration with large language models for more intuitive analysis.</p>
+                    </ul>
+                </div>
+            </div>
 
-            // Initialize
-            initializeCarousel();
+            <div class="service-summary"
+                style="text-align: center; padding: 40px; background: rgba(241,188,0,0.1); border-radius: 10px; margin-top: 60px;">
+                <em style="font-size: 20px; color: #F1BC00; font-style: normal; font-weight: 500;">Turn your data into your most powerful asset. Explore how we can help today.</em>
+            </div>
+        </section>
 
-            // Handle resize with debouncing
-            let resizeTimeout;
-        window.addEventListener('resize', () => {
-                clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(updateCarousel, 250);
-        });
+        <!-- Generative AI -->
+        <section class="service-section" id="gen-ai"
+            style="padding: 80px 40px; background: linear-gradient(180deg, rgba(26,26,26,1) 0%, rgba(31,31,31,1) 100%);">
+            <header style="text-align: center; margin-bottom: 60px;">
+                <div class="icon iso-icon" aria-hidden="true"
+                    style="position: relative; width: 200px; height: 200px; margin: 0 auto 40px;">
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 180px; height: 180px; background: rgba(241,188,0,0.1); border-radius: 50%; filter: blur(20px);">
+                    </div>
+                    <img src="../Images/IMGServ2/data Eng.png" alt="Service Icon"
+                        style="width: 160px; height: 160px; object-fit: contain; position: relative; z-index: 1; transition: all 0.3s ease; filter: drop-shadow(0 0 10px rgba(241,188,0,0.3));"
+                        onmouseover="this.style.transform='scale(1.1)'; this.style.filter='drop-shadow(0 0 20px rgba(241,188,0,0.5))'"
+                        onmouseout="this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 0 10px rgba(241,188,0,0.3))'">
+                </div>
+                <h2 class="service-title"
+                    style="color:#F1BC00; font-size: 48px; margin-bottom: 20px; line-height: 1.2;">
+                    Generative AI: <span
+                        style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">Unleashing New Dimensions of Creativity and Efficiency</span>
+                </h2>
+            </header>
 
-        // Pause on visibility change
-        document.addEventListener('visibilitychange', () => {
-            if (document.hidden) {
-                stopAutoRotate();
-            } else {
-                setTimeout(startAutoRotate, 1000);
-            }
-        });
-    </script>
+            <div class="service-intro"
+                style="max-width: 800px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
+                <p>Generative AI goes beyond analysis — creating entirely new content, designs, code, and experiences. It's redefining how businesses innovate, engage, and operate.</p>
+            </div>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Why This Service Matters</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Accelerated Content Creation:</b> Generate text, images, video, and audio.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Enhanced Customer Experience:</b> Sophisticated chatbots and assistants.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Automated Code Generation:</b> Faster cycles and rapid prototyping.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Innovative Design:</b> Novel products and simulations.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Process Automation:</b> From legal docs to data synthesis.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Competitive Edge:</b> Early adopters disrupt and lead markets.</li>
+                    </ul>
+                </div>
+
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">How We Help</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Strategy & Use Case Identification</b></li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Model Selection & Customization:</b> LLMs, diffusion models, and fine-tuning.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Proof-of-Concept & Pilots</b></li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Responsible AI Frameworks:</b> Ethics, bias detection, safety protocols.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Integration & Scalability</b></li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Talent Upskilling & Change Management</b></li>
+                    </ul>
+                </div>
+
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Key Benefits</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Reduced costs and faster content creation</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Deeper customer engagement</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Accelerated product innovation</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ Intelligent process automation</li>
+                        <li style="margin-bottom: 15px; color: #fff;">✓ New revenue streams</li>
+                        <li style="margin-bottom: 30px; color: #fff;">✓ Competitive advantage</li>
+                        <p style="color: #A0A0A0; margin-bottom: 20px;"><b style="color: #F1BC00;">Who Benefits:</b>
+                            Marketing, product, development, customer service, and creative teams.</p>
+                        <p style="color: #A0A0A0;"><b style="color: #F1BC00;">Future Outlook:</b> More multimodal models, real-time generation, specialized smaller models, and stronger ethical/regulatory frameworks.</p>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-summary"
+                style="text-align: center; padding: 40px; background: rgba(241,188,0,0.1); border-radius: 10px; margin-top: 60px;">
+                <em style="font-size: 20px; color: #F1BC00; font-style: normal; font-weight: 500;">Don't just adapt to the future — create it. Discover how Generative AI can transform your business.</em>
+            </div>
+        </section>
     </section>
 
 
 
 
+    <!-- Insights Section -->
+    <section href="../insights/insights.html" style="padding: 80px 0;">
+        <div style="max-width: 1200px; margin: auto; padding: 0 24px; position: relative;">
+            <header>
+                <div
+                    style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; margin: 0 0 16px;">
+                    Explore Our Projects</div>
+                <h2
+                    style="font-size: clamp(32px, 4vw, 48px); font-weight: 300; text-align: left; line-height: 1.2; letter-spacing: -0.02em;">
+                    Ideas,<span style="font-weight: 700; color: #F1BC00;">Case Studies</span>, and Research across
+                </h2>
+            </header>
+
+            <div
+                style="position: relative; margin: 64px auto 0; max-width: 1000px; background: #2a2a2a; overflow: hidden; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);">
+                <button
+                    style="position: absolute; top: 50%; transform: translateY(-50%); left: 20px; width: 40px; height: 40px; background: rgba(255, 255, 255, 0.2); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; z-index: 10; transition: all 0.3s ease;"
+                    class="prev" aria-label="Previous slide">←</button>
+                <button
+                    style="position: absolute; top: 50%; transform: translateY(-50%); right: 20px; width: 40px; height: 40px; background: rgba(255, 255, 255, 0.2); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; z-index: 10; transition: all 0.3s ease;"
+                    class="next" aria-label="Next slide">→</button>
+
+                <div style="display: flex; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);"
+                    class="slider-wrapper">
+                    <!-- Slide 1 -->
+                    <div style="flex: 0 0 100%; min-height: 500px; display: flex; flex-direction: column;">
+                        <div style="display: flex; height: 300px;">
+                            <div
+                                style="flex: 1; min-height: 200px; display: flex; align-items: center; justify-content: center;">
+                                <div
+                                    style="width: 100%; height: 100%; background: linear-gradient(135deg, rgba(58, 58, 58, 0.9) 0%, rgba(42, 42, 42, 0.9) 100%); display: flex; align-items: center; justify-content: center;">
+                                    <img src="../Images/Create a Dark Neon 3.png" alt="Healthcare"
+                                        style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+                                </div>
+                            </div>
+                            <div
+                                style="flex: 1; min-height: 200px; background: #1a1a1a; padding: 32px; display: flex; flex-direction: column; justify-content: space-between;">
+                                <div>
+                                    <span
+                                        style="background: #ffd84d; color: #2a2a2a; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 16px;">Healthcare</span>
+                                    <h2 style="font-size: 24px; font-weight: 700; color: #ffffff; margin: 0 0 16px;">
+                                        Healthcare medical record management</h2>
+                                    <p style="color: #888; line-height: 1.5; font-size: 14px; margin: 0 0 24px;">
+                                        Healthcare providers often face significant delivery problems, including supply
+                                        chain disruptions and delays in obtaining medical equipment.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            style="background: #2a2a2a; padding: 24px 32px; display: flex; justify-content: space-between; align-items: center;">
+                            <div style="text-align: center; flex: 1;">
+                                <div style="font-size: 28px; font-weight: 700; color: #ffd84d; margin-bottom: 8px;">93%
+                                </div>
+                                <div style="font-size: 12px; color: #ffffff; opacity: 0.8;">orders completed within 6h
+                                </div>
+                            </div>
+                            <div style="text-align: center; flex: 1;">
+                                <div style="font-size: 28px; font-weight: 700; color: #ffd84d; margin-bottom: 8px;">64%
+                                </div>
+                                <div style="font-size: 12px; color: #ffffff; opacity: 0.8;">faster record entry</div>
+                            </div>
+                            <div style="text-align: center; flex: 1;">
+                                <div style="font-size: 28px; font-weight: 700; color: #ffd84d; margin-bottom: 8px;">25%
+                                </div>
+                                <div style="font-size: 12px; color: #ffffff; opacity: 0.8;">cost reduction</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div style="flex: 0 0 100%; min-height: 500px; display: flex; flex-direction: column;">
+                        <div style="display: flex; height: 300px;">
+                            <div
+                                style="flex: 1; min-height: 200px; background: #2a2a2a; display: flex; align-items: center; justify-content: center;">
+                                <div
+                                    style="width: 100%; height: 100%; background: linear-gradient(135deg, rgba(58, 58, 58, 0.9) 0%, rgba(42, 42, 42, 0.9) 100%); display: flex; align-items: center; justify-content: center;">
+                                    <img src="../Images/Create a Dark Neon 2.png" alt="Healthcare"
+                                        style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+                                </div>
+                            </div>
+                            <div
+                                style="flex: 1; min-height: 200px; background: #1a1a1a; padding: 32px; display: flex; flex-direction: column; justify-content: space-between;">
+                                <div>
+                                    <span
+                                        style="background: #ffd84d; color: #2a2a2a; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 16px;">Finance</span>
+                                    <h2 style="font-size: 24px; font-weight: 700; color: #ffffff; margin: 0 0 16px;">
+                                        Real-time fraud detection</h2>
+                                    <p style="color: #888; line-height: 1.5; font-size: 14px; margin: 0 0 24px;">A
+                                        leading bank reduced fraudulent transactions by leveraging AI-powered anomaly
+                                        detection across millions of daily payments.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            style="background: #2a2a2a; padding: 24px 32px; display: flex; justify-content: space-between; align-items: center;">
+                            <div style="text-align: center; flex: 1;">
+                                <div style="font-size: 28px; font-weight: 700; color: #ffd84d; margin-bottom: 8px;">
+                                    99.7%</div>
+                                <div style="font-size: 12px; color: #ffffff; opacity: 0.8;">detection accuracy</div>
+                            </div>
+                            <div style="text-align: center; flex: 1;">
+                                <div style="font-size: 28px; font-weight: 700; color: #ffd84d; margin-bottom: 8px;">40%
+                                </div>
+                                <div style="font-size: 12px; color: #ffffff; opacity: 0.8;">false-positive drop</div>
+                            </div>
+                            <div style="text-align: center; flex: 1;">
+                                <div style="font-size: 28px; font-weight: 700; color: #ffd84d; margin-bottom: 8px;">
+                                    $4.2M</div>
+                                <div style="font-size: 12px; color: #ffffff; opacity: 0.8;">annual savings</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div style="flex: 0 0 100%; min-height: 500px; display: flex; flex-direction: column;">
+                        <div style="display: flex; height: 300px;">
+                            <div
+                                style="flex: 1; min-height: 200px; background: #2a2a2a; display: flex; align-items: center; justify-content: center;">
+                                <div
+                                    style="width: 100%; height: 100%; background: linear-gradient(135deg, rgba(58, 58, 58, 0.9) 0%, rgba(42, 42, 42, 0.9) 100%); display: flex; align-items: center; justify-content: center;">
+                                    <img src="../Images/Create a Dark Neon I.png" alt="Healthcare"
+                                        style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+                                </div>
+                            </div>
+                            <div
+                                style="flex: 1; min-height: 200px; background: #1a1a1a; padding: 32px; display: flex; flex-direction: column; justify-content: space-between;">
+                                <div>
+                                    <span
+                                        style="background: #ffd84d; color: #2a2a2a; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 16px;">Logistics</span>
+                                    <h2 style="font-size: 24px; font-weight: 700; color: #ffffff; margin: 0 0 16px;">
+                                        Route optimization at scale</h2>
+                                    <p style="color: #888; line-height: 1.5; font-size: 14px; margin: 0 0 24px;">Global
+                                        logistics firm cut fuel costs and delivery times by predicting traffic patterns
+                                        and dynamically rerouting fleets.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            style="background: #2a2a2a; padding: 24px 32px; display: flex; justify-content: space-between; align-items: center;">
+                            <div style="text-align: center; flex: 1;">
+                                <div style="font-size: 28px; font-weight: 700; color: #ffd84d; margin-bottom: 8px;">18%
+                                </div>
+                                <div style="font-size: 12px; color: #ffffff; opacity: 0.8;">fuel saved</div>
+                            </div>
+                            <div style="text-align: center; flex: 1;">
+                                <div style="font-size: 28px; font-weight: 700; color: #ffd84d; margin-bottom: 8px;">22%
+                                </div>
+                                <div style="font-size: 12px; color: #ffffff; opacity: 0.8;">faster delivery</div>
+                            </div>
+                            <div style="text-align: center; flex: 1;">
+                                <div style="font-size: 28px; font-weight: 700; color: #ffd84d; margin-bottom: 8px;">
+                                    $1.8M</div>
+                                <div style="font-size: 12px; color: #ffffff; opacity: 0.8;">annual savings</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const slider = document.querySelector('.slider-wrapper');
+            const slides = Array.from(slider.children);
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+
+            let currentSlide = 0;
+            const slideCount = slides.length;
+
+            // Add smooth animation class
+            slider.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+
+            function updateSlider(direction = 1) {
+                // Add fade animation
+                slides[currentSlide].style.opacity = '0';
+            slides[currentSlide].style.transition = 'opacity 0.3s ease';
+
+            currentSlide = (currentSlide + direction + slideCount) % slideCount;
+
+            // Update transform with smooth easing
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+            // Fade in new slide
+            setTimeout(() => {
+                slides[currentSlide].style.opacity = '1';
+            }, 300);
+        }
+
+            function nextSlide() {
+                updateSlider(1);
+        }
+
+            function prevSlide() {
+                updateSlider(-1);
+        }
+
+            // Enhanced touch handling with momentum
+            let touchStartX = 0;
+            let touchEndX = 0;
+            let touchStartTime = 0;
+        
+        slider.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            touchStartTime = Date.now();
+            slider.style.transition = 'none';
+        });
+        
+        slider.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+            const touchDuration = Date.now() - touchStartTime;
+            const velocity = Math.abs(touchEndX - touchStartX) / touchDuration;
+
+            slider.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+            
+            if (velocity > 0.5 || Math.abs(touchEndX - touchStartX) > 50) {
+                if (touchStartX - touchEndX > 0) {
+                nextSlide();
+                } else {
+                prevSlide();
+                }
+            } else {
+                // Snap back if swipe wasn't strong enough
+                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+        });
+
+            // Event listeners
+            prevBtn.addEventListener('click', prevSlide);
+            nextBtn.addEventListener('click', nextSlide);
+
+            // Auto-advance with pause on hover
+            let autoSlideTimer = setInterval(nextSlide, 5000);
+
+        slider.addEventListener('mouseenter', () => {
+                clearInterval(autoSlideTimer);
+        });
+        
+        slider.addEventListener('mouseleave', () => {
+                autoSlideTimer = setInterval(nextSlide, 5000);
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', e => {
+            if (e.key === 'ArrowLeft') prevSlide();
+            if (e.key === 'ArrowRight') nextSlide();
+        });
+
+            // Initialize first slide
+            slides[0].style.opacity = '1';
+        slides.forEach((slide, index) => {
+            if (index !== 0) slide.style.opacity = '0';
+        });
+
+            // Add responsive handling
+            function handleResize() {
+                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+            window.addEventListener('resize', handleResize);
+        </script>
+    </section>
+
+
     <!-- Form Section Start -->
-    <section style="max-width:1200px;margin:0 auto;padding:40px 20px;">
+    <section id="consultation-form" style="max-width:1200px;margin:0 auto;padding:40px 20px;">
         <div style="display:flex;flex-direction:column;gap:0;align-items:stretch;min-height:600px;">
             <div
                 style="background:rgba(40,40,40,0.2);backdrop-filter:blur(20px);padding:50px;display:flex;flex-direction:column;justify-content:center;">
@@ -3019,194 +3373,267 @@
         .ft {
             background: #1a1a1a;
             color: #fff;
-            padding: 60px 0 40px;
-            font-family: ui-sans-serif, system-ui
+            padding: 80px 0 40px;
+            font-family: 'Inter', sans-serif;
         }
 
         .ft-cta {
             text-align: center;
-            margin-bottom: 40px
+            margin-bottom: 60px;
         }
 
         .ft-cta h3 {
-            font-size: 24px;
+            font-size: 32px;
             font-weight: 600;
-            margin: 0 0 12px
+            margin: 0 0 16px;
+            letter-spacing: -0.02em;
         }
 
         .ft-cta p {
             color: #888;
-            margin: 0 0 24px
+            margin: 0 0 32px;
+            font-size: 18px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .ft-cta a {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
             background: #ffd700;
             color: #000;
-            padding: 12px 24px;
+            padding: 16px 32px;
             font-weight: 600;
-            text-decoration: none
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
         }
 
         .ft-cta a:hover {
-            background: #e6c200
+            background: #e6c200;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
         }
 
         .ft-grid {
             max-width: 1200px;
             margin: auto;
             display: grid;
-            grid-template-columns: 1fr 2fr 1fr 1fr;
-            gap: 60px;
-            padding: 0 20px
-        }
-
-        @media(max-width:1024px) {
-            .ft-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 40px
-            }
-        }
-
-        @media(max-width:768px) {
-            .ft-grid {
-                grid-template-columns: 1fr;
-                gap: 28px;
-                padding: 0 16px
-            }
-
-            .ft {
-                padding: 40px 0 20px
-            }
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 80px;
+            padding: 0 40px;
         }
 
         .ft-logo {
             display: flex;
             align-items: center;
-            gap: 12px;
-            margin-bottom: 16px
+            gap: 16px;
+            margin-bottom: 24px;
         }
 
-        .ft-logo div {
-            width: 32px;
-            height: 32px;
-            background: #ffd700;
-            color: #000;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center
+        .ft-logo img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
         }
 
-        .ft-links,
+        .ft-logo:hover img {
+            transform: scale(1.1);
+        }
+
+        .ft-logo span {
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
         .ft-contact {
             display: flex;
             flex-direction: column;
-            gap: 10px
+            gap: 12px;
+            margin: 24px 0;
+            color: #888;
         }
 
-        .ft-links a,
-        .ft-bottom a {
+        .ft-contact span {
+            transition: color 0.3s ease;
+        }
+
+        .ft-contact span:hover {
+            color: #ffd700;
+        }
+
+        .ft-grid h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 24px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .ft-links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .ft-links a {
             color: #888;
             text-decoration: none;
-            font-size: 14px
+            font-size: 16px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
         }
 
-        .ft-links a:hover,
-        .ft-bottom a:hover {
-            color: #ffd700
+        .ft-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: #ffd700;
+            transition: width 0.3s ease;
+        }
+
+        .ft-links a:hover {
+            color: #ffd700;
+            transform: translateX(8px);
+        }
+
+        .ft-links a:hover::after {
+            width: 100%;
         }
 
         .ft-bottom {
             max-width: 1200px;
-            margin: 40px auto 0;
-            padding: 20px 20px 0;
+            margin: 60px auto 0;
+            padding: 24px 40px 0;
             border-top: 1px solid #333;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 12px;
-            color: #666
+            font-size: 14px;
+            color: #666;
         }
 
-        @media(max-width:768px) {
-            .ft-bottom {
-                flex-direction: column;
-                gap: 14px;
-                text-align: center
+        .ft-bottom a {
+            color: #888;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .ft-bottom a:hover {
+            color: #ffd700;
+        }
+
+        @media(max-width: 1200px) {
+            .ft-grid {
+                grid-template-columns: 1.2fr 1fr 1fr;
+                gap: 60px;
+            }
+
+            .ft-grid>div:last-child {
+                grid-column: 2 / 4;
             }
         }
 
-        /* ===== Footer layout refinements ===== */
-        .ft-grid {
-            align-items: start;
-            row-gap: 40px;
+        @media(max-width: 900px) {
+            .ft-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+
+            .ft-grid>div:last-child {
+                grid-column: auto;
+            }
         }
 
-        .ft-grid>div {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
+        @media(max-width: 600px) {
+            .ft {
+                padding: 60px 0 30px;
+            }
 
-        .ft-grid h4 {
-            margin: 0 0 12px;
-            font-size: 16px;
-            font-weight: 600;
-            color: #ffffff;
-        }
+            .ft-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 0 20px;
+            }
 
-        .ft-links {
-            margin-top: 4px;
-        }
+            .ft-cta h3 {
+                font-size: 28px;
+            }
 
-        .ft-links a {
-            line-height: 1.4;
-            display: inline-block;
-        }
+            .ft-cta p {
+                font-size: 16px;
+            }
 
-        .ft-contact {
-            margin: 12px 0;
-            gap: 6px;
+            .ft-bottom {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+                margin-top: 40px;
+            }
         }
     </style>
+
     <footer class="ft">
         <div class="ft-cta">
             <h3>Ready to Transform Your Data?</h3>
-            <p>Schedule a free consultation to discover how we can accelerate your data journey.</p><a
-                href="#contact">Get Started Today</a>
+            <p>Schedule a free consultation to discover how we can accelerate your data journey.</p>
+            <a href="#contact">Get Started Today →</a>
         </div>
         <div class="ft-grid">
             <div>
                 <div class="ft-logo">
-                    <img class="logo-image" src="/Images/IMG Acc/Asset 1.svg" alt="NeuroGig Logo" />
-                    <span>Neurongig</span>
+                    <img src="../Images/Logo.svg" alt="NeuroGig Logo" />
+
                 </div>
                 <p style="color:#888">Empowering enterprises to transform data into actionable outcomes.</p>
-                <div class="ft-contact"><span>info@neurongig.com</span><span>+1 (555) 123-4567</span><span>Enterprise
-                        District, Global City</span></div>
+                <div class="ft-contact">
+                    <span>info@neurongig.com</span>
+                    <span>+1 (555) 123-4567</span>
+                    <span>Enterprise District, Global City</span>
+                </div>
             </div>
             <div>
                 <h4>Services</h4>
-                <div class="ft-links"><a href="#">Data Strategy</a><a href="#">Data Engineering</a><a href="#">Data
-                        Science</a><a href="#">Generative AI</a></div>
+                <div class="ft-links">
+                    <a href="#">Data Strategy</a>
+                    <a href="#">Data Engineering</a>
+                    <a href="#">Data Science</a>
+                    <a href="#">Generative AI</a>
+                </div>
             </div>
             <div>
                 <h4>Company</h4>
-                <div class="ft-links"><a href="#">About Us</a><a href="#">Leadership</a><a href="#">Mission &
-                        Values</a><a href="#">Contact</a></div>
+                <div class="ft-links">
+                    <a href="#">About Us</a>
+                    <a href="#">Leadership</a>
+                    <a href="#">Mission & Values</a>
+                    <a href="#">Contact</a>
+                </div>
             </div>
             <div>
                 <h4>Resources</h4>
-                <div class="ft-links"><a href="#">Case Studies</a><a href="#">Insights</a><a href="#">Accelerators</a><a
-                        href="#">Partners</a></div>
+                <div class="ft-links">
+                    <a href="#">Case Studies</a>
+                    <a href="#">Insights</a>
+                    <a href="#">Accelerators</a>
+                    <a href="#">Partners</a>
+                </div>
             </div>
         </div>
         <div class="ft-bottom">
             <div><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></div>
             <div>© 2025 Neurongig Technologies Pvt. Ltd.</div>
         </div>
-    </footer><!-- Footer Section End -->
+    </footer>
+    <!-- Footer Section End -->
 
     <!-- Social Links -->
     <aside class="social-links">

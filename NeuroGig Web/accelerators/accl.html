@@ -39,7 +39,7 @@
         }
 
         h2 {
-            font-size: clamp(32px, 5vw, 56px);
+            font-size: clamp(24px, 2.5vw, 40px) !important;
             line-height: 1.05;
             margin: 0 0 16px;
             color: var(--text-primary);
@@ -2593,182 +2593,282 @@
 
 
     <!-- Accelerators Section -->
-    <section class="accelerators" aria-labelledby="accelerators-title">
-        <div class="container">
-            <h2 style="font-size: clamp(32px, 4vw, 48px); font-weight: 300; text-align: center; margin-bottom: 60px; line-height: 1.2; letter-spacing: -0.02em; color: #FFFFFF;">
-                Accelerating Outcomes with
-                <span style="font-weight: 700; color: #F1BC00;">Pre-Built Frameworks</span>
-            </h2>
-
-            <div class="frameworks-grid">
-                <!-- Dremio Quickstart Kit -->
-                <div class="framework-card" style="background: linear-gradient(145deg, #1a1a1a 0%, #111111 100%); border: 1px solid #333; padding: 40px; transition: all 0.3s ease;">
-                    <div class="illustration" style="margin-top: auto;">
-                        <img src="../Images/IMG Acc/Dremio.png" alt="Dremio Quickstart Kit" style="width: 200px; height: 200px; transition: transform 0.3s ease;">
-                    </div>
-                    <div class="card-header" style="margin-bottom: 24px;">
-                        <span class="tag" style="background: #F1BC00; color: #000; padding: 6px 12px; font-size: 12px; font-weight: 600; text-transform: uppercase;">Data Lake Solution</span>
-                    </div>
-                    
-                    <h3 style="color: #F1BC00; font-size: 28px; margin-bottom: 12px; font-weight: 600;">Dremio Quickstart Kit</h3>
-                    <p style="color: #CCC; font-size: 18px; margin-bottom: 24px; font-weight: 500;">Instant modern data lake setup</p>
-                    
-                    <p style="color: #999; font-size: 15px; line-height: 1.6; margin-bottom: 32px;">
-                        Jumpstart your analytics journey with rapid, pre-configured Dremio deployment templates, instant data ingestion patterns, and optimized performance tuning—get an enterprise-grade data lakehouse up and running in record time.
-                    </p>
-
-                    
-                </div>
-
-                <!-- AI Readiness Framework -->
-                <div class="framework-card" style="background: linear-gradient(145deg, #1a1a1a 0%, #111111 100%); border: 1px solid #333; padding: 40px; transition: all 0.3s ease;"> 
-                    <div class="illustration" style="margin-top: auto;">
-                        <img src="../Images/IMG Acc/framework.png" alt="AI Readiness Framework" style="width: 200px; height: 200px; transition: transform 0.3s ease;">
-                    </div>
-                    <div class="card-header" style="margin-bottom: 24px;">
-                        <span class="tag" style="background: #F1BC00; color: #000; padding: 6px 12px; font-size: 12px; font-weight: 600; text-transform: uppercase;">AI Implementation</span>
-                    </div>
-                    
-                    <h3 style="color: #F1BC00; font-size: 28px; margin-bottom: 12px; font-weight: 600;">AI Readiness Framework</h3>
-                    <p style="color: #CCC; font-size: 18px; margin-bottom: 24px; font-weight: 500;">Evaluate, pilot, and scale GenAI solutions</p>
-                    
-                    <p style="color: #999; font-size: 15px; line-height: 1.6; margin-bottom: 32px;">
-                        A structured toolkit to assess your organization's generative AI maturity, identify high-potential use cases, run pilots, and scale successful GenAI initiatives—ensuring responsible, impactful adoption from day one.
-                    </p>
-
-                   
-                </div>
-
-                <!-- CloudOps Toolkit -->
-                <div class="framework-card" style="background: linear-gradient(145deg, #1a1a1a 0%, #111111 100%); border: 1px solid #333; padding: 40px; transition: all 0.3s ease;">
-                    <div class="illustration" style="margin-top: auto;">
-                        <img src="../Images/IMG Acc/cloudkit.png" alt="Data Governance Blueprint" style="width: 200px; height: 200px; transition: transform 0.3s ease;">
-                    </div>
-                    <div class="card-header" style="margin-bottom: 24px;">
-                        <span class="tag" style="background: #F1BC00; color: #000; padding: 6px 12px; font-size: 12px; font-weight: 600; text-transform: uppercase;">Cloud Operations</span>
-                    </div>
-                    
-                    <h3 style="color: #F1BC00; font-size: 28px; margin-bottom: 12px; font-weight: 600;">CloudOps Toolkit</h3>
-                    <p style="color: #CCC; font-size: 18px; margin-bottom: 24px; font-weight: 500;">Templates for secure, scalable deployments</p>
-                    
-                    <p style="color: #999; font-size: 15px; line-height: 1.6; margin-bottom: 32px;">
-                        Deploy with confidence using ready-made cloud operations playbooks, automated scripts, and best practices for scaling and securing infrastructure in any environment—accelerate cloud migration and operations.
-                    </p>
-
-                    
-                </div>
-
-                <!-- Data Governance Blueprint -->
-                <div class="framework-card" style="background: linear-gradient(145deg, #1a1a1a 0%, #111111 100%); border: 1px solid #333; padding: 40px; transition: all 0.3s ease;">
-                    <div class="illustration" style="margin-top: auto;">
-                        <img src="../Images/IMG Acc/Blueprints.png" alt="Data Governance Blueprint" style="width: 200px; height: 200px; transition: transform 0.3s ease;">
-                    </div>
-                    <div class="card-header" style="margin-bottom: 24px;">
-                        <span class="tag" style="background: #F1BC00; color: #000; padding: 6px 12px; font-size: 12px; font-weight: 600; text-transform: uppercase;">Governance & Compliance</span>
-                    </div>
-                    
-                    <h3 style="color: #F1BC00; font-size: 28px; margin-bottom: 12px; font-weight: 600;">Data Governance Blueprint</h3>
-                    <p style="color: #CCC; font-size: 18px; margin-bottom: 24px; font-weight: 500;">Policies + workflows, out-of-the-box</p>
-                    
-                    <p style="color: #999; font-size: 15px; line-height: 1.6; margin-bottom: 32px;">
-                        Kickstart your data governance journey with turnkey templates for policies, workflows, and compliance—establish robust data quality, lineage, security, and stewardship, ready to adapt and deploy across the enterprise.
-                    </p>
-
-                    
-                </div>
-            </div>
-
-            <div class="cta-wrap" style="text-align: center; margin-top: 60px;">
-                <button class="cta-button" style="background: #0C0C0C; border: 2px solid #F1BC00; color: #F1BC00; padding: 16px 32px; font-weight: 600; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: all 0.3s ease;">
-                    See All Accelerators
-                    <span style="margin-left: 8px;">→</span>
-                </button>
-            </div>
-        </div>
-
-        <style>
-            .frameworks-grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 24px;
-                margin: 48px 0;
-            }
-
-            .framework-card {
-                min-height: 480px;
-                display: flex;
-                flex-direction: column;
-            }
-
-            .framework-card:hover {
-                transform: translateY(-4px);
-                border-color: #F1BC00 !important;
-            }
-
-            .framework-card:hover .illustration img {
-                transform: scale(1.1);
-            }
-
-            @media (max-width: 1024px) {
-                .frameworks-grid {
-                    grid-template-columns: 1fr;
-                    gap: 20px;
-                }
-            }
-
-            .cta-button:hover {
-                background: #F1BC00 !important;
-                color: #0C0C0C !important;
-            }
-        </style>
-    </section>
-
+    
     <style>
-    .frameworks-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-        margin: 48px 0;
-    }
-
-    .framework-card {
-        position: relative;
-        overflow: hidden;
-    }
-
-    .framework-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-    }
-
-    .framework-card:hover .illustration img {
-        transform: scale(1.2);
-    }
-
-    .card-content {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    @media (max-width: 1024px) {
-        .frameworks-grid {
-            grid-template-columns: 1fr;
-            gap: 20px;
+        .services-page {
+            max-width: 1200px;
+            margin: 0 auto 96px;
+            padding: 0 24px;
         }
-    }
 
-    .cta-button:hover {
-        background: #F1BC00;
-        color: #0C0C0C;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-        .framework-card, .illustration img {
-            transition: none;
+        .service-section {
+            background: rgba(255, 255, 255, 0.03);
+            margin-bottom: 44px;
+            padding: 40px 32px;
+            color: #fff;
+            transition: all 0.3s ease;
+            border-radius: 0; /* Removed rounded corners */
         }
-    }
+
+        .service-title {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .service-intro {
+            color: #c7c7c7;
+            font-size: 17px;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .service-block {
+            margin-bottom: 32px;
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 0; /* Removed rounded corners */
+        }
+
+        .service-block h3 {
+            color: #F1BC00;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .service-block ul {
+            line-height: 1.7;
+            margin: 0 0 0 1.25rem;
+            color: #ededed;
+            font-size: 15.5px;
+            padding-left: 0;
+        }
+
+        .service-block li {
+            margin-bottom: 12px;
+            padding-left: 8px;
+        }
+
+        .service-block li b {
+            color: #FFD84D;
+            font-weight: 600;
+        }
+
+        .service-summary {
+            color: #FFD84D;
+            margin-top: 32px;
+            font-size: 16px;
+            font-style: italic;
+            padding: 24px;
+            background: rgba(241, 188, 0, 0.05);
+            border: 1px solid rgba(241, 188, 0, 0.1);
+            border-radius: 0; /* Removed rounded corners */
+        }
+
+        @media (max-width: 750px) {
+            .service-section {
+                padding: 24px 16px;
+                margin-bottom: 34px;
+            }
+
+            .service-block {
+                padding: 16px;
+            }
+
+            .service-summary {
+                padding: 16px;
+            }
+        }
     </style>
+
+    <section class="services-page">
+        <!-- Accelerators Section (matches services visual aesthetic) -->
+        <section class="service-section"  style="padding: 80px 40px; background: linear-gradient(180deg, rgba(26,26,26,1) 0%, rgba(31,31,31,1) 100%);">
+            <header style="text-align: center; margin-bottom: 60px;">
+                <div class="icon iso-icon" aria-hidden="true" style="position: relative; width: 200px; height: 200px; margin: 0 auto 40px;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 180px; height: 180px; background: rgba(241,188,0,0.1); border-radius: 50%; filter: blur(20px);"></div>
+                    <img src="../Images/IMGServ2/data strategy.png" alt="Accelerator Icon" style="width: 160px; height: 160px; object-fit: contain; position: relative; z-index: 1; transition: all 0.3s ease; filter: drop-shadow(0 0 10px rgba(241,188,0,0.3));" onmouseover="this.style.transform='scale(1.1)'; this.style.filter='drop-shadow(0 0 20px rgba(241,188,0,0.5))'" onmouseout="this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 0 10px rgba(241,188,0,0.3))'">
+                </div>
+                <h2 class="service-title" style="color:#F1BC00; font-size: 48px; margin-bottom: 20px; line-height: 1.2;">Data Strategy Accelerators <span style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">Clarify vision, build robust roadmaps, and establish governance</span></h2>
+            </header>
+            <div class="service-intro" style="max-width: 800px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
+                <p>These accelerators are designed to clarify vision, build robust roadmaps, and establish foundational governance.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                <div class="service-block" style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)';">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Data Maturity & AI Readiness Assessment Framework</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Description:</b> A structured methodology and diagnostic tool to rapidly evaluate an organization's current data capabilities and its readiness for AI adoption. Includes benchmarking against industry standards.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Components:</b> Standardized questionnaires, scoring models, gap analysis templates, and actionable recommendation frameworks.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Benefit:</b> Provides a quick, objective snapshot of current state, identifies critical areas for improvement, and helps define a realistic, phased data strategy roadmap.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Outcome:</b> A clear "north star" for data initiatives and identified quick wins.</li>
+                    </ul>
+                </div>
+                <div class="service-block" style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)';">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Data Governance & Ethics Blueprint</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Description:</b> A templated framework for establishing core data governance policies, roles, responsibilities, and processes. Includes principles for ethical AI integration.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Components:</b> Pre-defined governance committee structures, data dictionary templates, data lineage tracking guidelines, and ethical AI checklist.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Benefit:</b> Accelerates the creation of a strong data foundation, ensuring data trust, compliance, and responsible usage.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Outcome:</b> Reduced data-related risks and a foundation for scalable data initiatives.</li>
+                    </ul>
+                </div>
+                <div class="service-block" style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)';">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Value Realization Workshop Kit</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Description:</b> Facilitated workshops and templates to help clients identify high-impact data and AI use cases, quantify potential ROI, and prioritize initiatives based on business value and feasibility.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Components:</b> Use case ideation templates, ROI calculation models, prioritization matrices, and stakeholder alignment exercises.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Benefit:</b> Ensures that data and AI efforts are directly tied to business objectives and deliver measurable value.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Outcome:</b> A prioritized backlog of data and AI projects with clear business cases.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-summary" style="text-align: center; padding: 40px; background: rgba(241,188,0,0.1); border-radius: 10px; margin-top: 60px;">
+                <em style="font-size: 20px; color: #F1BC00; font-style: normal; font-weight: 500;">Accelerate your data strategy. Connect with our specialists today.</em>
+            </div>
+        </section>
+        <!-- Data Engineering -->
+        <section class="service-section" id="data-engineering" style="padding: 80px 40px; background: linear-gradient(180deg, rgba(26,26,26,1) 0%, rgba(31,31,31,1) 100%);">
+            <header style="text-align: center; margin-bottom: 60px;">
+                <div class="icon iso-icon" aria-hidden="true" style="position: relative; width: 200px; height: 200px; margin: 0 auto 40px;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 180px; height: 180px; background: rgba(241,188,0,0.1); border-radius: 50%; filter: blur(20px);"></div>
+                    <img src="../Images/IMGServ2/data Eng.png" alt="Accelerator Icon" style="width: 160px; height: 160px; object-fit: contain; position: relative; z-index: 1; transition: all 0.3s ease; filter: drop-shadow(0 0 10px rgba(241,188,0,0.3));" onmouseover="this.style.transform='scale(1.1)'; this.style.filter='drop-shadow(0 0 20px rgba(241,188,0,0.5))'" onmouseout="this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 0 10px rgba(241,188,0,0.3))'">
+                </div>
+                <h2 class="service-title" style="color:#F1BC00; font-size: 48px; margin-bottom: 20px; line-height: 1.2;">Data Engineering Accelerators <span style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">Scalable, reliable, and high-performance data infrastructure</span></h2>
+            </header>
+            <div class="service-intro" style="max-width: 800px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
+                <p>These focus on building scalable, reliable, and high-performance data infrastructure.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                <div class="service-block" style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)';">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Dremio Lakehouse Quickstart & Optimization Kit</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Description:</b> Pre-configured Dremio deployment templates, automated data ingestion patterns, and optimized Dremio Reflections configurations.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Components:</b> Infrastructure-as-Code scripts, common data source connectors, sample Dremio semantic layer models, and performance tuning checklists.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Benefit:</b> Rapidly sets up a performant and scalable open data lakehouse environment, drastically cutting setup time and ensuring optimal performance for analytics workloads.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Outcome:</b> A fully functional, optimized data platform ready for data transformation and consumption.</li>
+                    </ul>
+                </div>
+                <div class="service-block" style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)';">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Automated Data Quality & Validation Framework</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Description:</b> Reusable code libraries and methodologies for implementing automated data quality checks, validation rules, and anomaly detection directly within data pipelines.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Components:</b> SQL-based data quality checks, statistical anomaly detection scripts, alerting mechanisms, and data quality dashboards.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Benefit:</b> Ensures data reliability and trustworthiness at scale, reducing the time spent on data cleaning and debugging.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Outcome:</b> High-quality, reliable data feeding analytics and AI applications.</li>
+                    </ul>
+                </div>
+                <div class="service-block" style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)';">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Data Product Delivery Pipeline Templates</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Description:</b> Standardized CI/CD pipelines and best practices for building, testing, deploying, and versioning data pipelines and analytical datasets as "data products."</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Components:</b> Git repository structures, automated testing scripts, deployment automation tools, and monitoring dashboards.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Benefit:</b> Accelerates the productionalization of data assets, ensuring consistent delivery and easy maintenance.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Outcome:</b> Faster, more reliable deployment of data solutions.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-summary" style="text-align: center; padding: 40px; background: rgba(241,188,0,0.1); border-radius: 10px; margin-top: 60px;">
+                <em style="font-size: 20px; color: #F1BC00; font-style: normal; font-weight: 500;">Accelerate your data engineering. Connect with our specialists today.</em>
+            </div>
+        </section>
+        <!-- Data Science -->
+        <section class="service-section" id="data-science" style="padding: 80px 40px; background: linear-gradient(180deg, rgba(26,26,26,1) 0%, rgba(31,31,31,1) 100%);">
+            <header style="text-align: center; margin-bottom: 60px;">
+                <div class="icon iso-icon" aria-hidden="true" style="position: relative; width: 200px; height: 200px; margin: 0 auto 40px;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 180px; height: 180px; background: rgba(241,188,0,0.1); border-radius: 50%; filter: blur(20px);"></div>
+                    <img src="../Images/IMGServ2/data science.png" alt="Accelerator Icon" style="width: 160px; height: 160px; object-fit: contain; position: relative; z-index: 1; transition: all 0.3s ease; filter: drop-shadow(0 0 10px rgba(241,188,0,0.3));" onmouseover="this.style.transform='scale(1.1)'; this.style.filter='drop-shadow(0 0 20px rgba(241,188,0,0.5))'" onmouseout="this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 0 10px rgba(241,188,0,0.3))'">
+                </div>
+                <h2 class="service-title" style="color:#F1BC00; font-size: 48px; margin-bottom: 20px; line-height: 1.2;">Data Science Accelerators <span style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">Streamline model development, ensure accuracy, and facilitate responsible deployment</span></h2>
+            </header>
+            <div class="service-intro" style="max-width: 800px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
+                <p>These are designed to streamline model development, ensure accuracy, and facilitate responsible deployment.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                <div class="service-block" style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)';">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">ML Model Development Framework (MLOps Ready)</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Description:</b> A structured approach for the entire machine learning lifecycle, from data exploration and feature engineering to model training, evaluation, and deployment, with MLOps principles embedded from the start.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Components:</b> Standardized Jupyter notebooks, feature store templates, model selection guidelines, model evaluation metrics library, and API templates for model serving.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Benefit:</b> Ensures efficient, reproducible, and production-ready machine learning model development.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Outcome:</b> Robust, high-performing AI models that are ready for deployment and monitoring.</li>
+                    </ul>
+                </div>
+                <div class="service-block" style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)';">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Explainable AI (XAI) & Bias Detection Toolkit</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Description:</b> A set of tools and methodologies to understand why AI models make certain predictions (explainability) and to identify and mitigate biases within training data and model outputs.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Components:</b> LIME/SHAP integration templates, fairness metrics dashboards, and bias mitigation techniques.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Benefit:</b> Builds trust and transparency in AI systems, crucial for regulated industries and ethical deployment.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Outcome:</b> Fairer, more transparent, and auditable AI solutions.</li>
+                    </ul>
+                </div>
+                <div class="service-block" style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)';">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Predictive Analytics Use Case Starter Kits</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Description:</b> Pre-built or easily adaptable machine learning models for common predictive analytics use cases.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Components:</b> Generic model architectures, sample datasets, and result interpretation guides.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Benefit:</b> Provides a head start on solving common business problems with predictive insights, reducing development time.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Outcome:</b> Faster development of high-impact predictive capabilities.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-summary" style="text-align: center; padding: 40px; background: rgba(241,188,0,0.1); border-radius: 10px; margin-top: 60px;">
+                <em style="font-size: 20px; color: #F1BC00; font-style: normal; font-weight: 500;">Accelerate your data science. Connect with our specialists today.</em>
+            </div>
+        </section>
+        <!-- Generative AI -->
+        <section class="service-section" id="generative-ai" style="padding: 80px 40px; background: linear-gradient(180deg, rgba(26,26,26,1) 0%, rgba(31,31,31,1) 100%);">
+            <header style="text-align: center; margin-bottom: 60px;">
+                <div class="icon iso-icon" aria-hidden="true" style="position: relative; width: 200px; height: 200px; margin: 0 auto 40px;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 180px; height: 180px; background: rgba(241,188,0,0.1); border-radius: 50%; filter: blur(20px);"></div>
+                    <img src="../Images/IMGServ2/genai.png" alt="Accelerator Icon" style="width: 160px; height: 160px; object-fit: contain; position: relative; z-index: 1; transition: all 0.3s ease; filter: drop-shadow(0 0 10px rgba(241,188,0,0.3));" onmouseover="this.style.transform='scale(1.1)'; this.style.filter='drop-shadow(0 0 20px rgba(241,188,0,0.5))'" onmouseout="this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 0 10px rgba(241,188,0,0.3))'">
+                </div>
+                <h2 class="service-title" style="color:#F1BC00; font-size: 48px; margin-bottom: 20px; line-height: 1.2;">Generative AI Accelerators <span style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">Rapid prototyping, ethical deployment, and effective integration</span></h2>
+            </header>
+            <div class="service-intro" style="max-width: 800px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
+                <p>These focus on rapid prototyping, ethical deployment, and effective integration of Generative AI capabilities.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                <div class="service-block" style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)';">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Generative AI Use Case Prototyping Framework</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Description:</b> A structured, rapid prototyping methodology to quickly identify, validate, and demonstrate the feasibility of Generative AI applications for specific business challenges.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Components:</b> Use case Canvas templates, prompt engineering best practices, rapid MVP development guidelines, and early user feedback mechanisms.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Benefit:</b> De-risks Generative AI investments by quickly proving concepts and demonstrating tangible value before full-scale development.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Outcome:</b> Clear understanding of Generative AI potential for a client's business, with a working prototype.</li>
+                    </ul>
+                </div>
+                <div class="service-block" style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)';">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">LLM Fine-tuning & Customization Toolkit</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Description:</b> Tools and methodologies for fine-tuning open-source or proprietary Large Language Models (LLMs) on client-specific data to improve performance, domain specificity, and adherence to brand voice.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Components:</b> Data preparation scripts for fine-tuning, model evaluation metrics for text generation, and deployment patterns for custom LLMs.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Benefit:</b> Enables highly customized and accurate Generative AI solutions that resonate with the client's unique context.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Outcome:</b> Generative AI models that deliver precise, contextually relevant outputs.</li>
+                    </ul>
+                </div>
+                <div class="service-block" style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)';">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Generative AI Guardrails & Governance Kit</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Description:</b> A set of pre-built components and guidelines for implementing safety filters, content moderation, bias detection, and responsible usage policies for Generative AI applications.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Components:</b> Content filtering APIs integration, toxicity detection models, user feedback loops for model improvement, and policy templates for AI interaction.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Benefit:</b> Ensures responsible and ethical deployment of Generative AI, mitigating risks related to misinformation, bias, or inappropriate content.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Outcome:</b> Trustworthy and secure Generative AI solutions that meet regulatory and ethical standards.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-summary" style="text-align: center; padding: 40px; background: rgba(241,188,0,0.1); border-radius: 10px; margin-top: 60px;">
+                <em style="font-size: 20px; color: #F1BC00; font-style: normal; font-weight: 500;">Accelerate your Generative AI. Connect with our specialists today.</em>
+            </div>
+        </section>
+    </section>
 
 
     <!-- Case Studies Section -->

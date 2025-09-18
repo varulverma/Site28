@@ -39,15 +39,16 @@
         }
 
         h2 {
-            font-size: clamp(32px, 5vw, 56px);
+            font-size: clamp(24px, 3vw, 40px) !important;
             line-height: 1.05;
             margin: 0 0 16px;
-            color: var(--text-primary);}
+            color: var(--text-primary);
+        }
 
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 40px;
+            padding: 0 90px;
         }
 
         /* Header Container */
@@ -2731,271 +2732,663 @@
 
 
     <!-- Insights Section -->
-    <section style="padding: 80px 0;">
-        <div style="max-width: 1200px; margin: auto; padding: 0 24px; position: relative;">
-            <header>
-                <div
-                    style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; margin: 0 0 16px;">
-                    Explore Our Projects</div>
-                <h2
-                    style="font-size: clamp(32px, 4vw, 48px); font-weight: 300; text-align: left; line-height: 1.2; letter-spacing: -0.02em;">
-                    Ideas,<span style="font-weight: 700; color: #F1BC00;">Case Studies</span>, and Research across
+    <style>
+        .services-page {
+            max-width: 1200px;
+            margin: 0 auto 96px;
+            padding: 0 24px;
+        }
+
+        .service-section {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 0;
+            margin-bottom: 44px;
+            padding: 40px 32px;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+
+
+        .service-title {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .service-intro {
+            color: #c7c7c7;
+            font-size: 17px;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .service-block {
+            margin-bottom: 32px;
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .service-block h3 {
+            color: #F1BC00;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .service-block ul {
+            line-height: 1.7;
+            margin: 0 0 0 1.25rem;
+            color: #ededed;
+            font-size: 15.5px;
+            padding-left: 0;
+        }
+
+        .service-block li {
+            margin-bottom: 12px;
+            padding-left: 8px;
+        }
+
+        .service-block li b {
+            color: #FFD84D;
+            font-weight: 600;
+        }
+
+        .service-summary {
+            color: #FFD84D;
+            margin-top: 32px;
+            font-size: 16px;
+            font-style: italic;
+            padding: 24px;
+            background: rgba(241, 188, 0, 0.05);
+            border: 1px solid rgba(241, 188, 0, 0.1);
+        }
+
+        @media (max-width: 750px) {
+            .service-section {
+                padding: 24px 16px;
+                margin-bottom: 34px;
+            }
+
+            .service-block {
+                padding: 16px;
+            }
+
+            .service-summary {
+                padding: 16px;
+            }
+        }
+    </style>
+    <section class="services-page">
+        <!-- Data Strategy Primer -->
+        <section class="service-section" id="data-strategy"
+            style="padding: 80px 40px; background: linear-gradient(180deg, rgba(26,26,26,1) 0%, rgba(31,31,31,1) 100%);">
+            <header style="text-align: center; margin-bottom: 60px;">
+                <div class="icon iso-icon" aria-hidden="true"
+                    style="position: relative; width: 200px; height: 200px; margin: 0 auto 40px;">
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 180px; height: 180px; background: rgba(241,188,0,0.1); border-radius: 50%; filter: blur(20px);">
+                    </div>
+                    <img src="../Images/IMGServ2/dataStrategy.png" alt="Data Strategy Icon"
+                        style="width: 160px; height: 160px; object-fit: contain; position: relative; z-index: 1; transition: all 0.3s ease; filter: drop-shadow(0 0 10px rgba(241,188,0,0.3));"
+                        onmouseover="this.style.transform='scale(1.1)'; this.style.filter='drop-shadow(0 0 20px rgba(241,188,0,0.5))'"
+                        onmouseout="this.style.transform='scale(1)'; this.style.filter='drop-shadow(0 0 10px rgba(241,188,0,0.3))'">
+                </div>
+                <h2 class="service-title"
+                    style="color:#F1BC00; font-size: 48px; margin-bottom: 20px; line-height: 1.2;">
+                    Data Strategy Primer: <span
+                        style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">
+                        Charting Your Course in the Data Ocean – A Blueprint for Business Evolution
+                    </span>
                 </h2>
+                <div style="color:#A0A0A0; font-size:16px; margin-top:10px;">Read Time: ~9 Minutes</div>
             </header>
-
-            <div
-                style="position: relative; margin: 64px auto 0; max-width: 1000px; background: #2a2a2a; overflow: hidden; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);">
-                <button
-                    style="position: absolute; top: 50%; transform: translateY(-50%); left: 20px; width: 40px; height: 40px; background: rgba(255, 255, 255, 0.2); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; z-index: 10; transition: all 0.3s ease;"
-                    class="prev" aria-label="Previous slide">←</button>
-                <button
-                    style="position: absolute; top: 50%; transform: translateY(-50%); right: 20px; width: 40px; height: 40px; background: rgba(255, 255, 255, 0.2); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; z-index: 10; transition: all 0.3s ease;"
-                    class="next" aria-label="Next slide">→</button>
-
-                <div style="display: flex; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);"
-                    class="slider-wrapper">
-                    <!-- Slide 1 -->
-                    <div style="flex: 0 0 100%; min-height: 500px; display: flex; flex-direction: column;">
-                        <div style="display: flex; height: 300px;">
-                            <div
-                                style="flex: 1; min-height: 200px; display: flex; align-items: center; justify-content: center;">
-                                <div
-                                    style="width: 100%; height: 100%; background: linear-gradient(135deg, rgba(58, 58, 58, 0.9) 0%, rgba(42, 42, 42, 0.9) 100%); display: flex; align-items: center; justify-content: center;">
-                                    <img src="../Images/Create a Dark Neon 3.png" alt="Healthcare" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
-                                </div>
-                            </div>
-                            <div
-                                style="flex: 1; min-height: 200px; background: #1a1a1a; padding: 32px; display: flex; flex-direction: column; justify-content: space-between;">
-                                <div>
-                                    <span
-                                        style="background: #ffd84d; color: #2a2a2a; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 16px;">Healthcare</span>
-                                    <h2 style="font-size: 24px; font-weight: 700; color: #ffffff; margin: 0 0 16px;">
-                                        Healthcare medical record management</h2>
-                                    <p style="color: #888; line-height: 1.5; font-size: 14px; margin: 0 0 24px;">
-                                        Healthcare providers often face significant delivery problems, including supply
-                                        chain disruptions and delays in obtaining medical equipment.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            style="background: #2a2a2a; padding: 24px 32px; display: flex; justify-content: space-between; align-items: center;">
-                            <div style="text-align: center; flex: 1;">
-                                <div style="font-size: 28px; font-weight: 700; color: #ffd84d; margin-bottom: 8px;">93%
-                                </div>
-                                <div style="font-size: 12px; color: #ffffff; opacity: 0.8;">orders completed within 6h
-                                </div>
-                            </div>
-                            <div style="text-align: center; flex: 1;">
-                                <div style="font-size: 28px; font-weight: 700; color: #ffd84d; margin-bottom: 8px;">64%
-                                </div>
-                                <div style="font-size: 12px; color: #ffffff; opacity: 0.8;">faster record entry</div>
-                            </div>
-                            <div style="text-align: center; flex: 1;">
-                                <div style="font-size: 28px; font-weight: 700; color: #ffd84d; margin-bottom: 8px;">25%
-                                </div>
-                                <div style="font-size: 12px; color: #ffffff; opacity: 0.8;">cost reduction</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 2 -->
-                    <div style="flex: 0 0 100%; min-height: 500px; display: flex; flex-direction: column;">
-                        <div style="display: flex; height: 300px;">
-                            <div
-                                style="flex: 1; min-height: 200px; background: #2a2a2a; display: flex; align-items: center; justify-content: center;">
-                                <div
-                                    style="width: 100%; height: 100%; background: linear-gradient(135deg, rgba(58, 58, 58, 0.9) 0%, rgba(42, 42, 42, 0.9) 100%); display: flex; align-items: center; justify-content: center;">
-                                    <img src="../Images/Create a Dark Neon 2.png" alt="Healthcare" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
-                                </div>
-                            </div>
-                            <div
-                                style="flex: 1; min-height: 200px; background: #1a1a1a; padding: 32px; display: flex; flex-direction: column; justify-content: space-between;">
-                                <div>
-                                    <span
-                                        style="background: #ffd84d; color: #2a2a2a; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 16px;">Finance</span>
-                                    <h2 style="font-size: 24px; font-weight: 700; color: #ffffff; margin: 0 0 16px;">
-                                        Real-time fraud detection</h2>
-                                    <p style="color: #888; line-height: 1.5; font-size: 14px; margin: 0 0 24px;">A
-                                        leading bank reduced fraudulent transactions by leveraging AI-powered anomaly
-                                        detection across millions of daily payments.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            style="background: #2a2a2a; padding: 24px 32px; display: flex; justify-content: space-between; align-items: center;">
-                            <div style="text-align: center; flex: 1;">
-                                <div style="font-size: 28px; font-weight: 700; color: #ffd84d; margin-bottom: 8px;">
-                                    99.7%</div>
-                                <div style="font-size: 12px; color: #ffffff; opacity: 0.8;">detection accuracy</div>
-                            </div>
-                            <div style="text-align: center; flex: 1;">
-                                <div style="font-size: 28px; font-weight: 700; color: #ffd84d; margin-bottom: 8px;">40%
-                                </div>
-                                <div style="font-size: 12px; color: #ffffff; opacity: 0.8;">false-positive drop</div>
-                            </div>
-                            <div style="text-align: center; flex: 1;">
-                                <div style="font-size: 28px; font-weight: 700; color: #ffd84d; margin-bottom: 8px;">
-                                    $4.2M</div>
-                                <div style="font-size: 12px; color: #ffffff; opacity: 0.8;">annual savings</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div style="flex: 0 0 100%; min-height: 500px; display: flex; flex-direction: column;">
-                        <div style="display: flex; height: 300px;">
-                            <div
-                                style="flex: 1; min-height: 200px; background: #2a2a2a; display: flex; align-items: center; justify-content: center;">
-                                <div
-                                    style="width: 100%; height: 100%; background: linear-gradient(135deg, rgba(58, 58, 58, 0.9) 0%, rgba(42, 42, 42, 0.9) 100%); display: flex; align-items: center; justify-content: center;">
-                                    <img src="../Images/Create a Dark Neon I.png" alt="Healthcare" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
-                                </div>
-                            </div>
-                            <div
-                                style="flex: 1; min-height: 200px; background: #1a1a1a; padding: 32px; display: flex; flex-direction: column; justify-content: space-between;">
-                                <div>
-                                    <span
-                                        style="background: #ffd84d; color: #2a2a2a; padding: 6px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 16px;">Logistics</span>
-                                    <h2 style="font-size: 24px; font-weight: 700; color: #ffffff; margin: 0 0 16px;">
-                                        Route optimization at scale</h2>
-                                    <p style="color: #888; line-height: 1.5; font-size: 14px; margin: 0 0 24px;">Global
-                                        logistics firm cut fuel costs and delivery times by predicting traffic patterns
-                                        and dynamically rerouting fleets.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            style="background: #2a2a2a; padding: 24px 32px; display: flex; justify-content: space-between; align-items: center;">
-                            <div style="text-align: center; flex: 1;">
-                                <div style="font-size: 28px; font-weight: 700; color: #ffd84d; margin-bottom: 8px;">18%
-                                </div>
-                                <div style="font-size: 12px; color: #ffffff; opacity: 0.8;">fuel saved</div>
-                            </div>
-                            <div style="text-align: center; flex: 1;">
-                                <div style="font-size: 28px; font-weight: 700; color: #ffd84d; margin-bottom: 8px;">22%
-                                </div>
-                                <div style="font-size: 12px; color: #ffffff; opacity: 0.8;">faster delivery</div>
-                            </div>
-                            <div style="text-align: center; flex: 1;">
-                                <div style="font-size: 28px; font-weight: 700; color: #ffd84d; margin-bottom: 8px;">
-                                    $1.8M</div>
-                                <div style="font-size: 12px; color: #ffffff; opacity: 0.8;">annual savings</div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="service-intro"
+                style="max-width: 900px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
+                <p>
+                    Imagine your business as a ship sailing across a vast, dynamic ocean brimming with data – tidal
+                    waves of customer transactions, currents of social media sentiment, winds of market trends, and
+                    hidden reefs of operational inefficiencies.
+                    Without a clear map, a reliable compass, and a seasoned navigator, this journey can be perilous.
+                    This is precisely where Data Strategy becomes your indispensable guide.
+                    Data Strategy is your organization's meticulously crafted plan for acquiring, managing, analyzing,
+                    and ethically leveraging data to achieve business objectives. It transcends technology; it's a
+                    strategic imperative that aligns data capabilities with your vision, ensuring every byte contributes
+                    to growth and resilience.
+                </p>
+            </div>
+            <div style=" grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Why Data Strategy Is Imperative
+                    </h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Exponentiation of
+                                Data:</b> Data volume and velocity are exploding from every source. Managing this deluge
+                            without a strategy is like trying to drink from a firehose.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Agile
+                                Decision-Making:</b> In a hyper-competitive market, real-time, data-informed decisions
+                            are essential. Data Strategy empowers this agility.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Foundation for Advanced
+                                Intelligence (AI & ML):</b> AI and ML require high-quality, governed data. A chaotic
+                            data environment leads to flawed AI and wasted investments.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Navigating Regulatory
+                                Labyrinth:</b> Proactive strategy ensures compliance with privacy laws (GDPR, CCPA,
+                            DPDP), builds trust, and turns regulations into advantages.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Unlocking Hidden Value:</b> Data holds
+                            insights into customers, operations, and markets. Without strategy, these remain buried,
+                            resulting in missed revenue and lost innovation.</li>
+                    </ul>
+                </div>
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Risks of Neglect</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;">• Trapped in Data Silos: Fragmented systems
+                            prevent a holistic view and lead to redundant efforts.</li>
+                        <li style="margin-bottom: 20px; color: #fff;">• Poor Data Quality: Inaccurate or incomplete data
+                            leads to flawed decisions and wasted resources.</li>
+                        <li style="margin-bottom: 20px; color: #fff;">• Underutilized Investments: Expensive tools
+                            without strategy result in wasted expenditure.</li>
+                        <li style="margin-bottom: 20px; color: #fff;">• Reactive, Not Anticipating: Always playing
+                            catch-up instead of proactively identifying trends.</li>
+                        <li style="color: #fff;">• Security & Compliance Risks: Vulnerable practices expose you to
+                            breaches and penalties.</li>
+                    </ul>
+                </div>
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">How Leading Organizations Leverage
+                        Data Strategy</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Retail & Consumer
+                                Goods:</b> Integrate omnichannel data for "Customer 360" views, enabling
+                            hyper-personalized marketing and seamless experiences.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Manufacturing:</b>
+                            Combine IoT sensor data with ERP and supply chain data for predictive maintenance and smart
+                            factories.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Financial Services:</b>
+                            Enhance fraud detection, compliance, and personalized offerings through strategic data use.
+                        </li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Healthcare:</b> Break
+                            down silos between EHRs, genomics, and imaging to fuel precision medicine and optimize care.
+                        </li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Media &
+                                Entertainment:</b> Use data to personalize content and optimize creation workflows for
+                            engagement and new revenue.</li>
+                    </ul>
+                </div>
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Our Partnership Approach</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Data Governance:</b>
+                            Clear rules, roles, and processes for ownership, quality, security, and privacy.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Data Architecture:</b>
+                            Scalable, future-proof structures (open lakehouse, Dremio, etc.).</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Technology &
+                                Tooling:</b> Platform recommendations aligned to strategy and growth.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Organizational
+                                Enablement:</b> Culture and skill development for data-driven thinking.</li>
+                    </ul>
                 </div>
             </div>
-        </div>
+            <div class="service-summary"
+                style="text-align: center; padding: 40px; background: rgba(241,188,0,0.1); border-radius: 10px; margin-top: 60px;">
+                <em style="font-size: 20px; color: #F1BC00; font-style: normal; font-weight: 500;">
+                    A robust data strategy is not a luxury; it's a necessity for thriving in the modern economy. Let us
+                    help you chart your course to data-driven success.
+                </em>
+            </div>
+        </section>
+        <!-- Data Engineering Primer -->
+        <section class="service-section" id="data-engineering"
+            style="padding: 80px 40px; background: linear-gradient(180deg, rgba(26,26,26,1) 0%, rgba(31,31,31,1) 100%);">
+            <header style="text-align: center; margin-bottom: 60px;">
+                <div class="icon iso-icon" aria-hidden="true"
+                    style="position: relative; width: 200px; height: 200px; margin: 0 auto 40px;">
+                    <img src="../Images/IMGServ2/dataEngineering.png" alt="Data Engineering Icon"
+                        style="width: 160px; height: 160px; object-fit: contain; position: relative; z-index: 1; transition: all 0.3s ease; filter: drop-shadow(0 0 10px rgba(241,188,0,0.3));">
+                </div>
+                <h2 class="service-title"
+                    style="color:#F1BC00; font-size: 48px; margin-bottom: 20px; line-height: 1.2;">
+                    Data Engineering Primer: <span
+                        style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">
+                        Building the High-Performance Infrastructure for Your Data Assets
+                    </span>
+                </h2>
+                <div style="color:#A0A0A0; font-size:16px; margin-top:10px;">Read Time: ~9 Minutes</div>
+            </header>
+            <div class="service-intro"
+                style="max-width: 900px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
+                <p>
+                    If Data Strategy is your route map, Data Engineering is the discipline of building, optimizing, and
+                    maintaining the high-speed highways and bridges that move your data from every origin to every
+                    insight.<br>
+                    Data Engineering is focused on designing, constructing, and maintaining robust, scalable, and secure
+                    data infrastructure and pipelines. Data engineers ensure information is meticulously collected,
+                    cleaned, transformed, stored, and instantly accessible.
+                </p>
+            </div>
+            <div style=" grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Why Data Engineering Is Imperative
+                    </h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Tidal Wave of Data:</b>
+                            Data is exploding from diverse sources. Managing high-volume, high-velocity data requires
+                            specialized engineering.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Real-Time
+                                Imperative:</b> Businesses demand immediate insights. Sophisticated streaming pipelines
+                            and low-latency access are essential.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Oxygen for AI & ML:</b>
+                            AI and ML models depend on quality, fresh, accessible data delivered by data engineers.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Cost Efficiency &
+                                Scalability:</b> Robust engineering ensures infrastructure scales efficiently and
+                            optimizes resource utilization.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Data Trust & Security:</b> Data must be
+                            protected and traceable. Engineers embed security and quality checks into pipelines.</li>
+                    </ul>
+                </div>
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Risks of Neglect</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;">• Data Bottlenecks & Delays: Information gets
+                            stuck or requires manual prep, delaying insights.</li>
+                        <li style="margin-bottom: 20px; color: #fff;">• "Garbage In, Garbage Out": Poorly cleaned data
+                            leads to flawed analysis and decisions.</li>
+                        <li style="margin-bottom: 20px; color: #fff;">• System Breakdowns: Infrastructure can't handle
+                            growth, causing outages and lost productivity.</li>
+                        <li style="margin-bottom: 20px; color: #fff;">• Lack of Data Trust: Users lose confidence,
+                            leading to shadow IT and wasted effort.</li>
+                        <li style="color: #fff;">• Vendor Lock-in & Rigidity: Proprietary systems stifle innovation and
+                            migration.</li>
+                    </ul>
+                </div>
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">How Leading Organizations Leverage
+                        Data Engineering</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">E-commerce &
+                                Retail:</b> Real-time pipelines for clickstream, sales, and inventory enable dynamic
+                            pricing and recommendations.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Manufacturing &
+                                Industrials:</b> IoT data pipelines power predictive maintenance and optimized
+                            production.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Financial Services:</b>
+                            Secure, high-throughput pipelines for fraud detection and compliance.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Healthcare:</b>
+                            Compliant pipelines integrate EHRs, genomics, and imaging for holistic patient views.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Telecommunications:</b>
+                            Massive-scale ingestion for network optimization and personalized services.</li>
+                    </ul>
+                </div>
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Our Partnership Approach</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Cloud-Native
+                                Architecture:</b> Scalable, cost-effective solutions on AWS, Azure, GCP.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Automated ELT/ETL
+                                Pipelines:</b> Sophisticated, automated data flows for freshness and accuracy.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Data Governance &
+                                Quality:</b> Quality checks, lineage, and security embedded in pipelines.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Real-time
+                                Streaming:</b> Immediate insights for time-sensitive applications.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Performance
+                                Optimization:</b> Continuous tuning for speed and cost-efficiency.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-summary"
+                style="text-align: center; padding: 40px; background: rgba(241,188,0,0.1); border-radius: 10px; margin-top: 60px;">
+                <em style="font-size: 20px; color: #F1BC00; font-style: normal; font-weight: 500;">
+                    With us, you gain more than pipelines; you gain a strategic partner committed to building the solid,
+                    scalable, and secure data foundation for innovation and success.
+                </em>
+            </div>
+        </section>
+        <!-- Data Science Primer -->
+        <section class="service-section" id="data-science"
+            style="padding: 80px 40px; background: linear-gradient(180deg, rgba(26,26,26,1) 0%, rgba(31,31,31,1) 100%);">
+            <header style="text-align: center; margin-bottom: 60px;">
+                <div class="icon iso-icon" aria-hidden="true"
+                    style="position: relative; width: 200px; height: 200px; margin: 0 auto 40px;">
+                    <img src="../Images/IMGServ2/dataScience.png" alt="Data Science Icon"
+                        style="width: 160px; height: 160px; object-fit: contain; position: relative; z-index: 1; transition: all 0.3s ease; filter: drop-shadow(0 0 10px rgba(241,188,0,0.3));">
+                </div>
+                <h2 class="service-title"
+                    style="color:#F1BC00; font-size: 48px; margin-bottom: 20px; line-height: 1.2;">
+                    Data Science Primer: <span
+                        style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">
+                        Unlocking Deeper Truths, Predicting Tomorrow's Opportunities
+                    </span>
+                </h2>
+                <div style="color:#A0A0A0; font-size:16px; margin-top:10px;">Read Time: ~9 Minutes</div>
+            </header>
+            <div class="service-intro"
+                style="max-width: 900px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
+                <p>
+                    If Data Strategy outlines the goals and Data Engineering builds the pathways, Data Science is the
+                    intellectual engine that propels your business forward.<br>
+                    Data Science employs scientific methods, algorithms, and systems to extract knowledge and insights
+                    from structured and unstructured data, moving beyond "what happened" to "why," "what next," and
+                    "what's best."
+                </p>
+            </div>
+            <div style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Why Data Science Is Imperative
+                    </h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">From Reactive to
+                                Proactive:</b> Predict market shifts and customer behavior to enable proactive
+                            strategies.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Uncovering Hidden
+                                Opportunities:</b> Reveal correlations, segments, and efficiencies beyond human
+                            intuition.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Driving
+                                Hyper-Personalization:</b> Tailor products and communications at an individual level.
+                        </li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Optimizing
+                                Business:</b> Find optimal solutions for logistics, pricing, marketing, and resource
+                            allocation.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Competitive Differentiation:</b> Make
+                            smarter, faster decisions for a strategic edge.</li>
+                    </ul>
+                </div>
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Risks of Neglect</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;">• Missed Revenue: Failing to identify segments,
+                            optimize pricing, or forecast demand.</li>
+                        <li style="margin-bottom: 20px; color: #fff;">• Increased Costs: Inefficiencies in management
+                            and inventory.</li>
+                        <li style="margin-bottom: 20px; color: #fff;">• Stagnated Innovation: Missing new product ideas
+                            and services.</li>
+                        <li style="margin-bottom: 20px; color: #fff;">• Customer Churn: Failing to predict and address
+                            dissatisfaction.</li>
+                        <li style="color: #fff;">• Suboptimal Investments: Poor resource allocation without data-driven
+                            insights.</li>
+                    </ul>
+                </div>
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">How Leading Organizations Leverage
+                        Data Science</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Retail &
+                                E-commerce:</b> Recommendation engines and dynamic pricing models drive conversions and
+                            revenue.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Manufacturing:</b>
+                            Predictive maintenance and process optimization minimize downtime and maximize quality.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Financial Services:</b>
+                            Advanced fraud detection and precise credit scoring enhance client value and manage risk.
+                        </li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Healthcare:</b>
+                            Predictive diagnostics and personalized treatment plans improve outcomes.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Marketing &
+                                Advertising:</b> Segmentation and attribution models optimize campaigns and ROI.</li>
+                    </ul>
+                </div>
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Our Partnership Approach</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Problem Framing:</b>
+                            Collaboratively define business questions for data to answer.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Advanced Modeling:</b>
+                            Predictive models, classification, clustering, and time-series forecasts using ML and deep
+                            learning.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Rigorous
+                                Validation:</b> Ensure accuracy, robustness, and fairness with Explainable AI.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Operationalization
+                                (MLOps):</b> Seamlessly integrate models into systems for continuous value.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Actionable
+                                Insights:</b> Deliver clear recommendations and visualizations that drive action.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-summary"
+                style="text-align: center; padding: 40px; background: rgba(241,188,0,0.1); border-radius: 10px; margin-top: 60px;">
+                <em style="font-size: 20px; color: #F1BC00; font-style: normal; font-weight: 500;">
+                    With us, you gain the power to not just understand your past, but to intelligently shape your
+                    future, transforming data into your most strategic advantage.
+                </em>
+            </div>
+        </section>
+        <!-- Generative AI Primer -->
+        <section class="service-section" id="generative-ai"
+            style="padding: 80px 40px; background: linear-gradient(180deg, rgba(26,26,26,1) 0%, rgba(31,31,31,1) 100%);">
+            <header style="text-align: center; margin-bottom: 60px;">
+                <div class="icon iso-icon" aria-hidden="true"
+                    style="position: relative; width: 200px; height: 200px; margin: 0 auto 40px;">
+                    <img src="../Images/IMGServ2/genAI.png" alt="Generative AI Icon"
+                        style="width: 160px; height: 160px; object-fit: contain; position: relative; z-index: 1; transition: all 0.3s ease; filter: drop-shadow(0 0 10px rgba(241,188,0,0.3));">
+                </div>
+                <h2 class="service-title"
+                    style="color:#F1BC00; font-size: 48px; margin-bottom: 20px; line-height: 1.2;">
+                    Generative AI Primer: <span
+                        style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">
+                        Creating the Future – Beyond Analysis, Towards Intelligent Creation
+                    </span>
+                </h2>
+                <div style="color:#A0A0A0; font-size:16px; margin-top:10px;">Read Time: ~10 Minutes</div>
+            </header>
+            <div class="service-intro"
+                style="max-width: 900px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
+                <p>
+                    Imagine a technology that doesn't just analyze, but creates new, original content – text, images,
+                    designs, code, audio, or ideas – all from a simple prompt. This is the transformative power of
+                    Generative AI.<br>
+                    Generative AI models produce novel data that resembles training data but is distinct and original,
+                    unlocking new creativity, efficiency, and innovation.
+                </p>
+            </div>
+            <div style=" grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Why Generative AI Is Imperative
+                    </h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Explosive Creativity &
+                                Scale:</b> Automates and accelerates content creation, freeing human creativity for
+                            strategic work.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Hyper-Personalization &
+                                Engagement:</b> Delivers tailored content and experiences at massive scale.</li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Accelerated Innovation
+                                Cycles:</b> Rapid prototyping and synthesis of research data shorten time to market.
+                        </li>
+                        <li style="margin-bottom: 20px; color: #fff;"><b style="color: #F1BC00;">Revolutionizing
+                                Productivity:</b> Automates repetitive tasks, boosting operational efficiency.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Competitive Disruption:</b> Early adopters
+                            gain speed, cost, and innovation advantages.</li>
+                        <li style="color: #fff;"><b style="color: #F1BC00;">Unlocking New Business Models:</b> Enables
+                            new products and services powered by AI.</li>
+                    </ul>
+                </div>
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Risks of Delaying Adoption</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 20px; color: #fff;">• Outpaced by Competitors: Lose market share to
+                            agile rivals leveraging AI.</li>
+                        <li style="margin-bottom: 20px; color: #fff;">• Higher Operational Costs: Manual creation and
+                            repetitive tasks escalate costs.</li>
+                        <li style="margin-bottom: 20px; color: #fff;">• Stifled Innovation: Miss opportunities for new
+                            products and services.</li>
+                        <li style="margin-bottom: 20px; color: #fff;">• Generic Experiences: Fail to deliver
+                            personalized, dynamic content.</li>
+                        <li style="color: #fff;">• Talent Attrition: Struggle to attract top talent seeking cutting-edge
+                            tech.</li>
+                    </ul>
+                </div>
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">How Leading Organizations Leverage
+                        Generative AI</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Marketing &
+                                Advertising:</b> Generate thousands of personalized ad variants and content in minutes.
+                        </li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Product Design &
+                                Engineering:</b> Rapidly prototype new designs and generate code for software
+                            components.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Customer Service:</b>
+                            Power advanced chatbots and virtual assistants for natural, accurate responses.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Software
+                                Development:</b> Generate code snippets, debug, and write documentation to accelerate
+                            cycles.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Healthcare & Life
+                                Sciences:</b> Synthesize research, accelerate drug discovery, and generate synthetic
+                            data.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Education &
+                                Training:</b> Create personalized learning materials and interactive quizzes.</li>
+                    </ul>
+                </div>
+                <div class="service-block"
+                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;">
+                    <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Our Partnership Approach</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Identify High-Impact
+                                Use Cases:</b> Pinpoint where Generative AI solves your business challenges.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Strategic Model
+                                Selection:</b> Advise and implement foundational models, fine-tuned for your data.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Rapid Prototyping:</b>
+                            Develop proofs-of-concept for feasibility and early feedback.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Responsible AI &
+                                Guardrails:</b> Implement frameworks for moderation, bias detection, and privacy.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Seamless
+                                Integration:</b> Architect solutions for workflow integration and enterprise scale.</li>
+                        <li style="margin-bottom: 15px; color: #fff;"><b style="color: #F1BC00;">Talent Enablement:</b>
+                            Empower your team to leverage Generative AI effectively.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-summary"
+                style="text-align: center; padding: 40px; background: rgba(241,188,0,0.1); border-radius: 10px; margin-top: 60px;">
+                <em style="font-size: 20px; color: #F1BC00; font-style: normal; font-weight: 500;">
+                    With us, you gain a strategic partner ready to help you not just analyze the future, but actively
+                    create it, transforming your business through the intelligent power of Generative AI.
+                </em>
+            </div>
+        </section>
 
-        <script>
-            const slider = document.querySelector('.slider-wrapper');
-            const slides = Array.from(slider.children);
-            const prevBtn = document.querySelector('.prev');
-            const nextBtn = document.querySelector('.next');
+    </section>
+    <!-- Insights end -->
 
-            let currentSlide = 0;
-            const slideCount = slides.length;
 
-            // Add smooth animation class
-            slider.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+    <!-- Case studies Section  -->
 
-            function updateSlider(direction = 1) {
-                // Add fade animation
-                slides[currentSlide].style.opacity = '0';
-            slides[currentSlide].style.transition = 'opacity 0.3s ease';
+<section class="services-page" id="case-studies-blog" style="margin-top:80px;">
+    <header style="text-align:center; margin-bottom:60px;">
+        <h2 class="service-title" style="color:#F1BC00; font-size:48px; margin-bottom:20px; line-height:1.2;">Case Studies</h2>
+        <div class="service-intro" style="max-width:800px; margin:0 auto; color:#A0A0A0; font-size:18px;">Explore real-world examples of how data, analytics, and digital transformation drive business impact across industries.</div>
+    </header>
 
-            currentSlide = (currentSlide + direction + slideCount) % slideCount;
-
-            // Update transform with smooth easing
-            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-            // Fade in new slide
-            setTimeout(() => {
-                slides[currentSlide].style.opacity = '1';
-            }, 300);
-        }
-
-            function nextSlide() {
-                updateSlider(1);
-        }
-
-            function prevSlide() {
-                updateSlider(-1);
-        }
-
-            // Enhanced touch handling with momentum
-            let touchStartX = 0;
-            let touchEndX = 0;
-            let touchStartTime = 0;
-        
-        slider.addEventListener('touchstart', e => {
-                touchStartX = e.changedTouches[0].screenX;
-            touchStartTime = Date.now();
-            slider.style.transition = 'none';
-        });
-        
-        slider.addEventListener('touchend', e => {
-                touchEndX = e.changedTouches[0].screenX;
-            const touchDuration = Date.now() - touchStartTime;
-            const velocity = Math.abs(touchEndX - touchStartX) / touchDuration;
-
-            slider.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
-            
-            if (velocity > 0.5 || Math.abs(touchEndX - touchStartX) > 50) {
-                if (touchStartX - touchEndX > 0) {
-                nextSlide();
-                } else {
-                prevSlide();
-                }
-            } else {
-                // Snap back if swipe wasn't strong enough
-                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-            }
-        });
-
-            // Event listeners
-            prevBtn.addEventListener('click', prevSlide);
-            nextBtn.addEventListener('click', nextSlide);
-
-            // Auto-advance with pause on hover
-            let autoSlideTimer = setInterval(nextSlide, 5000);
-
-        slider.addEventListener('mouseenter', () => {
-                clearInterval(autoSlideTimer);
-        });
-        
-        slider.addEventListener('mouseleave', () => {
-                autoSlideTimer = setInterval(nextSlide, 5000);
-        });
-
-        // Keyboard navigation
-        document.addEventListener('keydown', e => {
-            if (e.key === 'ArrowLeft') prevSlide();
-            if (e.key === 'ArrowRight') nextSlide();
-        });
-
-            // Initialize first slide
-            slides[0].style.opacity = '1';
-        slides.forEach((slide, index) => {
-            if (index !== 0) slide.style.opacity = '0';
-        });
-
-            // Add responsive handling
-            function handleResize() {
-                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-        }
-
-            window.addEventListener('resize', handleResize);
-        </script>
+    <!-- Case Study 1 -->
+    <section class="service-block" style="background:rgba(255,255,255,0.05); padding:40px; border-radius:10px; margin-bottom:44px;">
+        <h3 style="color:#F1BC00; font-size:32px; margin-bottom:18px;">Executive Dashboard for Large Consumer Goods Company</h3>
+        <div class="service-intro" style="color:#A0A0A0; font-size:17px; margin-bottom:24px;">Empowering executives with a single source of truth for strategic oversight and operational performance.</div>
+        <ul style="list-style:none; padding:0; margin-bottom:24px;">
+            <li><b style="color:#FFD84D;">Problem:</b> The executive team lacked a centralized, real-time view of KPIs across Customer, Service, Demand Planning, Inventory, Logistics, Production, Collect, and Overheads.</li>
+            <li><b style="color:#FFD84D;">Impact:</b> Enabled strategic oversight, improved SLA compliance, and unified customer experience metrics.</li>
+            <li><b style="color:#FFD84D;">Solution:</b> Current state assessment, KPI monitoring, dashboarding, centralized KPI dictionary, data pipeline automation, dashboard design and implementation.</li>
+            <li><b style="color:#FFD84D;">Tools & Technologies:</b> Azure Databricks, PowerBI</li>
+        </ul>
     </section>
 
+    <!-- Case Study 2 -->
+    <section class="service-block" style="background:rgba(255,255,255,0.05); padding:40px; border-radius:10px; margin-bottom:44px;">
+        <h3 style="color:#F1BC00; font-size:32px; margin-bottom:18px;">Digital Transformation Strategy for Aerospace & Defense Manufacturer</h3>
+        <div class="service-intro" style="color:#A0A0A0; font-size:17px; margin-bottom:24px;">Driving ROI and efficiency through digital initiatives and supply chain optimization.</div>
+        <ul style="list-style:none; padding:0; margin-bottom:24px;">
+            <li><b style="color:#FFD84D;">Problem:</b> OEM rating declined due to poor delivery and quality, high costs, and minimal use of digital technologies.</li>
+            <li><b style="color:#FFD84D;">Impact:</b> 16 digital initiatives generated INR 58 Cr. in revenue, INR 26 Cr. in cost savings, 246% ROI, improved CSAT, and operational efficiency.</li>
+            <li><b style="color:#FFD84D;">Solution:</b> Digital Transformation Strategy, analysis of 9 functions and 450+ processes, roadmap with 16 initiatives.</li>
+            <li><b style="color:#FFD84D;">Tools & Technologies:</b> Digital Maturity Assessment Framework</li>
+        </ul>
+    </section>
+
+    <!-- Case Study 3 -->
+    <section class="service-block" style="background:rgba(255,255,255,0.05); padding:40px; border-radius:10px; margin-bottom:44px;">
+        <h3 style="color:#F1BC00; font-size:32px; margin-bottom:18px;">Data Lab for Large Private Equity Firm</h3>
+        <div class="service-intro" style="color:#A0A0A0; font-size:17px; margin-bottom:24px;">Centralizing data for reliability, quality, and scalable analytics.</div>
+        <ul style="list-style:none; padding:0; margin-bottom:24px;">
+            <li><b style="color:#FFD84D;">Problem:</b> Data fragmentation, quality inconsistencies, reporting delays, and siloed legacy systems.</li>
+            <li><b style="color:#FFD84D;">Impact:</b> Enhanced reporting, analytics, decision-making, reduced costs, and regulatory compliance.</li>
+            <li><b style="color:#FFD84D;">Solution:</b> Enterprise Data Warehouse, MDM, Hedge Fund Accounting, CRM, standardized data quality, scalable architecture, reporting portal migration.</li>
+            <li><b style="color:#FFD84D;">Tools & Technologies:</b> SQL Server, SSIS, SSRS, IBM Cognos, MS Excel, R, Essbase, IBM Initiate</li>
+        </ul>
+    </section>
+
+    <!-- Case Study 4 -->
+    <section class="service-block" style="background:rgba(255,255,255,0.05); padding:40px; border-radius:10px; margin-bottom:44px;">
+        <h3 style="color:#F1BC00; font-size:32px; margin-bottom:18px;">Internal Audit Analytics Tool</h3>
+        <div class="service-intro" style="color:#A0A0A0; font-size:17px; margin-bottom:24px;">Empowering auditors with efficient, cloud-agnostic analytics and anomaly detection.</div>
+        <ul style="list-style:none; padding:0; margin-bottom:24px;">
+            <li><b style="color:#FFD84D;">Problem:</b> Resistance to external queries, multiple ERPs, scripting effort, extraction failures, lack of native ERP tools.</li>
+            <li><b style="color:#FFD84D;">Impact:</b> Saved 20,000 hours, enhanced efficiency, empowered non-technical auditors.</li>
+            <li><b style="color:#FFD84D;">Solution:</b> Data ingestion framework, rule engine, scheduler, AI/ML anomaly detection, dashboards, containerized solution.</li>
+            <li><b style="color:#FFD84D;">Tools & Technologies:</b> Kylo, Spark, Azure, Superset, Hive, Hadoop</li>
+        </ul>
+    </section>
+
+    <!-- Case Study 5 -->
+    <section class="service-block" style="background:rgba(255,255,255,0.05); padding:40px; border-radius:10px; margin-bottom:44px;">
+        <h3 style="color:#F1BC00; font-size:32px; margin-bottom:18px;">Data Ingestion Framework for Wind Turbine Manufacturer</h3>
+        <div class="service-intro" style="color:#A0A0A0; font-size:17px; margin-bottom:24px;">Standardizing and automating analytics for wind energy data.</div>
+        <ul style="list-style:none; padding:0; margin-bottom:24px;">
+            <li><b style="color:#FFD84D;">Problem:</b> Varying data models, formats, and frequencies for turbine data, lack of standardization and automation.</li>
+            <li><b style="color:#FFD84D;">Impact:</b> Improved onboarding by 50%, enhanced data quality and prediction accuracy.</li>
+            <li><b style="color:#FFD84D;">Solution:</b> Custom ingestion platform, intuitive UI, ingest data from any turbine model.</li>
+            <li><b style="color:#FFD84D;">Tools & Technologies:</b> Java JSP, Node.js, React.js, Talend, MySQL</li>
+        </ul>
+    </section>
+
+    <!-- Case Study 6 -->
+    <section class="service-block" style="background:rgba(255,255,255,0.05); padding:40px; border-radius:10px; margin-bottom:44px;">
+        <h3 style="color:#F1BC00; font-size:32px; margin-bottom:18px;">Data Strategy for One of the Largest States in India</h3>
+        <div class="service-intro" style="color:#A0A0A0; font-size:17px; margin-bottom:24px;">Building a roadmap for data-driven governance and policy.</div>
+        <ul style="list-style:none; padding:0; margin-bottom:24px;">
+            <li><b style="color:#FFD84D;">Problem:</b> Needed a comprehensive data strategy for planning, policy, and scheme implementation; assessment of data ecosystem and governance.</li>
+            <li><b style="color:#FFD84D;">Impact:</b> Identified challenges, recommended roadmap, explored integration opportunities for DES and Remote Sensing.</li>
+            <li><b style="color:#FFD84D;">Solution:</b> User consultations, governance mapping, data inventory, best practices, strategy roadmap.</li>
+            <li><b style="color:#FFD84D;">Tools & Technologies:</b> MS Office</li>
+        </ul>
+    </section>
+
+    <!-- Case Study 7 -->
+    <section class="service-block" style="background:rgba(255,255,255,0.05); padding:40px; border-radius:10px; margin-bottom:44px;">
+        <h3 style="color:#F1BC00; font-size:32px; margin-bottom:18px;">Data Governance & MDM Strategy for Large BPO</h3>
+        <div class="service-intro" style="color:#A0A0A0; font-size:17px; margin-bottom:24px;">Establishing a single source of truth and standardized KPIs for business functions.</div>
+        <ul style="list-style:none; padding:0; margin-bottom:24px;">
+            <li><b style="color:#FFD84D;">Problem:</b> Data accuracy, consistency, compliance challenges, data silos, disparate sources, regulatory risk.</li>
+            <li><b style="color:#FFD84D;">Impact:</b> Defined governance structure, designed data lake and BI architecture, standardized KPIs.</li>
+            <li><b style="color:#FFD84D;">Solution:</b> Vision definition, current state assessment, KPI monitoring, BI evaluation, roadmap development.</li>
+            <li><b style="color:#FFD84D;">Tools & Technologies:</b> MS Office</li>
+        </ul>
+    </section>
+</section>
+    
 
     <!-- Form Section Start -->
     <section id="consultation-form" style="max-width:1200px;margin:0 auto;padding:40px 20px;">
         <div style="display:flex;flex-direction:column;gap:0;align-items:stretch;min-height:600px;">
             <div
                 style="background:rgba(40,40,40,0.2);backdrop-filter:blur(20px);padding:50px;display:flex;flex-direction:column;justify-content:center;">
-                <h2 style="color:#ffcc00;font-size:32px;margin-bottom:40px;font-weight:600;">Ready to unlock your data's
+                <h2 style="color:#ffcc00;font-size:32px;margin-bottom:40px;font-weight:600;">Ready to unlock your
+                    data's
                     potential?</h2>
                 <div id="successMessage"
                     style="background:rgba(0,150,0,0.2);color:#00ff00;padding:15px;margin-bottom:20px;display:none;border:none;">
@@ -3017,7 +3410,8 @@
                             Address *</label>
                         <input type="email" id="email" name="email" placeholder="your.email@company.com" required
                             style="width:100%;padding:16px;background:rgba(20,20,20,0.6);border:none;color:#e0e0e0;font-size:16px;transition:all 0.3s ease;">
-                        <div id="emailError" style="color:#ff6666;font-size:13px;margin-top:5px;display:none;">Please
+                        <div id="emailError" style="color:#ff6666;font-size:13px;margin-top:5px;display:none;">
+                            Please
                             enter a valid email</div>
                     </div>
                     <div style="margin-bottom:25px;">
@@ -3033,7 +3427,8 @@
                         <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..."
                             required
                             style="width:100%;padding:16px;background:rgba(20,20,20,0.6);border:none;color:#e0e0e0;font-size:16px;transition:all 0.3s ease;"></textarea>
-                        <div id="messageError" style="color:#ff6666;font-size:13px;margin-top:5px;display:none;">Please
+                        <div id="messageError" style="color:#ff6666;font-size:13px;margin-top:5px;display:none;">
+                            Please
                             enter your message</div>
                     </div>
                     <div style="margin:30px 0;">
@@ -3043,10 +3438,12 @@
                                 style="width:18px;height:18px;accent-color:#ffcc00;margin-top:2px;cursor:pointer;">
                             <span style="color:#cccccc;font-size:14px;line-height:1.5;">I agree to the <a
                                     href="#privacy" target="_blank"
-                                    style="color:#ffcc00;text-decoration:none;font-weight:500;">Privacy Policy</a> and
+                                    style="color:#ffcc00;text-decoration:none;font-weight:500;">Privacy Policy</a>
+                                and
                                 consent to my data being processed</span>
                         </label>
-                        <div id="privacyError" style="color:#ff6666;font-size:13px;margin-top:5px;display:none;">Please
+                        <div id="privacyError" style="color:#ff6666;font-size:13px;margin-top:5px;display:none;">
+                            Please
                             accept the privacy policy</div>
                     </div>
                     <button type="submit" id="submitButton"

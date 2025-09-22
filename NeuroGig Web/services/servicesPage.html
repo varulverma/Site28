@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - NeuroGig</title>
+    <title>Services - NeuroGig Tech</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,8 +17,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            text-decoration: none;
         }
+
 
         :root {
             --primary-yellow: #F1BC00;
@@ -39,8 +39,14 @@
             zoom: 0.8;
         }
 
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
         h2 {
             font-size: clamp(24px, 3vw, 40px) !important;
+            text-align: left !important;
             line-height: 1.05;
             margin: 0 0 16px;
             color: var(--text-primary);
@@ -49,7 +55,7 @@
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 40px;
+            padding: 0 80px;
         }
 
         /* Header Container */
@@ -128,14 +134,75 @@
             text-decoration: none;
             color: #f0f0f0;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: clamp(0.9rem, 0.9vw, 1rem);
-            font-weight: 500;
+            /* Set desktop nav links to 20px */
+            font-size: 20px;
+            font-weight: 600;
             letter-spacing: 0.8px;
             text-transform: uppercase;
             transition: color 0.3s ease;
-            padding: clamp(0.8rem, 1vw, 1rem) clamp(0.3rem, 0.6vw, 0.5rem);
+            padding: clamp(0.9rem, 1.1vw, 1.2rem) clamp(0.4rem, 0.8vw, 0.6rem);
             white-space: nowrap;
             position: relative;
+        }
+
+        /* Remove default list markers */
+        .nav-item>ul,
+        .mobile-nav-item>ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Consistent styling for desktop dropdown links */
+        .nav-item>ul li a {
+            display: block;
+            padding: 10px 24px;
+            color: #f0f0f0;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            white-space: nowrap;
+        }
+
+        .nav-item>ul li a:hover {
+            color: #ffd700;
+            background-color: rgba(255, 215, 0, 0.12);
+        }
+
+        /* Updated mobile nav link for better readability */
+        .mobile-nav-link {
+            display: block;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            color: #ffffff;
+            /* white inactive */
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Consistent styling for mobile dropdown links */
+        .mobile-nav-item>ul li a {
+            display: block;
+            padding: 1rem 3rem;
+            color: #f0f0f0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+        }
+
+        .mobile-nav-item>ul li a:hover {
+            background-color: #ffd700;
+            color: #000;
         }
 
         .nav-link:hover {
@@ -238,7 +305,8 @@
             left: 0;
             width: 300px;
             height: 100vh;
-            background-color: #f5f5f5;
+            /* Changed background to solid black for better contrast */
+            background-color: #000;
             z-index: 1000;
             transform: translateX(-100%);
             transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -284,7 +352,8 @@
         }
 
         .mobile-nav-link:hover {
-            background-color: #e0e0e0;
+            background-color: #ffd700;
+            color: #000;
         }
 
         /* Hero Section */
@@ -407,7 +476,7 @@
         .hero-image {
             width: 100%;
             height: 100%;
-            background: url('/NeuroGig Web/Images/imgHero6.png') center/contain no-repeat;
+            object-fit: contain;
         }
 
         /* Social Links */
@@ -444,6 +513,7 @@
 
         /* Case Studies Section - Unified Design */
         .case-studies-section {
+
             padding: 80px 0;
             overflow: hidden;
             position: relative;
@@ -668,7 +738,7 @@
             height: 320px;
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             text-align: left;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1556,7 +1626,7 @@
             min-height: 216px;
             display: flex;
             flex-direction: column;
-            gap: 60px;
+            gap: 80px;
             color: var(--text-primary);
             transition: background-color .22s ease, color .22s ease, transform .22s ease;
             border-right: 1px solid #232525;
@@ -1610,7 +1680,7 @@
         }
 
         .service-card h3 {
-            margin: 0 0 8px;
+            margin: 36px 0 8px;
             font-size: 20px;
             line-height: 1.2;
             color: currentColor;
@@ -1755,7 +1825,7 @@
         .section-title {
             font-size: clamp(32px, 4vw, 48px);
             font-weight: 300;
-            text-align: center;
+            text-align: center !important;
             margin-bottom: 60px;
             line-height: 1.2;
             letter-spacing: -0.02em;
@@ -2102,9 +2172,29 @@
             // Close menu on overlay click
             mobileMenuOverlay.addEventListener('click', closeMobileMenu);
 
-            // Close menu on mobile nav link click
+            // Handle mobile nav link clicks
             mobileNavLinks.forEach(link => {
-                link.addEventListener('click', closeMobileMenu);
+                link.addEventListener('click', function (e) {
+                    // Check if this link has a submenu
+                    const hasSubmenu = this.nextElementSibling && this.nextElementSibling.tagName === 'UL';
+
+                    if (hasSubmenu) {
+                        // If it has a submenu, prevent default and toggle the submenu
+                        e.preventDefault();
+                        const parentItem = this.parentElement;
+                        parentItem.classList.toggle('active');
+
+                        // Close other open submenus
+                        document.querySelectorAll('.mobile-nav-item.active').forEach(item => {
+                            if (item !== parentItem) {
+                                item.classList.remove('active');
+                            }
+                        });
+                    } else {
+                        // If no submenu, close the mobile menu
+                        closeMobileMenu();
+                    }
+                });
             });
 
             // Close menu on escape key
@@ -2347,7 +2437,7 @@
                                 style="color: #f0f0f0; text-decoration: none; font-size: 14px;">Dremio
                                 Accelerators</a>
                         </li>
-                        <li style="padding: 8px 20px;"><a href="../accelerators/accl.html/#data-science"
+                        <li style="padding: 8px 20px;"><a href="../accelerators/accl.html#data-science"
                                 style="color: #f0f0f0; text-decoration: none; font-size: 14px;">Data Science
                                 Accelerator</a>
                         </li>
@@ -2384,12 +2474,45 @@
             </ul>
 
             <!-- Hamburger Menu Button (Mobile) -->
-            <button class="hamburger-menu" aria-label="Toggle mobile menu" aria-expanded="false"
-                aria-controls="mobile-menu">
+            <button class="hamburger-menu" id="hamburger-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false"
+                aria-controls="mobile-menu" onclick="toggleMobileMenu(this)">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </button>
+
+            <script>
+            function toggleMobileMenu(button) {
+                    const mobileMenu = document.getElementById('mobile-menu');
+            const overlay = document.getElementById('mobile-menu-overlay');
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+            button.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.style.transform = isExpanded ? 'translateX(-100%)' : 'translateX(0)';
+            mobileMenu.setAttribute('aria-hidden', isExpanded);
+            overlay.style.opacity = isExpanded ? '0' : '1';
+            overlay.style.visibility = isExpanded ? 'hidden' : 'visible';
+
+            // Toggle hamburger animation class
+            button.classList.toggle('is-active');
+
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = isExpanded ? '' : 'hidden';
+                }
+
+                // Close menu when clicking overlay
+                document.getElementById('mobile-menu-overlay').addEventListener('click', () => {
+                    const button = document.getElementById('hamburger-menu-btn');
+            toggleMobileMenu(button);
+                });
+
+                // Close menu on escape key
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && document.getElementById('hamburger-menu-btn').getAttribute('aria-expanded') === 'true') {
+                toggleMobileMenu(document.getElementById('hamburger-menu-btn'));
+                    }
+                });
+            </script>
 
             <!-- CTA Button -->
             <div class="cta-section">
@@ -2418,73 +2541,91 @@
             </div>
             <ul class="mobile-nav-list" role="menubar">
                 <li class="mobile-nav-item" role="none">
-                    <a href="#" class="mobile-nav-link" role="menuitem" tabindex="-1">SERVICES</a>
+                    <a href="../services/servicesPage.html" class="mobile-nav-link" role="menuitem"
+                        tabindex="-1">SERVICES</a>
                     <ul style="display: none; padding-left: 20px; background: #222;">
-                        <li><a href="#data-engineering"
+                        <li><a href="../services/servicesPage.html#data-engineering"
                                 style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data
                                 Engineering</a></li>
-                        <li><a href="#data-science"
+                        <li><a href="../services/servicesPage.html#data-science"
                                 style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data
                                 Science</a></li>
-                        <li><a href="#data-strategy"
+                        <li><a href="../services/servicesPage.html#data-strategy"
                                 style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data
                                 Strategy</a></li>
-                        <li><a href="#generative-ai"
+                        <li><a href="../services/servicesPage.html#gen-ai"
                                 style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Generative
                                 AI</a></li>
                     </ul>
                 </li>
                 <li class="mobile-nav-item" role="none">
-                    <a href="#" class="mobile-nav-link" role="menuitem" tabindex="-1">INDUSTRIES</a>
+                    <a href="../industries/industries.html" class="mobile-nav-link" role="menuitem"
+                        tabindex="-1">INDUSTRIES</a>
                     <ul style="display: none; padding-left: 20px; background: #222;">
-                        <li><a href="#finance"
+                        <li><a href="../industries/industries.html#finance"
                                 style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Finance &
                                 Banking</a></li>
-                        <li><a href="#healthcare"
+                        <li><a href="../industries/industries.html#healthcare"
                                 style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Healthcare</a>
                         </li>
-                        <li><a href="#retail"
+                        <li><a href="../industries/industries.html#retail"
                                 style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Retail</a>
                         </li>
-                        <li><a href="#manufacturing"
+                        <li><a href="../industries/industries.html#manufacturing"
                                 style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Manufacturing</a>
                         </li>
                     </ul>
                 </li>
                 <li class="mobile-nav-item" role="none">
-                    <a href="#" class="mobile-nav-link" role="menuitem" tabindex="-1">ACCELERATORS</a>
+                    <a href="../accelerators/accl.html" class="mobile-nav-link" role="menuitem"
+                        tabindex="-1">ACCELERATORS</a>
                     <ul style="display: none; padding-left: 20px; background: #222;">
-                        <li><a href="#real-time-platform"
-                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Real-time
-                                Data Platform</a></li>
-                        <li><a href="#ai-ops"
-                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">AI Ops
-                                Framework</a></li>
-                        <li><a href="#gen-ai-studio"
-                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Generative
-                                AI Studio</a></li>
-                        <li><a href="#predictive-hub"
-                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Predictive
-                                Intelligence Hub</a></li>
+                        <li><a href="../accelerators/accl.html#data-strategy"
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data
+                                Strategy
+                                Accelerators</a></li>
+                        <li><a href="../accelerators/accl.html#data-engineering"
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data
+                                Engineering
+                                Accelerators</a>
+                        </li>
+                        <li><a href="../accelerators/accl.html#dremio"
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Dremio
+                                Accelerators</a>
+                        </li>
+                        <li><a href="../accelerators/accl.html#data-science"
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data Science
+                                Accelerator</a>
+                        </li>
+                        <li><a href="../accelerators/accl.html#generative-ai"
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Gen AI</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="mobile-nav-item" role="none">
-                    <a href="#insights" class="mobile-nav-link" role="menuitem" tabindex="-1">INSIGHTS</a>
+                    <a href="../insights/insights.html" class="mobile-nav-link" role="menuitem"
+                        tabindex="-1">INSIGHTS</a>
+                    <ul style="display: none; padding-left: 20px; background: #222;">
+                        <li><a href="../insights/insights.html#data-primer"
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data
+                                primer</a></li>
+                        <li><a href="../insights/insights.html#case"
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Case
+                                Studies</a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="mobile-nav-item" role="none">
-                    <a href="#" class="mobile-nav-link" role="menuitem" tabindex="-1">ABOUT US</a>
+                    <a href="../aboutUs/aboutUs.html" class="mobile-nav-link" role="menuitem" tabindex="-1">ABOUT US</a>
                     <ul style="display: none; padding-left: 20px; background: #222;">
-                        <li><a href="#our-story"
+                        <li><a href="../aboutUs/aboutUs.html#our-story"
                                 style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Our
                                 Story</a></li>
-                        <li><a href="#core-values"
+                        <li><a href="../aboutUs/aboutUs.html#our-values"
                                 style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Our Core
                                 Values</a></li>
-                        <li><a href="#leadership"
+                        <li><a href="../aboutUs/aboutUs.html#leadership"
                                 style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Leadership</a>
-                        </li>
-                        <li><a href="#careers"
-                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Careers</a>
                         </li>
                     </ul>
                 </li>
@@ -2715,21 +2856,18 @@
                     Data Engineering: <span
                         style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">Building
                         the Foundation for Intelligent Enterprises</span>
-                </h2>
-            </header>
-
-            <div class="service-intro"
-                style="max-width: 800px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
-                <p>Data engineering is the bedrock of all successful data initiatives. It involves designing, building,
+                </h2><p style="text-align: left;">Data engineering is the bedrock of all successful data initiatives. It involves designing, building,
                     and maintaining robust, scalable, and reliable pipelines that deliver clean, transformed, and
                     accessible data to fuel analytics, machine learning, and business intelligence. Without efficient
                     data engineering, even the most sophisticated data science models remain theoretical.</p>
-            </div>
+            </header>
+
+            
 
             <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                style=" gap: 40px; margin-bottom: 60px;">
                 <div class="service-block"
-                    style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
+                    style="background: rgba(255,255,255,0.05); padding: 40px border-radius: 10px; transition: all 0.3s ease;"
                     onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
                     onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.05)'">
                     <h3 style="color: #F1BC00; font-size: 24px; margin-bottom: 30px;">Why This Service Matters</h3>
@@ -2823,16 +2961,14 @@
                         style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">Charting
                         Your Course to Data-Driven Success</span>
                 </h2>
+                <p style="text-align: left;">Simply collecting data is not enough. A robust data strategy transforms raw information into
+                    actionable insights, enabling sustainable growth and competitive advantage.</p>
             </header>
 
-            <div class="service-intro"
-                style="max-width: 800px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
-                <p>Simply collecting data is not enough. A robust data strategy transforms raw information into
-                    actionable insights, enabling sustainable growth and competitive advantage.</p>
-            </div>
+            
 
             <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                style=" gap: 40px; margin-bottom: 60px;">
                 <div class="service-block"
                     style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
                     onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
@@ -2917,17 +3053,15 @@
                         style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">Transforming
                         Data into Actionable Intelligence and Innovation</span>
                 </h2>
-            </header>
-
-            <div class="service-intro"
-                style="max-width: 800px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
-                <p>Data science is about extracting meaningful insights from complex datasets using advanced analytics,
+                <p style="text-align: left;">Data science is about extracting meaningful insights from complex datasets using advanced analytics,
                     machine learning, and statistical modeling. It empowers smarter, faster decisions and drives
                     innovation.</p>
-            </div>
+            </header>
+
+            
 
             <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                style=" gap: 40px; margin-bottom: 60px;">
                 <div class="service-block"
                     style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
                     onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
@@ -3020,16 +3154,14 @@
                         style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">Unleashing
                         New Dimensions of Creativity and Efficiency</span>
                 </h2>
+                <p style="text-align: left;">Generative AI goes beyond analysis — creating entirely new content, designs, code, and experiences.
+                    It's redefining how businesses innovate, engage, and operate.</p>
             </header>
 
-            <div class="service-intro"
-                style="max-width: 800px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
-                <p>Generative AI goes beyond analysis — creating entirely new content, designs, code, and experiences.
-                    It's redefining how businesses innovate, engage, and operate.</p>
-            </div>
+            
 
             <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                style=" gap: 40px; margin-bottom: 60px;">
                 <div class="service-block"
                     style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 10px; transition: all 0.3s ease;"
                     onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
@@ -3102,273 +3234,6 @@
     </section>
 
 
-
-
-    <!-- Process Section -->
-    <section style="padding: 80px 0; width: 100%; overflow: hidden;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
-            <div style="display: flex; flex-direction: row; gap: 48px; align-items: center; flex-wrap: wrap;">
-                <div style="flex: 1; min-width: 300px;">
-                    <h2
-                        style="font-size: clamp(32px, 4vw, 48px); font-weight: 300; margin-bottom: 24px; line-height: 1.2; letter-spacing: -0.02em; color: #FFFFFF;">
-                        Our Proven <span style="font-weight: 700; color: #F1BC00;">Process</span>
-                    </h2>
-                    <p
-                        style="font-size: 16px; line-height: 1.6; color: #A0A0A0; margin-bottom: 32px; max-width: 500px;">
-                        A systematic six-phase approach that ensures successful data transformation with measurable
-                        outcomes at every stage.
-                    </p>
-                </div>
-
-                <div
-                    style="flex: 1; min-width: 300px; background: rgba(241, 188, 0, 0.05); padding: 32px; border: 1px solid rgba(241, 188, 0, 0.1);">
-                    <div id="phase-content" style="text-align: left;">
-                        <div id="phase-tag"
-                            style="display: inline-block; background: #F1BC00; color: #1A1A1A; font-size: 14px; font-weight: 600; padding: 6px 12px; margin-bottom: 16px; letter-spacing: 0.5px;">
-                        </div>
-                        <div id="phase-title"
-                            style="font-size: 24px; font-weight: 600; color: #FFFFFF; line-height: 1.4;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div style="margin-top: 64px; position: relative;"></div>
-            <div style="position: relative; width: 100%; height: 2px; background: rgba(255,255,255,0.1);">
-                <div id="progress-fill"
-                    style="position: absolute; top: 0; left: 0; height: 100%; background: #F1BC00; transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);">
-                </div>
-            </div>
-
-            <!-- Wrap timeline in a container with horizontal scroll -->
-            <div style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;"></div>
-            <div class="progress-timeline"
-                style="display: flex; justify-content: space-between; position: relative; padding: 20px 0; background: #1A1A1A; border: 2px solid rgba(255,255,255,0.1); min-width: fit-content;">
-
-                <!-- Progress Steps -->
-                <div class="progress-step active"
-                    style="flex: 0 0 auto; text-align: center; cursor: pointer; padding: 0 20px; width: 160px;">
-                    <div class="step-indicator"
-                        style="width: 16px; height: 16px; margin: 0 auto 16px; border: 2px solid rgba(255,255,255,0.2); background: #1A1A1A; border-radius: 50%; transition: all 0.3s ease;">
-                    </div>
-                    <div class="step-text"
-                        style="font-size: 14px; font-weight: 600; color: #A0A0A0; transition: all 0.3s ease;">Discovery
-                        & Strategy</div>
-                </div>
-
-                <div class="progress-step"
-                    style="flex: 0 0 auto; text-align: center; cursor: pointer; padding: 0 20px; width: 160px;">
-                    <div
-                        style="width: 16px; height: 16px; margin: 0 auto 16px; border: 2px solid rgba(255,255,255,0.2); background: #1A1A1A; border-radius: 50%; transition: all 0.3s ease;">
-                    </div>
-                    <div style="font-size: 14px; font-weight: 600; color: #A0A0A0; transition: all 0.3s ease;">Design &
-                        Architecture</div>
-                </div>
-
-                <div class="progress-step"
-                    style="flex: 0 0 auto; text-align: center; cursor: pointer; padding: 0 20px; width: 160px;">
-                    <div
-                        style="width: 16px; height: 16px; margin: 0 auto 16px; border: 2px solid rgba(255,255,255,0.2); background: #1A1A1A; border-radius: 50%; transition: all 0.3s ease;">
-                    </div>
-                    <div style="font-size: 14px; font-weight: 600; color: #A0A0A0; transition: all 0.3s ease;">
-                        Development</div>
-                </div>
-
-                <div class="progress-step"
-                    style="flex: 0 0 auto; text-align: center; cursor: pointer; padding: 0 20px; width: 160px;">
-                    <div
-                        style="width: 16px; height: 16px; margin: 0 auto 16px; border: 2px solid rgba(255,255,255,0.2); background: #1A1A1A; border-radius: 50%; transition: all 0.3s ease;">
-                    </div>
-                    <div style="font-size: 14px; font-weight: 600; color: #A0A0A0; transition: all 0.3s ease;">
-                        Validation</div>
-                </div>
-
-                <div class="progress-step"
-                    style="flex: 0 0 auto; text-align: center; cursor: pointer; padding: 0 20px; width: 160px;">
-                    <div
-                        style="width: 16px; height: 16px; margin: 0 auto 16px; border: 2px solid rgba(255,255,255,0.2); background: #1A1A1A; border-radius: 50%; transition: all 0.3s ease;">
-                    </div>
-                    <div style="font-size: 14px; font-weight: 600; color: #A0A0A0; transition: all 0.3s ease;">
-                        Deployment</div>
-                </div>
-
-                <div class="progress-step"
-                    style="flex: 0 0 auto; text-align: center; cursor: pointer; padding: 0 20px; width: 160px;">
-                    <div
-                        style="width: 16px; height: 16px; margin: 0 auto 16px; border: 2px solid rgba(255,255,255,0.2); background: #1A1A1A; border-radius: 50%; transition: all 0.3s ease;">
-                    </div>
-                    <div style="font-size: 14px; font-weight: 600; color: #A0A0A0; transition: all 0.3s ease;">Evolve
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-
-        <style>
-            /* Active state styles */
-            .progress-step.active .step-indicator {
-                border-color: #F1BC00 !important;
-                background: #F1BC00 !important;
-                transform: scale(1.2);
-                box-shadow: 0 0 15px rgba(241, 188, 0, 0.4);
-            }
-
-            .progress-step.active .step-text {
-                color: #F1BC00 !important;
-                font-weight: 700 !important;
-            }
-
-            /* Hover effects */
-            .progress-step:hover div:first-child {
-                border-color: #F1BC00 !important;
-                transform: scale(1.1);
-            }
-
-            .progress-step:hover div:last-child {
-                color: #F1BC00 !important;
-            }
-
-            /* Hide scrollbar but keep functionality */
-            .progress-timeline::-webkit-scrollbar {
-                display: none;
-            }
-
-            .progress-timeline {
-                -ms-overflow-style: none;
-                scrollbar-width: none;
-            }
-
-            /* Responsive adjustments */
-            @media (max-width: 768px) {
-                .progress-timeline {
-                    padding: 15px 0;
-                }
-
-                .progress-step {
-                    width: 140px !important;
-                    padding: 0 15px !important;
-                }
-            }
-
-            @media (max-width: 480px) {
-                .progress-step {
-                    width: 120px !important;
-                    padding: 0 10px !important;
-                }
-
-                .step-text {
-                    font-size: 12px !important;
-                }
-            }
-        </style>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const steps = document.querySelectorAll('.progress-step');
-            const phaseContent = document.getElementById('phase-content');
-            const phaseTag = document.getElementById('phase-tag');
-            const phaseTitle = document.getElementById('phase-title');
-
-            const phases = [
-            {tag: "PHASE 1", title: "Discovery & Strategy" },
-            {tag: "PHASE 2", title: "Design & Architecture" },
-            {tag: "PHASE 3", title: "Development" },
-            {tag: "PHASE 4", title: "Validation" },
-            {tag: "PHASE 5", title: "Deployment" },
-            {tag: "PHASE 6", title: "Evolve" }
-            ];
-
-            function updateProgress(index) {
-                steps.forEach((step) => step.classList.remove('active'));
-            steps[index].classList.add('active');
-
-            const progress = (index / (steps.length - 1)) * 100;
-            document.getElementById('progress-fill').style.width = `${progress}%`;
-
-            phaseContent.style.opacity = '0';
-                    setTimeout(() => {
-                phaseTag.textContent = phases[index].tag;
-            phaseTitle.textContent = phases[index].title;
-            phaseContent.style.opacity = '1';
-                    }, 300);
-
-            // // Scroll into view
-            // steps[index].scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'center' });
-                }
-
-            let isAnimating = false;
-                steps.forEach((step, index) => {
-                step.addEventListener('click', () => {
-                    if (!isAnimating) {
-                        isAnimating = true;
-                        updateProgress(index);
-                        setTimeout(() => isAnimating = false, 600);
-                    }
-                });
-                });
-
-            updateProgress(0);
-            });
-        </script>
-        </div>
-
-        <script>
-            const phases = [
-            {tag: "DISCOVERY & STRATEGY", title: "Assess current state and define data vision"},
-            {tag: "DESIGN & ARCHITECTURE", title: "Create scalable frameworks and blueprints"},
-            {tag: "DEVELOPMENT & IMPLEMENTATION", title: "Build and integrate robust data solutions"},
-            {tag: "VALIDATION & OPTIMIZATION", title: "Ensure accuracy, efficiency, and reliability"},
-            {tag: "DEPLOYMENT & ENABLEMENT", title: "Deliver and empower teams with solutions"},
-            {tag: "SUSTAIN & EVOLVE", title: "Continuously adapt and grow data strategies"}
-            ];
-
-            let currentPhase = 0;
-            const tagEl = document.getElementById("phase-tag");
-            const titleEl = document.getElementById("phase-title");
-            const fillEl = document.getElementById("progress-fill");
-            const steps = document.querySelectorAll('.progress-step');
-
-            function updatePhase(index) {
-            const {tag, title} = phases[index];
-
-            // Update content
-            tagEl.textContent = tag;
-            titleEl.textContent = title;
-
-            // Update progress bar
-            fillEl.style.width = `${(index / (phases.length - 1)) * 100}%`;
-
-            // Update steps
-            steps.forEach((step, i) => {
-                if (i === index) {
-                step.querySelector('div:first-child').style.borderColor = '#F1BC00';
-            step.querySelector('div:first-child').style.background = '#F1BC00';
-            step.querySelector('div:last-child').style.color = '#FFFFFF';
-                } else {
-                step.querySelector('div:first-child').style.borderColor = 'rgba(255,255,255,0.2)';
-            step.querySelector('div:first-child').style.background = '#1A1A1A';
-            step.querySelector('div:last-child').style.color = '#A0A0A0';
-                }
-            });
-        }
-
-            function startProgress() {
-                updatePhase(currentPhase);
-            setInterval(() => {
-                currentPhase = (currentPhase + 1) % phases.length;
-            updatePhase(currentPhase);
-            }, 3000);
-        }
-
-        steps.forEach((step, index) => {
-                step.addEventListener('click', () => {
-                    currentPhase = index;
-                    updatePhase(index);
-                });
-        });
-
-            window.addEventListener('load', startProgress);
-        </script>
-    </section>
 
 
 
@@ -3604,8 +3469,10 @@
                 <div style="text-align:center;">
                     <div style="font-size:48px;margin-bottom:20px;color:#ffcc00;">📍</div>
                     <div style="font-size:24px;font-weight:600;margin-bottom:10px;color:#ffcc00;">Our Location</div>
-                    <div style="font-size:16px;color:#888888;line-height:1.5;">Interactive map and contact
-                        details<br>will appear here</div>
+                    <iframe src="https://www.google.com/maps?q=Sector+16C,+Greater+Noida+West,+UP-201306&output=embed"
+                        width="100%" height="180" style="border:0;border-radius:12px;margin-bottom:12px;"></iframe>
+                    <div style="font-size:16px;color:#A0A0A0;line-height:1.5;margin-top:8px;">Sector 16C, Greater Noida
+                        West<br>UP-201306</div>
                 </div>
             </div>
         </div>

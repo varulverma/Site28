@@ -665,7 +665,7 @@
       .framework-card {
           background: transparent;
           border: none;
-          border-radius: 6px;
+          border-radius: 0;
           padding: 48px 24px 84px;
           height: 320px;
           display: flex;
@@ -764,7 +764,7 @@
           background: var(--primary-yellow);
           color: var(--dark-bg);
           border: none;
-          border-radius: 4px;
+          border-radius: 0;
           font-weight: 600;
           font-size: 14px;
           letter-spacing: 0.02em;
@@ -3101,7 +3101,7 @@
     </style>
 
     <section class="services-page">
-      <!-- Accelerators Section  -->
+      
       <!--Data Strategy-->
       <section
         id="data-strategy"
@@ -3196,8 +3196,9 @@
         </div>
         <div
           style="
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
             gap: 40px;
             margin-bottom: 60px;
           "
@@ -3207,7 +3208,7 @@
             style="
               background: rgba(255, 255, 255, 0.05);
               padding: 40px;
-              border-radius: 10px;
+              border-radius: 0;
               transition: all 0.3s ease;
             "
             onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
@@ -3245,7 +3246,7 @@
             style="
               background: rgba(255, 255, 255, 0.05);
               padding: 40px;
-              border-radius: 10px;
+              border-radius: 0;
               transition: all 0.3s ease;
             "
             onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
@@ -3282,7 +3283,7 @@
             style="
               background: rgba(255, 255, 255, 0.05);
               padding: 40px;
-              border-radius: 10px;
+              
               transition: all 0.3s ease;
             "
             onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
@@ -3321,7 +3322,7 @@
             text-align: center;
             padding: 40px;
             background: rgba(241, 188, 0, 0.1);
-            border-radius: 10px;
+            
             margin-top: 60px;
           "
         >
@@ -3436,7 +3437,7 @@
               background: rgba(255, 255, 255, 0.05);
               padding: 40px;
               display: block;
-              border-radius: 10px;
+               
               transition: all 0.3s ease;
             "
             onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
@@ -3482,7 +3483,11 @@
                 padding: 12px 24px;
                 border: none;
                 font-weight: 600;
-               
+               text-decoration: none;
+                display: inline-block;
+                margin-top: 20px;
+                border-radius: 5px;
+                transition: background 0.3s ease;
                 
               "
             >
@@ -3502,7 +3507,7 @@
             style="
               background: rgba(255, 255, 255, 0.05);
               padding: 40px;
-              border-radius: 10px;
+               
               transition: all 0.3s ease;
             "
             onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
@@ -3539,7 +3544,7 @@
             style="
               background: rgba(255, 255, 255, 0.05);
               padding: 40px;
-              border-radius: 10px;
+               
               transition: all 0.3s ease;
             "
             onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
@@ -3578,7 +3583,7 @@
             text-align: center;
             padding: 40px;
             background: rgba(241, 188, 0, 0.1);
-            border-radius: 10px;
+             
             margin-top: 60px;
           "
         >
@@ -3699,7 +3704,7 @@
             style="
               background: rgba(255, 255, 255, 0.05);
               padding: 40px;
-              border-radius: 10px;
+               
               transition: all 0.3s ease;
             "
             onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
@@ -3737,7 +3742,7 @@
             style="
               background: rgba(255, 255, 255, 0.05);
               padding: 40px;
-              border-radius: 10px;
+               
               transition: all 0.3s ease;
             "
             onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
@@ -3774,7 +3779,7 @@
             style="
               background: rgba(255, 255, 255, 0.05);
               padding: 40px;
-              border-radius: 10px;
+               
               transition: all 0.3s ease;
             "
             onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
@@ -3812,7 +3817,7 @@
             text-align: center;
             padding: 40px;
             background: rgba(241, 188, 0, 0.1);
-            border-radius: 10px;
+             
             margin-top: 60px;
           "
         >
@@ -3933,7 +3938,7 @@
             style="
               background: rgba(255, 255, 255, 0.05);
               padding: 40px;
-              border-radius: 10px;
+               
               transition: all 0.3s ease;
             "
             onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
@@ -3971,7 +3976,7 @@
             style="
               background: rgba(255, 255, 255, 0.05);
               padding: 40px;
-              border-radius: 10px;
+              
               transition: all 0.3s ease;
             "
             onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
@@ -4008,7 +4013,7 @@
             style="
               background: rgba(255, 255, 255, 0.05);
               padding: 40px;
-              border-radius: 10px;
+              
               transition: all 0.3s ease;
             "
             onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.08)'"
@@ -4048,7 +4053,7 @@
             text-align: center;
             padding: 40px;
             background: rgba(241, 188, 0, 0.1);
-            border-radius: 10px;
+          
             margin-top: 60px;
           "
         >

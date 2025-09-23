@@ -2939,7 +2939,7 @@
            
 
             <!-- Partners Section -->
-            <div class="team-section">
+            <div class="team-section" id="dremio">
                 <div class="section-header">
                     <div class="icon">
                         <img src="../Images/IMG Acc/Dremio.png" alt="Technology Partners">
@@ -2949,7 +2949,6 @@
 
                 <div class="partner-card">
                     <div class="partner-header">
-                        <img src="../Images/IMG Acc/Dremio.png" alt="Dremio">
                         <h3>Powering the Next Generation of Data Analytics</h3>
                     </div>
 
@@ -2963,7 +2962,7 @@
                     </div>
 
                     <div class="partner-section">
-                        <h4>Why Dremio? The Foundation for Future-Ready Data</h4>
+                        <h4>Why Dremio? <i> Foundation for Future-Ready Data</i></h4>
                         <p>Dremio transforms how organizations interact with their data, enabling a true self-service
                             data experience directly on their data lake. Built on open-source technologies like Apache
                             Iceberg and Apache Arrow, Dremio provides:</p>
@@ -3263,47 +3262,178 @@
             /* Partners Section */
             .partner-card {
                 background: rgba(255, 255, 255, 0.05);
-                padding: 32px;
-                border-radius: 2px;
+                padding: 48px 40px;
+                border-radius: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                border-left: 4px solid #F1BC00;
+                position: relative;
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+
+            .partner-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background: linear-gradient(90deg, transparent, rgba(241, 188, 0, 0.3), transparent);
+            }
+
+            .partner-card:hover {
+                background: rgba(255, 255, 255, 0.08);
+                transform: translateY(-2px);
             }
 
             .partner-header {
                 display: flex;
                 align-items: center;
-                gap: 24px;
-                margin-bottom: 24px;
+                gap: 32px;
+                margin-bottom: 0;
             }
 
             .partner-header img {
-                height: 40px;
+                height: 56px;
                 object-fit: contain;
+                filter: brightness(1.1);
+                transition: transform 0.3s ease;
+            }
+
+            .partner-header:hover img {
+                transform: scale(1.05);
             }
 
             .partner-header h3 {
-                color: #fff;
-                font-size: 24px;
+                color: #ffffff;
+                font-size: 32px;
                 margin: 0;
+                font-weight: 600;
+                line-height: 1.2;
+            }
+
+            .partner-intro {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
             }
 
             .partner-description {
-                color: #fff;
-                line-height: 1.6;
-                margin-bottom: 24px;
-                font-size: 15px;
+                color: #d1d1d1;
+                line-height: 1.8;
+                font-size: 17px;
+                margin: 0;
             }
 
-            .partner-features {
+            .partner-section {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .partner-section h4 {
+                color: #F1BC00;
+                font-size: 24px;
+                margin: 0 0 16px;
+                font-weight: 600;
+                line-height: 1.3;
+            }
+
+            .partner-section p {
+                color: #b8b8b8;
+                font-size: 16px;
+                line-height: 1.7;
+                margin: 0;
+            }
+
+            .feature-grid {
                 display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 16px;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 24px;
+                margin-top: 24px;
             }
 
-            .feature {
+            .feature-card {
                 background: rgba(255, 255, 255, 0.03);
-                padding: 16px;
-                color: #888;
-                font-size: 14px;
-                border-radius: 2px;
+                padding: 28px 24px;
+                border-radius: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                border-left: 3px solid transparent;
+                transition: all 0.3s ease;
+            }
+
+            .feature-card:hover {
+                background: rgba(255, 255, 255, 0.06);
+                border-left-color: #F1BC00;
+                transform: translateX(4px);
+            }
+
+            .feature-card h5 {
+                color: #ffffff;
+                font-size: 19px;
+                margin: 0;
+                font-weight: 600;
+            }
+
+            .feature-card p {
+                color: #999;
+                font-size: 15px;
+                line-height: 1.6;
+                margin: 0;
+            }
+
+            .partner-benefits {
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+            }
+
+            .partner-benefits h4 {
+                color: #F1BC00;
+                font-size: 24px;
+                margin: 0 0 16px;
+                font-weight: 600;
+            }
+
+            .benefits-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 24px;
+            }
+
+            .benefit-item {
+                background: rgba(255, 255, 255, 0.03);
+                padding: 28px 24px;
+                border-radius: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                border-left: 3px solid transparent;
+                transition: all 0.3s ease;
+            }
+
+            .benefit-item:hover {
+                background: rgba(255, 255, 255, 0.06);
+                border-left-color: #F1BC00;
+                transform: translateX(4px);
+            }
+
+            .benefit-item h5 {
+                color: #ffffff;
+                font-size: 19px;
+                margin: 0;
+                font-weight: 600;
+            }
+
+            .benefit-item p {
+                color: #999;
+                font-size: 15px;
+                line-height: 1.6;
+                margin: 0;
             }
 
             /* Responsive Design */
@@ -3343,6 +3473,32 @@
                 .partner-header {
                     flex-direction: column;
                     text-align: center;
+                    gap: 24px;
+                }
+
+                .partner-header h3 {
+                    font-size: 26px;
+                }
+
+                .partner-card {
+                    padding: 32px 24px;
+                    gap: 32px;
+                }
+
+                .feature-grid,
+                .benefits-grid {
+                    grid-template-columns: 1fr;
+                    gap: 20px;
+                }
+
+                .feature-card,
+                .benefit-item {
+                    padding: 24px 20px;
+                }
+
+                .partner-section h4,
+                .partner-benefits h4 {
+                    font-size: 20px;
                 }
             }
 
@@ -3367,6 +3523,33 @@
                 .advisory-intro,
                 .partner-description {
                     font-size: 14px;
+                }
+
+                .partner-header img {
+                    height: 40px;
+                }
+
+                .partner-header h3 {
+                    font-size: 22px;
+                }
+
+                .partner-description {
+                    font-size: 15px;
+                }
+
+                .feature-card,
+                .benefit-item {
+                    padding: 20px 16px;
+                }
+
+                .feature-card h5,
+                .benefit-item h5 {
+                    font-size: 17px;
+                }
+
+                .partner-section h4,
+                .partner-benefits h4 {
+                    font-size: 18px;
                 }
             }
         </style>

@@ -19,7 +19,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
 
         :root {
             --primary-yellow: #F1BC00;
@@ -29,6 +29,8 @@
             --text-secondary: #A0A0A0;
             --nav-text: #808080;
         }
+
+
 
         body {
             background-color: var(--dark-bg);
@@ -41,9 +43,10 @@
         }
 
 
-        p{
+        p {
             text-align: left !important;
-        }        
+        }
+
         a {
             color: inherit;
             text-decoration: none;
@@ -151,15 +154,15 @@
         }
 
         /* Remove default list markers */
-        .nav-item > ul,
-        .mobile-nav-item > ul {
+        .nav-item>ul,
+        .mobile-nav-item>ul {
             list-style: none;
             padding: 0;
             margin: 0;
         }
 
         /* Consistent styling for desktop dropdown links */
-        .nav-item > ul li a {
+        .nav-item>ul li a {
             display: block;
             padding: 10px 24px;
             color: #f0f0f0;
@@ -172,7 +175,7 @@
             white-space: nowrap;
         }
 
-        .nav-item > ul li a:hover {
+        .nav-item>ul li a:hover {
             color: #ffd700;
             background-color: rgba(255, 215, 0, 0.12);
         }
@@ -182,7 +185,8 @@
             display: block;
             padding: 1rem 2rem;
             text-decoration: none;
-            color: #ffffff; /* white inactive */
+            color: #ffffff;
+            /* white inactive */
             font-family: Arial, Helvetica, sans-serif;
             font-size: 20px;
             font-weight: 600;
@@ -192,7 +196,7 @@
         }
 
         /* Consistent styling for mobile dropdown links */
-        .mobile-nav-item > ul li a {
+        .mobile-nav-item>ul li a {
             display: block;
             padding: 1rem 3rem;
             color: #f0f0f0;
@@ -204,7 +208,7 @@
             text-decoration: none;
         }
 
-        .mobile-nav-item > ul li a:hover {
+        .mobile-nav-item>ul li a:hover {
             background-color: #ffd700;
             color: #000;
         }
@@ -2178,16 +2182,16 @@
 
             // Handle mobile nav link clicks
             mobileNavLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
+                link.addEventListener('click', function (e) {
                     // Check if this link has a submenu
                     const hasSubmenu = this.nextElementSibling && this.nextElementSibling.tagName === 'UL';
-                    
+
                     if (hasSubmenu) {
                         // If it has a submenu, prevent default and toggle the submenu
                         e.preventDefault();
                         const parentItem = this.parentElement;
                         parentItem.classList.toggle('active');
-                        
+
                         // Close other open submenus
                         document.querySelectorAll('.mobile-nav-item.active').forEach(item => {
                             if (item !== parentItem) {
@@ -2478,48 +2482,42 @@
             </ul>
 
             <!-- Hamburger Menu Button (Mobile) -->
-            <button 
-                class="hamburger-menu" 
-                id="hamburger-menu-btn"
-                aria-label="Toggle mobile menu" 
-                aria-expanded="false"
-                aria-controls="mobile-menu"
-                onclick="toggleMobileMenu(this)"
-            >
+            <button class="hamburger-menu" id="hamburger-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false"
+                aria-controls="mobile-menu" onclick="toggleMobileMenu(this)">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </button>
 
             <script>
-                function toggleMobileMenu(button) {
+            function toggleMobileMenu(button) {
                     const mobileMenu = document.getElementById('mobile-menu');
-                    const overlay = document.getElementById('mobile-menu-overlay');
-                    const isExpanded = button.getAttribute('aria-expanded') === 'true';
-                    
-                    button.setAttribute('aria-expanded', !isExpanded);
-                    mobileMenu.style.transform = isExpanded ? 'translateX(-100%)' : 'translateX(0)';
-                    mobileMenu.setAttribute('aria-hidden', isExpanded);
-                    overlay.style.opacity = isExpanded ? '0' : '1';
-                    overlay.style.visibility = isExpanded ? 'hidden' : 'visible';
-                    
-                    // Toggle hamburger animation class
-                    button.classList.toggle('is-active');
-                    
-                    // Prevent body scroll when menu is open
-                    document.body.style.overflow = isExpanded ? '' : 'hidden';
+            const overlay = document.getElementById('mobile-menu-overlay');
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+            button.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.style.transform = isExpanded ? 'translateX(-100%)' : 'translateX(0)';
+            mobileMenu.setAttribute('aria-hidden', isExpanded);
+            overlay.style.opacity = isExpanded ? '0' : '1';
+            overlay.style.visibility = isExpanded ? 'hidden' : 'visible';
+
+            // Toggle hamburger animation class
+            button.classList.toggle('is-active');
+
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = isExpanded ? '' : 'hidden';
                 }
 
                 // Close menu when clicking overlay
                 document.getElementById('mobile-menu-overlay').addEventListener('click', () => {
                     const button = document.getElementById('hamburger-menu-btn');
-                    toggleMobileMenu(button);
+            toggleMobileMenu(button);
                 });
 
                 // Close menu on escape key
                 document.addEventListener('keydown', (e) => {
                     if (e.key === 'Escape' && document.getElementById('hamburger-menu-btn').getAttribute('aria-expanded') === 'true') {
-                        toggleMobileMenu(document.getElementById('hamburger-menu-btn'));
+                toggleMobileMenu(document.getElementById('hamburger-menu-btn'));
                     }
                 });
             </script>
@@ -2551,7 +2549,8 @@
             </div>
             <ul class="mobile-nav-list" role="menubar">
                 <li class="mobile-nav-item" role="none">
-                    <a href="../services/servicesPage.html" class="mobile-nav-link" role="menuitem" tabindex="-1">SERVICES</a>
+                    <a href="../services/servicesPage.html" class="mobile-nav-link" role="menuitem"
+                        tabindex="-1">SERVICES</a>
                     <ul style="display: none; padding-left: 20px; background: #222;">
                         <li><a href="../services/servicesPage.html#data-engineering"
                                 style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data
@@ -2568,7 +2567,8 @@
                     </ul>
                 </li>
                 <li class="mobile-nav-item" role="none">
-                    <a href="../industries/industries.html" class="mobile-nav-link" role="menuitem" tabindex="-1">INDUSTRIES</a>
+                    <a href="../industries/industries.html" class="mobile-nav-link" role="menuitem"
+                        tabindex="-1">INDUSTRIES</a>
                     <ul style="display: none; padding-left: 20px; background: #222;">
                         <li><a href="../industries/industries.html#finance"
                                 style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Finance &
@@ -2585,13 +2585,16 @@
                     </ul>
                 </li>
                 <li class="mobile-nav-item" role="none">
-                    <a href="../accelerators/accl.html" class="mobile-nav-link" role="menuitem" tabindex="-1">ACCELERATORS</a>
+                    <a href="../accelerators/accl.html" class="mobile-nav-link" role="menuitem"
+                        tabindex="-1">ACCELERATORS</a>
                     <ul style="display: none; padding-left: 20px; background: #222;">
                         <li><a href="../accelerators/accl.html#data-strategy"
-                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data Strategy
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data
+                                Strategy
                                 Accelerators</a></li>
                         <li><a href="../accelerators/accl.html#data-engineering"
-                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data Engineering
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data
+                                Engineering
                                 Accelerators</a>
                         </li>
                         <li><a href="../accelerators/accl.html#dremio"
@@ -2603,16 +2606,20 @@
                                 Accelerator</a>
                         </li>
                         <li><a href="../accelerators/accl.html#generative-ai"
-                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Gen AI</a></li>
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Gen AI</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="mobile-nav-item" role="none">
-                    <a href="../insights/insights.html" class="mobile-nav-link" role="menuitem" tabindex="-1">INSIGHTS</a>
+                    <a href="../insights/insights.html" class="mobile-nav-link" role="menuitem"
+                        tabindex="-1">INSIGHTS</a>
                     <ul style="display: none; padding-left: 20px; background: #222;">
                         <li><a href="../insights/insights.html#data-primer"
-                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data primer</a></li>
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data
+                                primer</a></li>
                         <li><a href="../insights/insights.html#case"
-                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Case Studies</a>
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Case
+                                Studies</a>
                         </li>
                     </ul>
                 </li>
@@ -2620,11 +2627,14 @@
                     <a href="../aboutUs/aboutUs.html" class="mobile-nav-link" role="menuitem" tabindex="-1">ABOUT US</a>
                     <ul style="display: none; padding-left: 20px; background: #222;">
                         <li><a href="../aboutUs/aboutUs.html#our-story"
-                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Our Story</a></li>
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Our
+                                Story</a></li>
                         <li><a href="../aboutUs/aboutUs.html#our-values"
-                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Our Core Values</a></li>
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Our Core
+                                Values</a></li>
                         <li><a href="../aboutUs/aboutUs.html#leadership"
-                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Leadership</a></li>
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Leadership</a>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -2975,7 +2985,8 @@
                         style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">
                         Charting Your Course in the Data Ocean – A Blueprint for Business Evolution
                     </span>
-                </h2><p>
+                </h2>
+                <p>
                     Imagine your business as a ship sailing across a vast, dynamic ocean brimming with data – tidal
                     waves of customer transactions, currents of social media sentiment, winds of market trends, and
                     hidden reefs of operational inefficiencies.
@@ -2990,7 +3001,7 @@
             </header>
             <div class="service-intro"
                 style="max-width: 900px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
-                
+
             </div>
             <div style=" grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
                 <div class="service-block"
@@ -3091,7 +3102,8 @@
                         style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">
                         Building the High-Performance Infrastructure for Your Data Assets
                     </span>
-                </h2><p>
+                </h2>
+                <p>
                     If Data Strategy is your route map, Data Engineering is the discipline of building, optimizing, and
                     maintaining the high-speed highways and bridges that move your data from every origin to every
                     insight.<br>
@@ -3103,7 +3115,7 @@
             </header>
             <div class="service-intro"
                 style="max-width: 900px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
-                
+
             </div>
             <div style=" grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
                 <div class="service-block"
@@ -3201,7 +3213,8 @@
                         style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">
                         Unlocking Deeper Truths, Predicting Tomorrow's Opportunities
                     </span>
-                </h2><p>
+                </h2>
+                <p>
                     If Data Strategy outlines the goals and Data Engineering builds the pathways, Data Science is the
                     intellectual engine that propels your business forward.<br>
                     Data Science employs scientific methods, algorithms, and systems to extract knowledge and insights
@@ -3212,7 +3225,7 @@
             </header>
             <div class="service-intro"
                 style="max-width: 900px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
-                
+
             </div>
             <div style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
                 <div class="service-block"
@@ -3312,7 +3325,8 @@
                         style="color:#fff; font-weight:400; display: block; font-size: 36px; margin-top: 10px;">
                         Creating the Future – Beyond Analysis, Towards Intelligent Creation
                     </span>
-                </h2><p>
+                </h2>
+                <p>
                     Imagine a technology that doesn't just analyze, but creates new, original content – text, images,
                     designs, code, audio, or ideas – all from a simple prompt. This is the transformative power of
                     Generative AI.<br>
@@ -3323,7 +3337,7 @@
             </header>
             <div class="service-intro"
                 style="max-width: 900px; margin: 0 auto 60px; text-align: center; color: #A0A0A0; font-size: 18px; line-height: 1.8;">
-                
+
             </div>
             <div style=" grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
                 <div class="service-block"
@@ -3424,217 +3438,483 @@
         <header style="text-align:center; margin-bottom:60px;">
             <h2 class="service-title" style="color:#F1BC00; font-size:48px; margin-bottom:20px; line-height:1.2;">Case
                 Studies</h2>
-            <div class="service-intro" style="max-width:800px;  color:#A0A0A0; font-size:18px; text-align: left;">Explore
+            <div class="service-intro" style="max-width:800px;  color:#A0A0A0; font-size:18px; text-align: left;">
+                Explore
                 real-world examples of how data, analytics, and digital transformation drive business impact across
                 industries.</div>
         </header>
+        <style>
+            .case-study-card {
+                background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                // border-radius: 16px !important;
+                padding: 40px;
+                margin-bottom: 44px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .case-study-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            }
+
+            .case-tag {
+                display: inline-block;
+                background: rgba(241, 188, 0, 0.1);
+                color: #F1BC00;
+                padding: 8px 16px;
+                // border-radius: 20px !important;
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+
+            .case-title {
+                color: #F1BC00;
+                font-size: 32px;
+                font-weight: 600;
+                margin-bottom: 20px;
+                line-height: 1.2;
+            }
+
+            .case-intro {
+                color: #A0A0A0;
+                font-size: 18px;
+                line-height: 1.6;
+                margin-bottom: 40px;
+            }
+
+            .case-details {
+                display: flex;
+                flex-direction: rows;
+                // gap: 30px;
+            }
+
+            .detail-block {
+                background: rgba(255, 255, 255, 0.03);
+                padding: 24px;
+                // border-radius: 12px !important;
+            }
+
+            .detail-block h4 {
+                color: #FFD84D;
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 12px;
+            }
+
+            .detail-block p {
+                color: #E0E0E0;
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+            .tool-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .tool-tag {
+                background: rgba(255, 216, 77, 0.1);
+                color: #FFD84D;
+                padding: 6px 12px;
+                // border-radius: 6px !important;
+                font-size: 14px;
+                font-weight: 500;
+            }
+        </style>
 
         <!-- Case Study 1 -->
-        <section class="service-block" id="case1"
-            style="background:rgba(255,255,255,0.05); padding:40px; border-radius:10px; margin-bottom:44px;">
-            <h3 style="color:#F1BC00; font-size:32px; margin-bottom:18px;">Executive Dashboard for Large Consumer Goods
-                Company</h3>
-            <div class="service-intro" style="color:#A0A0A0; font-size:17px; margin-bottom:24px;">Empowering executives
-                with a single source of truth for strategic oversight and operational performance.</div>
-            <ul style="list-style:none; padding:0; margin-bottom:24px;">
-                <li><b style="color:#FFD84D;">Problem:</b> The executive team lacked a centralized, real-time view of
-                    KPIs across Customer, Service, Demand Planning, Inventory, Logistics, Production, Collect, and
-                    Overheads.</li>
-                <li><b style="color:#FFD84D;">Impact:</b> Enabled strategic oversight, improved SLA compliance, and
-                    unified customer experience metrics.</li>
-                <li><b style="color:#FFD84D;">Solution:</b> Current state assessment, KPI monitoring, dashboarding,
-                    centralized KPI dictionary, data pipeline automation, dashboard design and implementation.</li>
-                <li><b style="color:#FFD84D;">Tools & Technologies:</b> Azure Databricks, PowerBI</li>
-            </ul>
+        <section class="case-study-card" id="case1">
+            <div class="case-study-content">
+                <span class="case-tag">Executive Dashboard</span>
+                <h3 class="case-title">Executive Dashboard for Large Consumer Goods Company</h3>
+                <p class="case-intro">Empowering executives with a single source of truth for strategic oversight and
+                    operational performance.</p>
+
+                <div class="case-details">
+                    <div class="detail-block">
+                        <h4>Problem</h4>
+                        <p>The executive team lacked a centralized, real-time view of KPIs across Customer, Service,
+                            Demand Planning, Inventory, Logistics, Production, Collect, and Overheads.</p>
+                    </div>
+
+                    <div class="detail-block">
+                        <h4>Impact</h4>
+                        <p>Enabled strategic oversight, improved SLA compliance, and unified customer experience
+                            metrics.</p>
+                    </div>
+
+                    <div class="detail-block">
+                        <h4>Solution</h4>
+                        <p>Current state assessment, KPI monitoring, dashboarding, centralized KPI dictionary, data
+                            pipeline automation, dashboard design and implementation.</p>
+                    </div>
+
+
+                </div>
+                <div class="detail-block tools">
+                    <h4>Tools & Technologies</h4>
+                    <div class="tool-tags">
+                        <span class="tool-tag">Azure Databricks</span>
+                        <span class="tool-tag">PowerBI</span>
+                    </div>
+                </div>
+            </div>
+
+
         </section>
 
         <!-- Case Study 2 -->
-        <section class="service-block" id="case2"
-            style="background:rgba(255,255,255,0.05); padding:40px; border-radius:10px; margin-bottom:44px;">
-            <h3 style="color:#F1BC00; font-size:32px; margin-bottom:18px;">Digital Transformation Strategy for Aerospace
-                & Defense Manufacturer</h3>
-            <div class="service-intro" style="color:#A0A0A0; font-size:17px; margin-bottom:24px;">Driving ROI and
-                efficiency through digital initiatives and supply chain optimization.</div>
-            <ul style="list-style:none; padding:0; margin-bottom:24px;">
-                <li><b style="color:#FFD84D;">Problem:</b> OEM rating declined due to poor delivery and quality, high
-                    costs, and minimal use of digital technologies.</li>
-                <li><b style="color:#FFD84D;">Impact:</b> 16 digital initiatives generated INR 58 Cr. in revenue, INR 26
-                    Cr. in cost savings, 246% ROI, improved CSAT, and operational efficiency.</li>
-                <li><b style="color:#FFD84D;">Solution:</b> Digital Transformation Strategy, analysis of 9 functions and
-                    450+ processes, roadmap with 16 initiatives.</li>
-                <li><b style="color:#FFD84D;">Tools & Technologies:</b> Digital Maturity Assessment Framework</li>
-            </ul>
+        <section class="case-study-card" id="case2">
+            <div class="case-study-content">
+                <span class="case-tag">Digital Transformation Strategy</span>
+                <h3 class="case-title">Digital Transformation Strategy for Leading Aerospace & Defense Manufacturer</h3>
+                <p class="case-intro">Driving ROI, efficiency, and supply chain optimization through digital
+                    initiatives.</p>
+
+                <div class="case-details">
+                    <div class="detail-block">
+                        <h4>Problem</h4>
+                        <p>OEM rating was declining due to poor delivery and quality, high raw material costs (65%),
+                            inventory challenges, production downtime, and minimal adoption of digital technologies.</p>
+                    </div>
+
+                    <div class="detail-block">
+                        <h4>Impact</h4>
+                        <p>Generated INR 58 Cr. in additional revenue, INR 26 Cr. in cost savings, achieved 246% ROI,
+                            improved CSAT, enhanced delivery and quality, ensured real-time traceability, increased
+                            efficiency, and reduced defects.</p>
+                    </div>
+
+                    <div class="detail-block">
+                        <h4>Solution</h4>
+                        <p>Created a Digital Transformation Strategy by analyzing 9 key functions and 450+ processes,
+                            followed by a detailed roadmap with 16 digital initiatives.</p>
+                    </div>
+                </div>
+
+                <div class="detail-block tools">
+                    <h4>Tools & Technologies</h4>
+                    <div class="tool-tags">
+                        <span class="tool-tag">Digital Maturity Assessment Framework</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Case Study 3 -->
+        <section class="case-study-card" id="case3">
+            <div class="case-study-content">
+                <span class="case-tag">Data Lab</span>
+                <h3 class="case-title">Data Lab for Large Private Equity Firm</h3>
+                <p class="case-intro">Centralizing data to enhance reliability, quality, and scalable analytics
+                    capabilities.</p>
+
+                <div class="case-details">
+                    <div class="detail-block">
+                        <h4>Problem</h4>
+                        <p>The organization faced significant challenges with data fragmentation, quality
+                            inconsistencies, and reporting delays due to disparate legacy systems and lack of
+                            centralized management. Siloed data led to redundant, outdated information, hampering
+                            accurate analysis and compliance.</p>
+                    </div>
+
+                    <div class="detail-block">
+                        <h4>Impact</h4>
+                        <p>Implementation of centralized systems improved data reliability, quality, and accessibility.
+                            Enabled faster and more accurate reporting, enhanced decision-making, reduced costs, ensured
+                            scalability, and regulatory compliance. Network analysis supported complex scenarios like
+                            circular and reverse linear trades.</p>
+                    </div>
+
+                    <div class="detail-block">
+                        <h4>Solution</h4>
+                        <p>Implemented Enterprise Data Warehouse, Master Data Management, Hedge Fund Accounting
+                            Waterfall System, and CRM. Improved and standardized data quality via a fully functional
+                            MDM. Built a reliable, high-availability data warehouse. Migrated reporting portal from
+                            Cognos to SSRS with a scaled-out deployment strategy for performance and cost savings.</p>
+                    </div>
+                </div>
+
+                <div class="detail-block tools">
+                    <h4>Tools & Technologies</h4>
+                    <div class="tool-tags">
+                        <span class="tool-tag">SQL Server 2005/2008/2012</span>
+                        <span class="tool-tag">SSIS</span>
+                        <span class="tool-tag">SSRS</span>
+                        <span class="tool-tag">IBM Cognos</span>
+                        <span class="tool-tag">MS Excel</span>
+                        <span class="tool-tag">R</span>
+                        <span class="tool-tag">Essbase</span>
+                        <span class="tool-tag">IBM Initiate</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!-- Case Study 3 -->
-        <section class="service-block" id="case3"
-            style="background:rgba(255,255,255,0.05); padding:40px; border-radius:10px; margin-bottom:44px;">
-            <h3 style="color:#F1BC00; font-size:32px; margin-bottom:18px;">Data Lab for Large Private Equity Firm</h3>
-            <div class="service-intro" style="color:#A0A0A0; font-size:17px; margin-bottom:24px;">Centralizing data for
-                reliability, quality, and scalable analytics.</div>
-            <ul style="list-style:none; padding:0; margin-bottom:24px;">
-                <li><b style="color:#FFD84D;">Problem:</b> Data fragmentation, quality inconsistencies, reporting
-                    delays, and siloed legacy systems.</li>
-                <li><b style="color:#FFD84D;">Impact:</b> Enhanced reporting, analytics, decision-making, reduced costs,
-                    and regulatory compliance.</li>
-                <li><b style="color:#FFD84D;">Solution:</b> Enterprise Data Warehouse, MDM, Hedge Fund Accounting, CRM,
-                    standardized data quality, scalable architecture, reporting portal migration.</li>
-                <li><b style="color:#FFD84D;">Tools & Technologies:</b> SQL Server, SSIS, SSRS, IBM Cognos, MS Excel, R,
-                    Essbase, IBM Initiate</li>
-            </ul>
-        </section>
 
         <!-- Case Study 4 -->
-        <section class="service-block" id="case4"
-            style="background:rgba(255,255,255,0.05); padding:40px; border-radius:10px; margin-bottom:44px;">
-            <h3 style="color:#F1BC00; font-size:32px; margin-bottom:18px;">Internal Audit Analytics Tool</h3>
-            <div class="service-intro" style="color:#A0A0A0; font-size:17px; margin-bottom:24px;">Empowering auditors
-                with efficient, cloud-agnostic analytics and anomaly detection.</div>
-            <ul style="list-style:none; padding:0; margin-bottom:24px;">
-                <li><b style="color:#FFD84D;">Problem:</b> Resistance to external queries, multiple ERPs, scripting
-                    effort, extraction failures, lack of native ERP tools.</li>
-                <li><b style="color:#FFD84D;">Impact:</b> Saved 20,000 hours, enhanced efficiency, empowered
-                    non-technical auditors.</li>
-                <li><b style="color:#FFD84D;">Solution:</b> Data ingestion framework, rule engine, scheduler, AI/ML
-                    anomaly detection, dashboards, containerized solution.</li>
-                <li><b style="color:#FFD84D;">Tools & Technologies:</b> Kylo, Spark, Azure, Superset, Hive, Hadoop</li>
-            </ul>
+        <section class="case-study-card" id="case4">
+            <div class="case-study-content">
+                <span class="case-tag">Internal Audit Analytics</span>
+                <h3 class="case-title">Internal Audit Analytics Tool</h3>
+                <p class="case-intro">Automating audits with rule engines, anomaly detection, and scalable ingestion
+                    frameworks.</p>
+
+                <div class="case-details">
+                    <div class="detail-block">
+                        <h4>Problem</h4>
+                        <p>Resistance to running external queries in client production environments. Multiple ERP
+                            versions required extensive scripting. Queries often failed due to complex transformations
+                            and dataset size. Native ERP features were underutilized.</p>
+                    </div>
+
+                    <div class="detail-block">
+                        <h4>Impact</h4>
+                        <p>Enhanced efficiency, saved ~20,000 hours in the first year of internal audits, achieved
+                            significant cost savings, and enabled non-technical auditors through a shift-left
+                            philosophy.</p>
+                    </div>
+
+                    <div class="detail-block">
+                        <h4>Solution</h4>
+                        <p>Developed a simple ingestion framework usable by auditors. Built a rule engine with a
+                            comprehensive library and custom rule support. Automated scheduling for audits. Integrated
+                            AI/ML-based anomaly detection and dashboards. Designed a containerized, cloud-agnostic
+                            solution.</p>
+                    </div>
+                </div>
+
+                <div class="detail-block tools">
+                    <h4>Tools & Technologies</h4>
+                    <div class="tool-tags">
+                        <span class="tool-tag">Kylo</span>
+                        <span class="tool-tag">Spark</span>
+                        <span class="tool-tag">Azure</span>
+                        <span class="tool-tag">Superset</span>
+                        <span class="tool-tag">Hive</span>
+                        <span class="tool-tag">Hadoop</span>
+                    </div>
+                </div>
+            </div>
         </section>
+
 
         <!-- Case Study 5 -->
-        <section class="service-block" id="case5"
-            style="background:rgba(255,255,255,0.05); padding:40px; border-radius:10px; margin-bottom:44px;">
-            <h3 style="color:#F1BC00; font-size:32px; margin-bottom:18px;">Data Ingestion Framework for Wind Turbine
-                Manufacturer</h3>
-            <div class="service-intro" style="color:#A0A0A0; font-size:17px; margin-bottom:24px;">Standardizing and
-                automating analytics for wind energy data.</div>
-            <ul style="list-style:none; padding:0; margin-bottom:24px;">
-                <li><b style="color:#FFD84D;">Problem:</b> Varying data models, formats, and frequencies for turbine
-                    data, lack of standardization and automation.</li>
-                <li><b style="color:#FFD84D;">Impact:</b> Improved onboarding by 50%, enhanced data quality and
-                    prediction accuracy.</li>
-                <li><b style="color:#FFD84D;">Solution:</b> Custom ingestion platform, intuitive UI, ingest data from
-                    any turbine model.</li>
-                <li><b style="color:#FFD84D;">Tools & Technologies:</b> Java JSP, Node.js, React.js, Talend, MySQL</li>
-            </ul>
+        <section class="case-study-card" id="case5">
+            <div class="case-study-content">
+                <span class="case-tag">Data Ingestion</span>
+                <h3 class="case-title">Data Ingestion Framework for Largest Wind Turbine Manufacturer</h3>
+                <p class="case-intro">Best-in-class analytics platform for wind energy industry through standardized
+                    data ingestion.</p>
+
+                <div class="case-details">
+                    <div class="detail-block">
+                        <h4>Problem</h4>
+                        <p>Each turbine model had a unique data model with no standardized import mechanism. Customer
+                            data arrived in varied formats and frequencies, making integration time-consuming without
+                            automation.</p>
+                    </div>
+
+                    <div class="detail-block">
+                        <h4>Impact</h4>
+                        <p>Improved customer onboarding by 50%, enhanced data quality, and significantly increased
+                            prediction accuracy.</p>
+                    </div>
+
+                    <div class="detail-block">
+                        <h4>Solution</h4>
+                        <p>Developed a custom ingestion platform that supports any turbine model. Delivered an intuitive
+                            user interface for ease of use.</p>
+                    </div>
+                </div>
+
+                <div class="detail-block tools">
+                    <h4>Tools & Technologies</h4>
+                    <div class="tool-tags">
+                        <span class="tool-tag">Java JSP</span>
+                        <span class="tool-tag">Node.js</span>
+                        <span class="tool-tag">React.js</span>
+                        <span class="tool-tag">Talend</span>
+                        <span class="tool-tag">MySQL</span>
+                    </div>
+                </div>
+            </div>
         </section>
+
 
         <!-- Case Study 6 -->
-        <section class="service-block" id="case6"
-            style="background:rgba(255,255,255,0.05); padding:40px; border-radius:10px; margin-bottom:44px;">
-            <h3 style="color:#F1BC00; font-size:32px; margin-bottom:18px;">Data Strategy for One of the Largest States
-                in India</h3>
-            <div class="service-intro" style="color:#A0A0A0; font-size:17px; margin-bottom:24px;">Building a roadmap for
-                data-driven governance and policy.</div>
-            <ul style="list-style:none; padding:0; margin-bottom:24px;">
-                <li><b style="color:#FFD84D;">Problem:</b> Needed a comprehensive data strategy for planning, policy,
-                    and scheme implementation; assessment of data ecosystem and governance.</li>
-                <li><b style="color:#FFD84D;">Impact:</b> Identified challenges, recommended roadmap, explored
-                    integration opportunities for DES and Remote Sensing.</li>
-                <li><b style="color:#FFD84D;">Solution:</b> User consultations, governance mapping, data inventory, best
-                    practices, strategy roadmap.</li>
-                <li><b style="color:#FFD84D;">Tools & Technologies:</b> MS Office</li>
-            </ul>
+        <section class="case-study-card" id="case6">
+            <div class="case-study-content">
+                <span class="case-tag">Data Strategy</span>
+                <h3 class="case-title">Data Strategy for One of the Largest States in India</h3>
+                <p class="case-intro">Roadmap for efficient data-driven governance, policymaking, and district growth
+                    strategies.</p>
+
+                <div class="case-details">
+                    <div class="detail-block">
+                        <h4>Problem</h4>
+                        <p>The state needed a comprehensive data strategy for planning, policymaking, and scheme
+                            implementation. The assessment had to cover governance, policies, organizational
+                            capabilities, statistical systems, and technology applications.</p>
+                    </div>
+
+                    <div class="detail-block">
+                        <h4>Impact</h4>
+                        <p>Identified governance challenges, mapped opportunities for integrating DES and Remote Sensing
+                            Application Centre, and recommended a robust roadmap for data strategy and improved
+                            statistical systems.</p>
+                    </div>
+
+                    <div class="detail-block">
+                        <h4>Solution</h4>
+                        <p>Conducted user consultations, governance reviews, data inventories, and mapping exercises.
+                            Studied DES and RSAC systems, established baselines, benchmarked best practices, and defined
+                            a roadmap for efficient, effective data governance.</p>
+                    </div>
+                </div>
+
+                <div class="detail-block tools">
+                    <h4>Tools & Technologies</h4>
+                    <div class="tool-tags">
+                        <span class="tool-tag">MS Office</span>
+                    </div>
+                </div>
+            </div>
         </section>
+
 
         <!-- Case Study 7 -->
-        <section class="service-block" id=""
-            style="background:rgba(255,255,255,0.05); padding:40px; border-radius:10px; margin-bottom:44px;">
-            <h3 style="color:#F1BC00; font-size:32px; margin-bottom:18px;">Data Governance & MDM Strategy for Large BPO
-            </h3>
-            <div class="service-intro" style="color:#A0A0A0; font-size:17px; margin-bottom:24px;">Establishing a single
-                source of truth and standardized KPIs for business functions.</div>
-            <ul style="list-style:none; padding:0; margin-bottom:24px;">
-                <li><b style="color:#FFD84D;">Problem:</b> Data accuracy, consistency, compliance challenges, data
-                    silos, disparate sources, regulatory risk.</li>
-                <li><b style="color:#FFD84D;">Impact:</b> Defined governance structure, designed data lake and BI
-                    architecture, standardized KPIs.</li>
-                <li><b style="color:#FFD84D;">Solution:</b> Vision definition, current state assessment, KPI monitoring,
-                    BI evaluation, roadmap development.</li>
-                <li><b style="color:#FFD84D;">Tools & Technologies:</b> MS Office</li>
-            </ul>
+        <section class="case-study-card" id="case7">
+            <div class="case-study-content">
+                <span class="case-tag">Data Governance & MDM</span>
+                <h3 class="case-title">Data Governance & MDM Strategy for Large BPO</h3>
+                <p class="case-intro">Creating a single source of truth by defining governance, standardization, and BI
+                    architecture.</p>
+
+                <div class="case-details">
+                    <div class="detail-block">
+                        <h4>Problem</h4>
+                        <p>Challenges included data accuracy, consistency, and compliance issues across multiple
+                            systems. Data silos created duplicate, outdated, or conflicting information, complicating
+                            decision-making and compliance. Needed infrastructure for a single source of truth.</p>
+                    </div>
+
+                    <div class="detail-block">
+                        <h4>Impact</h4>
+                        <p>Defined key data elements, governance structures, BI and data lake architectures, and
+                            standardized KPIs across business functions.</p>
+                    </div>
+
+                    <div class="detail-block">
+                        <h4>Solution</h4>
+                        <p>Assessed current state, BI capabilities, and challenges. Defined high-level candidate
+                            solutions, recommended BI enhancements, and created an iterative roadmap balancing business
+                            value, priorities, and ease of implementation.</p>
+                    </div>
+                </div>
+
+                <div class="detail-block tools">
+                    <h4>Tools & Technologies</h4>
+                    <div class="tool-tags">
+                        <span class="tool-tag">MS Office</span>
+                    </div>
+                </div>
+            </div>
         </section>
-    </section>
 
 
-    <!-- Form Section Start -->
-    <section id="consultation-form" style="max-width:1200px;margin:0 auto;padding:40px 20px;">
-        <div style="display:flex;flex-direction:column;gap:0;align-items:stretch;min-height:600px;">
-            <div
-                style="background:rgba(40,40,40,0.2);backdrop-filter:blur(20px);padding:50px;display:flex;flex-direction:column;justify-content:center;">
-                <h2 style="color:#ffcc00;font-size:32px;margin-bottom:40px;font-weight:600;">Ready to unlock your data's
-                    potential?</h2>
-                <div id="successMessage"
-                    style="background:rgba(0,150,0,0.2);color:#00ff00;padding:15px;margin-bottom:20px;display:none;border:none;">
-                    Thank you! We'll get back to you soon.
+
+
+
+
+
+        <!-- Form Section Start -->
+        <section id="consultation-form" style="max-width:1200px;margin:0 auto;padding:40px 20px;">
+            <div style="display:flex;flex-direction:column;gap:0;align-items:stretch;min-height:600px;">
+                <div
+                    style="background:rgba(40,40,40,0.2);backdrop-filter:blur(20px);padding:50px;display:flex;flex-direction:column;justify-content:center;">
+                    <h2 style="color:#ffcc00;font-size:32px;margin-bottom:40px;font-weight:600;">Ready to unlock your
+                        data's
+                        potential?</h2>
+                    <div id="successMessage"
+                        style="background:rgba(0,150,0,0.2);color:#00ff00;padding:15px;margin-bottom:20px;display:none;border:none;">
+                        Thank you! We'll get back to you soon.
+                    </div>
+                    <form id="contactForm">
+                        <div style="margin-bottom:25px;">
+                            <label for="name"
+                                style="display:block;margin-bottom:8px;color:#cccccc;font-weight:500;font-size:14px;">Full
+                                Name *</label>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required
+                                style="width:100%;padding:16px;background:rgba(20,20,20,0.6);border:none;color:#e0e0e0;font-size:16px;transition:all 0.3s ease;">
+                            <div id="nameError" style="color:#ff6666;font-size:13px;margin-top:5px;display:none;">Please
+                                enter your name</div>
+                        </div>
+                        <div style="margin-bottom:25px;">
+                            <label for="email"
+                                style="display:block;margin-bottom:8px;color:#cccccc;font-weight:500;font-size:14px;">Email
+                                Address *</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@company.com" required
+                                style="width:100%;padding:16px;background:rgba(20,20,20,0.6);border:none;color:#e0e0e0;font-size:16px;transition:all 0.3s ease;">
+                            <div id="emailError" style="color:#ff6666;font-size:13px;margin-top:5px;display:none;">
+                                Please
+                                enter a valid email</div>
+                        </div>
+                        <div style="margin-bottom:25px;">
+                            <label for="company"
+                                style="display:block;margin-bottom:8px;color:#cccccc;font-weight:500;font-size:14px;">Company</label>
+                            <input type="text" id="company" name="company" placeholder="Your company name"
+                                style="width:100%;padding:16px;background:rgba(20,20,20,0.6);border:none;color:#e0e0e0;font-size:16px;transition:all 0.3s ease;">
+                        </div>
+                        <div style="margin-bottom:25px;">
+                            <label for="message"
+                                style="display:block;margin-bottom:8px;color:#cccccc;font-weight:500;font-size:14px;">Message
+                                *</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..."
+                                required
+                                style="width:100%;padding:16px;background:rgba(20,20,20,0.6);border:none;color:#e0e0e0;font-size:16px;transition:all 0.3s ease;"></textarea>
+                            <div id="messageError" style="color:#ff6666;font-size:13px;margin-top:5px;display:none;">
+                                Please
+                                enter your message</div>
+                        </div>
+                        <div style="margin:30px 0;">
+                            <label
+                                style="display:flex;align-items:flex-start;gap:12px;cursor:pointer;padding:15px 0;transition:all 0.3s ease;">
+                                <input type="checkbox" id="privacyConsent" name="privacyConsent" required
+                                    style="width:18px;height:18px;accent-color:#ffcc00;margin-top:2px;cursor:pointer;">
+                                <span style="color:#cccccc;font-size:14px;line-height:1.5;">I agree to the <a
+                                        href="#privacy" target="_blank"
+                                        style="color:#ffcc00;text-decoration:none;font-weight:500;">Privacy Policy</a>
+                                    and
+                                    consent to my data being processed</span>
+                            </label>
+                            <div id="privacyError" style="color:#ff6666;font-size:13px;margin-top:5px;display:none;">
+                                Please
+                                accept the privacy policy</div>
+                        </div>
+                        <button type="submit" id="submitButton"
+                            style="width:100%;padding:18px;background:linear-gradient(135deg,#ffcc00 0%,#e6b800 100%);color:#1a1a1a;border:none;font-size:16px;font-weight:600;cursor:pointer;transition:all 0.3s ease;text-transform:uppercase;letter-spacing:0.5px;margin-top:20px;">Send
+                            Message</button>
+                    </form>
                 </div>
-                <form id="contactForm">
-                    <div style="margin-bottom:25px;">
-                        <label for="name"
-                            style="display:block;margin-bottom:8px;color:#cccccc;font-weight:500;font-size:14px;">Full
-                            Name *</label>
-                        <input type="text" id="name" name="name" placeholder="Your full name" required
-                            style="width:100%;padding:16px;background:rgba(20,20,20,0.6);border:none;color:#e0e0e0;font-size:16px;transition:all 0.3s ease;">
-                        <div id="nameError" style="color:#ff6666;font-size:13px;margin-top:5px;display:none;">Please
-                            enter your name</div>
+                <div
+                    style="background:rgba(30,30,30,0.2);backdrop-filter:blur(20px);padding:50px;display:flex;align-items:center;justify-content:center;color:#cccccc;font-size:18px;">
+                    <div style="text-align:center;">
+                        <div style="font-size:48px;margin-bottom:20px;color:#ffcc00;">📍</div>
+                        <div style="font-size:24px;font-weight:600;margin-bottom:10px;color:#ffcc00;">Our Location</div>
+                        <iframe
+                            src="https://www.google.com/maps?q=Sector+16C,+Greater+Noida+West,+UP-201306&output=embed"
+                            width="100%" height="180" style="border:0;border-radius:12px;margin-bottom:12px;"></iframe>
+                        <div style="font-size:16px;color:#A0A0A0;line-height:1.5;margin-top:8px;">Sector 16C, Greater
+                            Noida
+                            West<br>UP-201306</div>
                     </div>
-                    <div style="margin-bottom:25px;">
-                        <label for="email"
-                            style="display:block;margin-bottom:8px;color:#cccccc;font-weight:500;font-size:14px;">Email
-                            Address *</label>
-                        <input type="email" id="email" name="email" placeholder="your.email@company.com" required
-                            style="width:100%;padding:16px;background:rgba(20,20,20,0.6);border:none;color:#e0e0e0;font-size:16px;transition:all 0.3s ease;">
-                        <div id="emailError" style="color:#ff6666;font-size:13px;margin-top:5px;display:none;">Please
-                            enter a valid email</div>
-                    </div>
-                    <div style="margin-bottom:25px;">
-                        <label for="company"
-                            style="display:block;margin-bottom:8px;color:#cccccc;font-weight:500;font-size:14px;">Company</label>
-                        <input type="text" id="company" name="company" placeholder="Your company name"
-                            style="width:100%;padding:16px;background:rgba(20,20,20,0.6);border:none;color:#e0e0e0;font-size:16px;transition:all 0.3s ease;">
-                    </div>
-                    <div style="margin-bottom:25px;">
-                        <label for="message"
-                            style="display:block;margin-bottom:8px;color:#cccccc;font-weight:500;font-size:14px;">Message
-                            *</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..."
-                            required
-                            style="width:100%;padding:16px;background:rgba(20,20,20,0.6);border:none;color:#e0e0e0;font-size:16px;transition:all 0.3s ease;"></textarea>
-                        <div id="messageError" style="color:#ff6666;font-size:13px;margin-top:5px;display:none;">Please
-                            enter your message</div>
-                    </div>
-                    <div style="margin:30px 0;">
-                        <label
-                            style="display:flex;align-items:flex-start;gap:12px;cursor:pointer;padding:15px 0;transition:all 0.3s ease;">
-                            <input type="checkbox" id="privacyConsent" name="privacyConsent" required
-                                style="width:18px;height:18px;accent-color:#ffcc00;margin-top:2px;cursor:pointer;">
-                            <span style="color:#cccccc;font-size:14px;line-height:1.5;">I agree to the <a
-                                    href="#privacy" target="_blank"
-                                    style="color:#ffcc00;text-decoration:none;font-weight:500;">Privacy Policy</a> and
-                                consent to my data being processed</span>
-                        </label>
-                        <div id="privacyError" style="color:#ff6666;font-size:13px;margin-top:5px;display:none;">Please
-                            accept the privacy policy</div>
-                    </div>
-                    <button type="submit" id="submitButton"
-                        style="width:100%;padding:18px;background:linear-gradient(135deg,#ffcc00 0%,#e6b800 100%);color:#1a1a1a;border:none;font-size:16px;font-weight:600;cursor:pointer;transition:all 0.3s ease;text-transform:uppercase;letter-spacing:0.5px;margin-top:20px;">Send
-                        Message</button>
-                </form>
-            </div>
-            <div
-                style="background:rgba(30,30,30,0.2);backdrop-filter:blur(20px);padding:50px;display:flex;align-items:center;justify-content:center;color:#cccccc;font-size:18px;">
-                <div style="text-align:center;">
-                    <div style="font-size:48px;margin-bottom:20px;color:#ffcc00;">📍</div>
-                    <div style="font-size:24px;font-weight:600;margin-bottom:10px;color:#ffcc00;">Our Location</div>
-                    <iframe src="https://www.google.com/maps?q=Sector+16C,+Greater+Noida+West,+UP-201306&output=embed"
-                        width="100%" height="180" style="border:0;border-radius:12px;margin-bottom:12px;"></iframe>
-                    <div style="font-size:16px;color:#A0A0A0;line-height:1.5;margin-top:8px;">Sector 16C, Greater Noida
-                        West<br>UP-201306</div>
                 </div>
             </div>
-        </div>
-    </section>
-    <script>
+        </section>
+        <script>
             document.getElementById('contactForm').addEventListener('submit', function(e) {
                 e.preventDefault();
             const form = e.target;
@@ -3676,294 +3956,294 @@
                 }, 1500);
             }
         });
-    </script>
+        </script>
 
 
-    <!-- Form Section End -->
+        <!-- Form Section End -->
 
-    <!-- Footer Section Start -->
-    <style>
-        .ft {
-            background: #1a1a1a;
-            color: #fff;
-            padding: 80px 0 40px;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .ft-cta {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .ft-cta h3 {
-            font-size: 32px;
-            font-weight: 600;
-            margin: 0 0 16px;
-            letter-spacing: -0.02em;
-        }
-
-        .ft-cta p {
-            color: #888;
-            margin: 0 0 32px;
-            font-size: 18px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .ft-cta a {
-            display: inline-flex;
-            align-items: center;
-            background: #ffd700;
-            color: #000;
-            padding: 16px 32px;
-            font-weight: 600;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-        }
-
-        .ft-cta a:hover {
-            background: #e6c200;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
-        }
-
-        .ft-grid {
-            max-width: 1200px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr 1fr;
-            gap: 80px;
-            padding: 0 40px;
-        }
-
-        .ft-logo {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 24px;
-        }
-
-        .ft-logo img {
-            width: 40px;
-            height: 40px;
-            transition: transform 0.3s ease;
-        }
-
-        .ft-logo:hover img {
-            transform: scale(1.1);
-        }
-
-        .ft-logo span {
-            font-size: 24px;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-        }
-
-        .ft-contact {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin: 24px 0;
-            color: #888;
-        }
-
-        .ft-contact span {
-            transition: color 0.3s ease;
-        }
-
-        .ft-contact span:hover {
-            color: #ffd700;
-        }
-
-        .ft-grid h4 {
-            font-size: 18px;
-            font-weight: 600;
-            margin: 0 0 24px;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .ft-links {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .ft-links a {
-            color: #888;
-            text-decoration: none;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            display: inline-block;
-            position: relative;
-        }
-
-        .ft-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
-            bottom: -2px;
-            left: 0;
-            background-color: #ffd700;
-            transition: width 0.3s ease;
-        }
-
-        .ft-links a:hover {
-            color: #ffd700;
-            transform: translateX(8px);
-        }
-
-        .ft-links a:hover::after {
-            width: 100%;
-        }
-
-        .ft-bottom {
-            max-width: 1200px;
-            margin: 60px auto 0;
-            padding: 24px 40px 0;
-            border-top: 1px solid #333;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 14px;
-            color: #666;
-        }
-
-        .ft-bottom a {
-            color: #888;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .ft-bottom a:hover {
-            color: #ffd700;
-        }
-
-        @media(max-width: 1200px) {
-            .ft-grid {
-                grid-template-columns: 1.2fr 1fr 1fr;
-                gap: 60px;
-            }
-
-            .ft-grid>div:last-child {
-                grid-column: 2 / 4;
-            }
-        }
-
-        @media(max-width: 900px) {
-            .ft-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 40px;
-            }
-
-            .ft-grid>div:last-child {
-                grid-column: auto;
-            }
-        }
-
-        @media(max-width: 600px) {
+        <!-- Footer Section Start -->
+        <style>
             .ft {
-                padding: 60px 0 30px;
+                background: #1a1a1a;
+                color: #fff;
+                padding: 80px 0 40px;
+                font-family: 'Inter', sans-serif;
             }
 
-            .ft-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                padding: 0 20px;
+            .ft-cta {
+                text-align: center;
+                margin-bottom: 60px;
             }
 
             .ft-cta h3 {
-                font-size: 28px;
+                font-size: 32px;
+                font-weight: 600;
+                margin: 0 0 16px;
+                letter-spacing: -0.02em;
             }
 
             .ft-cta p {
+                color: #888;
+                margin: 0 0 32px;
+                font-size: 18px;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .ft-cta a {
+                display: inline-flex;
+                align-items: center;
+                background: #ffd700;
+                color: #000;
+                padding: 16px 32px;
+                font-weight: 600;
+                text-decoration: none;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                transition: all 0.3s ease;
+            }
+
+            .ft-cta a:hover {
+                background: #e6c200;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+            }
+
+            .ft-grid {
+                max-width: 1200px;
+                margin: auto;
+                display: grid;
+                grid-template-columns: 1.5fr 1fr 1fr 1fr;
+                gap: 80px;
+                padding: 0 40px;
+            }
+
+            .ft-logo {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                margin-bottom: 24px;
+            }
+
+            .ft-logo img {
+                width: 40px;
+                height: 40px;
+                transition: transform 0.3s ease;
+            }
+
+            .ft-logo:hover img {
+                transform: scale(1.1);
+            }
+
+            .ft-logo span {
+                font-size: 24px;
+                font-weight: 600;
+                letter-spacing: -0.02em;
+            }
+
+            .ft-contact {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                margin: 24px 0;
+                color: #888;
+            }
+
+            .ft-contact span {
+                transition: color 0.3s ease;
+            }
+
+            .ft-contact span:hover {
+                color: #ffd700;
+            }
+
+            .ft-grid h4 {
+                font-size: 18px;
+                font-weight: 600;
+                margin: 0 0 24px;
+                color: #fff;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .ft-links {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .ft-links a {
+                color: #888;
+                text-decoration: none;
                 font-size: 16px;
+                transition: all 0.3s ease;
+                display: inline-block;
+                position: relative;
+            }
+
+            .ft-links a::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 1px;
+                bottom: -2px;
+                left: 0;
+                background-color: #ffd700;
+                transition: width 0.3s ease;
+            }
+
+            .ft-links a:hover {
+                color: #ffd700;
+                transform: translateX(8px);
+            }
+
+            .ft-links a:hover::after {
+                width: 100%;
             }
 
             .ft-bottom {
-                flex-direction: column;
-                gap: 16px;
-                text-align: center;
-                margin-top: 40px;
+                max-width: 1200px;
+                margin: 60px auto 0;
+                padding: 24px 40px 0;
+                border-top: 1px solid #333;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 14px;
+                color: #666;
             }
-        }
-    </style>
 
-    <footer class="ft">
-        <div class="ft-cta">
-            <h3>Ready to Transform Your Data?</h3>
-            <p>Schedule a free consultation to discover how we can accelerate your data journey.</p>
-            <a href="#consultation-form">Get Started Today →</a>
-        </div>
-        <div class="ft-grid">
-            <div>
-                <div class="logo-section">
-                    <a href="../home/index.html" class="logo-link" aria-label="NeuroGig Home">
-                        <img class="logo-image" src="../Images/Logo.svg" alt="NeuroGig Logo" />
-                        <span class="logo-text">Neurogig</span>
-                    </a>
-                </div>
-                <p style="color:#888">Empowering enterprises to transform data into actionable outcomes.</p>
-                <div class="ft-contact">
-                    <span style="font-weight:600;color:#fff;font-size:16px;">Contact</span>
-                    <div style="display:flex;flex-direction:column;gap:4px;margin-top:8px;">
-                        <span style="color:#ffd700;font-weight:500;"><span
-                                style="color:#fff;">+91-8447808884</span></span>
-                        <span style="color:#ffd700;font-weight:500;"><span
-                                style="color:#fff;">+91-8800650909</span></span>
-                        <span style="color:#ffd700;font-weight:500;"><span
-                                style="color:#fff;">info@neurogig.com</span></span>
+            .ft-bottom a {
+                color: #888;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+
+            .ft-bottom a:hover {
+                color: #ffd700;
+            }
+
+            @media(max-width: 1200px) {
+                .ft-grid {
+                    grid-template-columns: 1.2fr 1fr 1fr;
+                    gap: 60px;
+                }
+
+                .ft-grid>div:last-child {
+                    grid-column: 2 / 4;
+                }
+            }
+
+            @media(max-width: 900px) {
+                .ft-grid {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 40px;
+                }
+
+                .ft-grid>div:last-child {
+                    grid-column: auto;
+                }
+            }
+
+            @media(max-width: 600px) {
+                .ft {
+                    padding: 60px 0 30px;
+                }
+
+                .ft-grid {
+                    grid-template-columns: 1fr;
+                    gap: 40px;
+                    padding: 0 20px;
+                }
+
+                .ft-cta h3 {
+                    font-size: 28px;
+                }
+
+                .ft-cta p {
+                    font-size: 16px;
+                }
+
+                .ft-bottom {
+                    flex-direction: column;
+                    gap: 16px;
+                    text-align: center;
+                    margin-top: 40px;
+                }
+            }
+        </style>
+
+        <footer class="ft">
+            <div class="ft-cta">
+                <h3>Ready to Transform Your Data?</h3>
+                <p>Schedule a free consultation to discover how we can accelerate your data journey.</p>
+                <a href="#consultation-form">Get Started Today →</a>
+            </div>
+            <div class="ft-grid">
+                <div>
+                    <div class="logo-section">
+                        <a href="../home/index.html" class="logo-link" aria-label="NeuroGig Home">
+                            <img class="logo-image" src="../Images/Logo.svg" alt="NeuroGig Logo" />
+                            <span class="logo-text">Neurogig</span>
+                        </a>
                     </div>
-                    <span style="margin-top:12px;color:#A0A0A0;font-size:15px;">Sector 16C, Greater Noida
-                        West<br>UP-201306</span>
+                    <p style="color:#888">Empowering enterprises to transform data into actionable outcomes.</p>
+                    <div class="ft-contact">
+                        <span style="font-weight:600;color:#fff;font-size:16px;">Contact</span>
+                        <div style="display:flex;flex-direction:column;gap:4px;margin-top:8px;">
+                            <span style="color:#ffd700;font-weight:500;"><span
+                                    style="color:#fff;">+91-8447808884</span></span>
+                            <span style="color:#ffd700;font-weight:500;"><span
+                                    style="color:#fff;">+91-8800650909</span></span>
+                            <span style="color:#ffd700;font-weight:500;"><span
+                                    style="color:#fff;">info@neurogig.com</span></span>
+                        </div>
+                        <span style="margin-top:12px;color:#A0A0A0;font-size:15px;">Sector 16C, Greater Noida
+                            West<br>UP-201306</span>
+                    </div>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <div class="ft-links">
+                        <a href="../services/servicesPage.html#data-strategy">Data Strategy</a>
+                        <a href="../services/servicesPage.html#data-engineering">Data Engineering</a>
+                        <a href="../services/servicesPage.html#data-science">Data Science</a>
+                        <a href="../services/servicesPage.html#generative-ai">Generative AI</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <div class="ft-links">
+                        <a href="../aboutUs/aboutUs.html">About Us</a>
+                        <a href="../aboutUs/aboutUs.html#leadership">Leadership</a>
+                        <a href="../aboutUs/aboutUs.html#our-story">Mission & Values</a>
+                        <a href="../aboutUs/aboutUs.html#contact">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <div class="ft-links">
+                        <a href="../insights/insights.html">Case Studies</a>
+                        <a href="../insights/insights.html#insights">Insights</a>
+                        <a href="../accelerators/accl.html">Accelerators</a>
+                        <a href="../aboutUs/aboutUs.html">Partners</a>
+                    </div>
                 </div>
             </div>
-            <div>
-                <h4>Services</h4>
-                <div class="ft-links">
-                    <a href="../services/servicesPage.html#data-strategy">Data Strategy</a>
-                    <a href="../services/servicesPage.html#data-engineering">Data Engineering</a>
-                    <a href="../services/servicesPage.html#data-science">Data Science</a>
-                    <a href="../services/servicesPage.html#generative-ai">Generative AI</a>
-                </div>
+            <div class="ft-bottom">
+                <div><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></div>
+                <div>© 2024 Neurongig Technologies Pvt. Ltd.</div>
             </div>
-            <div>
-                <h4>Company</h4>
-                <div class="ft-links">
-                    <a href="../aboutUs/aboutUs.html">About Us</a>
-                    <a href="../aboutUs/aboutUs.html#leadership">Leadership</a>
-                    <a href="../aboutUs/aboutUs.html#our-story">Mission & Values</a>
-                    <a href="../aboutUs/aboutUs.html#contact">Contact</a>
-                </div>
-            </div>
-            <div>
-                <h4>Resources</h4>
-                <div class="ft-links">
-                    <a href="../insights/insights.html">Case Studies</a>
-                    <a href="../insights/insights.html#insights">Insights</a>
-                    <a href="../accelerators/accl.html">Accelerators</a>
-                    <a href="../aboutUs/aboutUs.html">Partners</a>
-                </div>
-            </div>
-        </div>
-        <div class="ft-bottom">
-            <div><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></div>
-            <div>© 2024 Neurongig Technologies Pvt. Ltd.</div>
-        </div>
-    </footer>
-    <!-- Footer Section End -->
+        </footer>
+        <!-- Footer Section End -->
 
-    <!-- Social Links -->
-    <aside class="social-links">
-        <a href="https://www.linkedin.com/company/neurongig/" title="LinkedIn">in</a>
-        <a href="mailto:info@neurongig.com" title="Email">@</a>
-        <a href=":info@neurongig.com" title="Email">@</a>
-    </aside>
+        <!-- Social Links -->
+        <aside class="social-links">
+            <a href="https://www.linkedin.com/company/neurongig/" title="LinkedIn">in</a>
+            <a href="mailto:info@neurongig.com" title="Email">@</a>
+            <a href=":info@neurongig.com" title="Email">@</a>
+        </aside>
 </body>
 
 </html>

@@ -18,7 +18,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
 
         :root {
             --primary-yellow: #F1BC00;
@@ -146,15 +146,15 @@
         }
 
         /* Remove default list markers */
-        .nav-item > ul,
-        .mobile-nav-item > ul {
+        .nav-item>ul,
+        .mobile-nav-item>ul {
             list-style: none;
             padding: 0;
             margin: 0;
         }
 
         /* Consistent styling for desktop dropdown links */
-        .nav-item > ul li a {
+        .nav-item>ul li a {
             display: block;
             padding: 10px 24px;
             color: #f0f0f0;
@@ -167,7 +167,7 @@
             white-space: nowrap;
         }
 
-        .nav-item > ul li a:hover {
+        .nav-item>ul li a:hover {
             color: #ffd700;
             background-color: rgba(255, 215, 0, 0.12);
         }
@@ -177,7 +177,8 @@
             display: block;
             padding: 1rem 2rem;
             text-decoration: none;
-            color: #ffffff; /* white inactive */
+            color: #ffffff;
+            /* white inactive */
             font-family: Arial, Helvetica, sans-serif;
             font-size: 20px;
             font-weight: 600;
@@ -187,7 +188,7 @@
         }
 
         /* Consistent styling for mobile dropdown links */
-        .mobile-nav-item > ul li a {
+        .mobile-nav-item>ul li a {
             display: block;
             padding: 1rem 3rem;
             color: #f0f0f0;
@@ -199,7 +200,7 @@
             text-decoration: none;
         }
 
-        .mobile-nav-item > ul li a:hover {
+        .mobile-nav-item>ul li a:hover {
             background-color: #ffd700;
             color: #000;
         }
@@ -2173,16 +2174,16 @@
 
             // Handle mobile nav link clicks
             mobileNavLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
+                link.addEventListener('click', function (e) {
                     // Check if this link has a submenu
                     const hasSubmenu = this.nextElementSibling && this.nextElementSibling.tagName === 'UL';
-                    
+
                     if (hasSubmenu) {
                         // If it has a submenu, prevent default and toggle the submenu
                         e.preventDefault();
                         const parentItem = this.parentElement;
                         parentItem.classList.toggle('active');
-                        
+
                         // Close other open submenus
                         document.querySelectorAll('.mobile-nav-item.active').forEach(item => {
                             if (item !== parentItem) {
@@ -2473,48 +2474,42 @@
             </ul>
 
             <!-- Hamburger Menu Button (Mobile) -->
-            <button 
-                class="hamburger-menu" 
-                id="hamburger-menu-btn"
-                aria-label="Toggle mobile menu" 
-                aria-expanded="false"
-                aria-controls="mobile-menu"
-                onclick="toggleMobileMenu(this)"
-            >
+            <button class="hamburger-menu" id="hamburger-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false"
+                aria-controls="mobile-menu" onclick="toggleMobileMenu(this)">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </button>
 
             <script>
-                function toggleMobileMenu(button) {
+            function toggleMobileMenu(button) {
                     const mobileMenu = document.getElementById('mobile-menu');
-                    const overlay = document.getElementById('mobile-menu-overlay');
-                    const isExpanded = button.getAttribute('aria-expanded') === 'true';
-                    
-                    button.setAttribute('aria-expanded', !isExpanded);
-                    mobileMenu.style.transform = isExpanded ? 'translateX(-100%)' : 'translateX(0)';
-                    mobileMenu.setAttribute('aria-hidden', isExpanded);
-                    overlay.style.opacity = isExpanded ? '0' : '1';
-                    overlay.style.visibility = isExpanded ? 'hidden' : 'visible';
-                    
-                    // Toggle hamburger animation class
-                    button.classList.toggle('is-active');
-                    
-                    // Prevent body scroll when menu is open
-                    document.body.style.overflow = isExpanded ? '' : 'hidden';
+            const overlay = document.getElementById('mobile-menu-overlay');
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+            button.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.style.transform = isExpanded ? 'translateX(-100%)' : 'translateX(0)';
+            mobileMenu.setAttribute('aria-hidden', isExpanded);
+            overlay.style.opacity = isExpanded ? '0' : '1';
+            overlay.style.visibility = isExpanded ? 'hidden' : 'visible';
+
+            // Toggle hamburger animation class
+            button.classList.toggle('is-active');
+
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = isExpanded ? '' : 'hidden';
                 }
 
                 // Close menu when clicking overlay
                 document.getElementById('mobile-menu-overlay').addEventListener('click', () => {
                     const button = document.getElementById('hamburger-menu-btn');
-                    toggleMobileMenu(button);
+            toggleMobileMenu(button);
                 });
 
                 // Close menu on escape key
                 document.addEventListener('keydown', (e) => {
                     if (e.key === 'Escape' && document.getElementById('hamburger-menu-btn').getAttribute('aria-expanded') === 'true') {
-                        toggleMobileMenu(document.getElementById('hamburger-menu-btn'));
+                toggleMobileMenu(document.getElementById('hamburger-menu-btn'));
                     }
                 });
             </script>
@@ -2546,7 +2541,8 @@
             </div>
             <ul class="mobile-nav-list" role="menubar">
                 <li class="mobile-nav-item" role="none">
-                    <a href="../services/servicesPage.html" class="mobile-nav-link" role="menuitem" tabindex="-1">SERVICES</a>
+                    <a href="../services/servicesPage.html" class="mobile-nav-link" role="menuitem"
+                        tabindex="-1">SERVICES</a>
                     <ul style="display: none; padding-left: 20px; background: #222;">
                         <li><a href="../services/servicesPage.html#data-engineering"
                                 style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data
@@ -2563,7 +2559,8 @@
                     </ul>
                 </li>
                 <li class="mobile-nav-item" role="none">
-                    <a href="../industries/industries.html" class="mobile-nav-link" role="menuitem" tabindex="-1">INDUSTRIES</a>
+                    <a href="../industries/industries.html" class="mobile-nav-link" role="menuitem"
+                        tabindex="-1">INDUSTRIES</a>
                     <ul style="display: none; padding-left: 20px; background: #222;">
                         <li><a href="../industries/industries.html#finance"
                                 style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Finance &
@@ -2580,13 +2577,16 @@
                     </ul>
                 </li>
                 <li class="mobile-nav-item" role="none">
-                    <a href="../accelerators/accl.html" class="mobile-nav-link" role="menuitem" tabindex="-1">ACCELERATORS</a>
+                    <a href="../accelerators/accl.html" class="mobile-nav-link" role="menuitem"
+                        tabindex="-1">ACCELERATORS</a>
                     <ul style="display: none; padding-left: 20px; background: #222;">
                         <li><a href="../accelerators/accl.html#data-strategy"
-                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data Strategy
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data
+                                Strategy
                                 Accelerators</a></li>
                         <li><a href="../accelerators/accl.html#data-engineering"
-                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data Engineering
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data
+                                Engineering
                                 Accelerators</a>
                         </li>
                         <li><a href="../accelerators/accl.html#dremio"
@@ -2598,16 +2598,20 @@
                                 Accelerator</a>
                         </li>
                         <li><a href="../accelerators/accl.html#generative-ai"
-                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Gen AI</a></li>
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Gen AI</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="mobile-nav-item" role="none">
-                    <a href="../insights/insights.html" class="mobile-nav-link" role="menuitem" tabindex="-1">INSIGHTS</a>
+                    <a href="../insights/insights.html" class="mobile-nav-link" role="menuitem"
+                        tabindex="-1">INSIGHTS</a>
                     <ul style="display: none; padding-left: 20px; background: #222;">
                         <li><a href="../insights/insights.html#data-primer"
-                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data primer</a></li>
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Data
+                                primer</a></li>
                         <li><a href="../insights/insights.html#case"
-                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Case Studies</a>
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Case
+                                Studies</a>
                         </li>
                     </ul>
                 </li>
@@ -2615,11 +2619,14 @@
                     <a href="../aboutUs/aboutUs.html" class="mobile-nav-link" role="menuitem" tabindex="-1">ABOUT US</a>
                     <ul style="display: none; padding-left: 20px; background: #222;">
                         <li><a href="../aboutUs/aboutUs.html#our-story"
-                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Our Story</a></li>
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Our
+                                Story</a></li>
                         <li><a href="../aboutUs/aboutUs.html#our-values"
-                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Our Core Values</a></li>
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Our Core
+                                Values</a></li>
                         <li><a href="../aboutUs/aboutUs.html#leadership"
-                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Leadership</a></li>
+                                style="color: #f0f0f0; padding: 8px 20px; display: block; font-size: 14px;">Leadership</a>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -2666,7 +2673,7 @@
         </script>
     </header>
 
-   <!-- Hero Section -->
+    <!-- Hero Section -->
     <main class="hero-section" id="home">
         <div class="container">
             <div class="hero-content-wrapper">
@@ -2703,7 +2710,7 @@
                                 </svg>
                             </span>
                         </a>
-                        
+
                     </div>
                 </div>
                 <div class="hero-visual"
@@ -2736,133 +2743,377 @@
 
     <!-- Our Story -->
     <section class="services" id="our-story" aria-labelledby="services-title">
-        <div class="section-headerh2">
-            <h2
-                style="font-size: clamp(32px, 4vw, 48px); font-weight: 300; text-align: left;  line-height: 1.2; letter-spacing: -0.02em; color: #FFFFFF;">
-                Our <span style="font-weight: 700; color: #F1BC00;">Story</span>
-            </h2>
-            <p class="intro">In <b>October 2024</b>, Neurongig Technologies was founded with a vision to empower
-                enterprises through data-driven insights.
-                <br>
-                <br>
-                We began by building a team of talented engineers and strategists dedicated to solving complex business
-                challenges. From our first solutions in data integration and AI to pioneering cutting-edge
-                architectures, our journey has always been about driving clarity from chaos.
-            </p>
-        </div>
-
-        <div class="services-grid" aria-label="Service list">
 
 
-            <!-- Team Section -->
-            <div class="team-grid">
+
+        <!-- hearder our story -->
+        <style>
+            .case-study-card {
+                background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                // border-radius: 16px !important;
+                padding: 40px;
+                margin-bottom: 44px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .case-study-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            }
+
+            .case-tag {
+                display: inline-block;
+                background: rgba(241, 188, 0, 0.1);
+                color: #F1BC00;
+                padding: 8px 16px;
+                // border-radius: 20px !important;
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+
+            .case-title {
+                color: #F1BC00;
+                font-size: 32px;
+                font-weight: 600;
+                margin-bottom: 20px;
+                line-height: 1.2;
+            }
+
+            .case-intro {
+                color: #A0A0A0;
+                font-size: 18px;
+                line-height: 1.6;
+                margin-bottom: 40px;
+            }
+
+            .case-details {
+                // display: flex;
+                // flex-direction: rows;
+                // gap: 30px;
+            }
+
+            .detail-block {
+                background: rgba(255, 255, 255, 0.03);
+                padding: 24px;
+                // border-radius: 12px !important;
+            }
+
+            .detail-block h4 {
+                color: #FFD84D;
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 12px;
+            }
+
+            .detail-block p {
+                color: #E0E0E0;
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+            .tool-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .tool-tag {
+                background: rgba(255, 216, 77, 0.1);
+                color: #FFD84D;
+                padding: 6px 12px;
+                // border-radius: 6px !important;
+                font-size: 14px;
+                font-weight: 500;
+            }
+        </style>
+
+        <section class="case-study-card" id="case1">
+            <div class="case-study-content">
+
+                <h2
+                    style="font-size: clamp(32px, 4vw, 48px); font-weight: 300; text-align: left;  line-height: 1.2; letter-spacing: -0.02em; color: #FFFFFF;">
+                    Our <span style="font-weight: 700; color: #F1BC00;">Story</span>
+                </h2>
+                <p class="intro">October 2024: Founding NeuronIntel
+                    <b>In October 2024</b>, we embarked on an exciting journey to revolutionize the data engineering
+                    landscape.<br><br>
+                    With a vision to <i>empower enterprises through data-driven insights</i>, we laid the groundwork for
+                    our company, focusing on innovative
+                    solutions that address complex business challenges.<br><br>
 
 
-                <!-- Advisory Board Section -->
-                <div class="team-section">
-                    <div class="section-header">
-                        <div class="icon">
-                            <img src="../Images/company/advisors.png" alt="Advisory Board">
-                        </div>
-                        <h2>Our Advisory Board</h2>
+                </p>
+
+                <div class="case-details">
+                    <div class="detail-block">
+                        <h4>Building Our Team</h4>
+                        <p>Assembling a talented team of data engineers, analysts, and technology experts, we
+                            prioritized creating
+                            a collaborative environment that fosters creativity and innovation. <i>Each team member
+                                brings unique
+                                skills and experiences</i>, driving
+                            our commitment to excellence.</p>
                     </div>
 
-                    <div class="advisory-content">
-                        <p class="advisory-intro">Our advisors comprise industry veterans and subject matter experts who
-                            provide strategic guidance, ensure robust governance, and push us to the forefront of data
-                            and AI innovation.</p>
-
-                        <div class="advisory-grid">
-                            <div class="advisory-item">
-                                <h4>Industry Leadership</h4>
-                                <p>Decades of leadership across Fortune 500 companies</p>
-                            </div>
-                            <div class="advisory-item">
-                                <h4>Technical Excellence</h4>
-                                <p>Pioneers in AI, Data Engineering, and Cloud Technologies</p>
-                            </div>
-                        </div>
+                    <div class="detail-block">
+                        <h4>Developing Our Core Offerings</h4>
+                        <p>We began developing our core services, focusing on areas such as <i>data integration,
+                                analytics, and AI
+                                solutions</i>. Our aim is to help organizations leverage their data effectively,
+                            ensuring faster
+                            time to value and improved
+                            decision-making capabilities.</p>
                     </div>
+
+                    <div class="detail-block">
+                        <h4>Engaging with Clients</h4>
+                        <p>Our initial outreach to potential clients allowed us to understand their unique challenges
+                            and
+                            aspirations. We engaged in meaningful conversations, identifying how we can best support
+                            their data and
+                            AI priorities.</p>
+                    </div>
+                    <div class="detail-block">
+                        <h4>Pioneering Innovative Solutions</h4>
+                        <p>With our team's expertise, we began designing and implementing <i>innovative solutions
+                                tailored to meet
+                                the
+                                specific needs of our clients</i>. Our commitment to quality and efficiency sets us
+                            apart in the
+                            competitive data engineering
+                            field.</p>
+                    </div>
+                    <div class="detail-block">
+                        <h4>Looking Ahead</h4>
+                        <p>As we continue to grow and evolve, our focus remains on delivering <i>exceptional value to
+                                our
+                                clients</i>. We
+                            are excited to explore new technologies, expand our service offerings, and forge strategic
+                            partnerships
+                            that enhance our
+                            capabilities.</p>
+                    </div>
+
+
                 </div>
 
-                <!-- Partners Section -->
-                <div class="team-section">
-                    <div class="section-header">
-                        <div class="icon">
-                            <img src="../Images/IMG Acc/Dremio.png" alt="Technology Partners">
-                        </div>
-                        <h2>Technology Partners</h2>
+            </div>
+
+
+        </section>
+
+
+        <!-- Team Section -->
+        <div class="team-grid">
+
+
+            <!-- Advisory Board Section -->
+            <div class="team-section">
+                <div class="section-header">
+                    <div class="icon">
+                        <img src="../Images/company/advisors.png" alt="Advisory Board">
                     </div>
-
-                    <div class="partner-card">
-                        <div class="partner-header">
-                            <img src="../Images/IMG Acc/Dremio.png" alt="Dremio">
-                            <h3>Dremio</h3>
-                        </div>
-
-                        <p class="partner-description">We are proud to partner with Dremio, the leader in Open Data
-                            Lakehouse Platforms. Their cutting-edge technology transforms how organizations access,
-                            accelerate, and govern data for analytics and AI.</p>
-
-                        <div class="partner-features">
-                            <div class="feature">✓ Blazing-fast query performance</div>
-                            <div class="feature">✓ Unified semantic layer</div>
-                            <div class="feature">✓ Open architecture</div>
-                            <div class="feature">✓ End-to-end governance</div>
-                        </div>
-                    </div>
+                    <h2>Our Advisory Board</h2>
                 </div>
 
-                <!-- Leadership Section -->
-                <div class="team-section" id="leadership">
-                    <div class="section-header">
-                        <div class="icon">
-                            <img src="../Images/company/team.png" alt="Leadership Team">
-                        </div>
-                        <h2>Our Leadership</h2>
-                    </div>
+                <div class="advisory-content">
+                    <p class="advisory-intro">Our advisors comprise industry veterans and subject matter experts who
+                        provide strategic guidance, ensure robust governance, and push us to the forefront of data
+                        and AI innovation.</p>
 
-                    <!-- Leadership Cards -->
-                    <div class="leadership-cards">
-                        <!-- CEO Card -->
-                        <div class="leader-card">
-                            <div class="leader-header">
-                                <div class="leader-image">
-                                    <img src="../Images/dipender.jpg" alt="Depender Kumar">
-                                </div>
-                                <div class="leader-info">
-                                    <h3>Depender Kumar</h3>
-                                    <p class="title">Founder, CEO & CTO</p>
-                                </div>
-                            </div>
-                            <div class="leader-bio"></div>
-                            <p>With 29+ years of global leadership in product and service organizations, Depender is the
-                                visionary driving Neurongig's innovation in Data Engineering, AI, Blockchain, and IoT.
-                                He's led digital transformations for leading brands worldwide, pioneered AI-based
-                                platforms, and established Centers of Excellence for analytics and digital solutions.
-                            </p>
+                    <div class="advisory-grid">
+                        <div class="advisory-item">
+                            <h4>Industry Leadership</h4>
+                            <p>Decades of leadership across Fortune 500 companies</p>
                         </div>
-                    </div>
-
-                    <!-- COO Card -->
-                    <div class="leader-card">
-                        <div class="leader-header">
-                            <div class="leader-image">
-                                <img src="../Images/arun.png" alt="Arun Singh">
-                            </div>
-                            <div class="leader-info">
-                                <h3>Arun Singh</h3>
-                                <p class="title">Founder, COO</p>
-                            </div>
+                        <div class="advisory-item">
+                            <h4>Technical Excellence</h4>
+                            <p>Pioneers in AI, Data Engineering, and Cloud Technologies</p>
                         </div>
-                        <div class="leader-bio"></div>
-                        <p>Arun brings a wealth of experience in Human Resources, Talent Acquisition, and Operations,
-                            having operated across Banking, Healthcare, Automotive, Telecom, and Retail. He excels at
-                            building and scaling global teams, driving 25–27% organizational growth year-over-year.</p>
                     </div>
                 </div>
             </div>
-        </div>
+
+           
+
+            <!-- Partners Section -->
+            <div class="team-section">
+                <div class="section-header">
+                    <div class="icon">
+                        <img src="../Images/IMG Acc/Dremio.png" alt="Technology Partners">
+                    </div>
+                    <h2>Our Technology Partner: Dremio</h2>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-header">
+                        <img src="../Images/IMG Acc/Dremio.png" alt="Dremio">
+                        <h3>Powering the Next Generation of Data Analytics</h3>
+                    </div>
+
+                    <div class="partner-intro">
+                        <p class="partner-description">At Neurongig, we are committed to leveraging the most innovative
+                            and robust technologies to deliver unparalleled value to our clients. That's why we are
+                            proud to partner with Dremio, the leader in the Open Data Lakehouse Platform.</p>
+                        <p class="partner-description">This strategic partnership empowers us to deliver faster, more
+                            flexible, and more scalable data solutions, directly addressing the evolving needs of modern
+                            enterprises for analytics and AI.</p>
+                    </div>
+
+                    <div class="partner-section">
+                        <h4>Why Dremio? The Foundation for Future-Ready Data</h4>
+                        <p>Dremio transforms how organizations interact with their data, enabling a true self-service
+                            data experience directly on their data lake. Built on open-source technologies like Apache
+                            Iceberg and Apache Arrow, Dremio provides:</p>
+
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <h5>Blazing-Fast Query Performance</h5>
+                                <p>Dremio's patented query acceleration technologies, including Reflections, deliver
+                                    sub-second query speeds for BI dashboards and interactive analytics, directly on
+                                    your data lake.</p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h5>Unified Data Access</h5>
+                                <p>Creates a powerful semantic layer that unifies data from diverse sources, providing a
+                                    single, consistent view of all your data.</p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h5>Open Data Lakehouse Architecture</h5>
+                                <p>Built natively for Apache Iceberg, ensuring your data remains in open formats and
+                                    avoiding vendor lock-in.</p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h5>Simplified Data Management</h5>
+                                <p>Automates data management tasks with Git-like versioning capabilities for robust
+                                    change management.</p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h5>AI-Ready Data Products</h5>
+                                <p>Designed to accelerate AI and ML initiatives by enabling creation of high-quality,
+                                    governed data products.</p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h5>Cost Efficiency</h5>
+                                <p>Significantly lowers TCO by eliminating data copies and optimizing query performance
+                                    on low-cost storage.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="partner-benefits">
+                        <h4>How Our Partnership Benefits You</h4>
+                        <div class="benefits-grid">
+                            <div class="benefit-item">
+                                <h5>Data Strategy</h5>
+                                <p>Design future-proof data architectures that are flexible, scalable, and aligned with
+                                    your business objectives.</p>
+                            </div>
+
+                            <div class="benefit-item">
+                                <h5>Data Engineering</h5>
+                                <p>Build highly efficient, robust data pipelines that simplify data ingestion,
+                                    transformation, and delivery.</p>
+                            </div>
+
+                            <div class="benefit-item">
+                                <h5>Data Science</h5>
+                                <p>Provide fast, self-service access to clean, governed data for advanced analytical
+                                    models.</p>
+                            </div>
+
+                            <div class="benefit-item">
+                                <h5>Generative AI</h5>
+                                <p>Enable high-quality, real-time data access for developing cutting-edge AI
+                                    applications.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leadership Section -->
+            <div class="team-section" id="leadership">
+                <div class="section-header">
+                    <div class="icon">
+                        <img src="../Images/company/team.png" alt="Leadership Team">
+                    </div>
+                    <h2>Our Leadership</h2>
+                </div>
+
+                <!-- Leadership Cards -->
+                <div class="leadership-cards">
+                    <!-- CEO Card -->
+                    <div class="leader-card">
+                        <div class="leader-header">
+                            <div class="leader-image">
+                                <img src="../Images/dipender.jpg" alt="Depender Kumar">
+                            </div>
+                            <div class="leader-info">
+                                <h3>Depender Kumar</h3>
+                                <p class="title">Founder, CEO & CTO</p>
+                            </div>
+                        </div>
+                        <div class="leader-bio"></div>
+                        <p>With over 29 years of global leadership experience in product and service organizations,
+                            Depender brings a unique blend of expertise in data engineering, strategic growth,
+                            highperformance team building, and cutting-edge digital solution development to
+                            NeuronIntel. Known for partnerships with C-suite executives across North America,
+                            India, and the Middle East, he has driven digital transformations for top-tier brands
+                            across private equity, hi-tech, retail, energy, and manufacturing sectors.
+                            Depender’s journey includes pioneering AI, IoT, data engineering, and blockchain-driven
+                            products,
+                            establishing COEs for digital and analytics, and implementing Lean MVP frameworks to
+                            accelerate innovation.
+                            His achievements include developing an AI-based risk assessment platform, introducing
+                            India’s first
+                            blockchain supply chain solution, and enhancing data-driven decision-making through
+                            agile methodologies
+                            and robust data architectures.
+                            He embodies a dedication to solving complex challenges, cultivating world-class talent,
+                            and advancing digital
+                            and data engineering innovation in a dynamic, customer-centric economy.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- COO Card -->
+                <div class="leader-card">
+                    <div class="leader-header">
+                        <div class="leader-image">
+                            <img src="../Images/arun.png" alt="Arun Singh">
+                        </div>
+                        <div class="leader-info">
+                            <h3>Arun Singh</h3>
+                            <p class="title">Founder, COO</p>
+                        </div>
+                    </div>
+                    <div class="leader-bio"></div>
+                    <p>Arun has worked extensively with global product and digital organizations across diverse
+                        sectors, including Banking & Financial Services, Automotive, Healthcare, Medical Devices,
+                        Telecom, Retail, and Embedded Systems.
+                        He has played a pivotal role in Human Resources, Talent Acquisition, Resource Management,
+                        and Operations. Arun has successfully built and led large teams and managed strategic client
+                        relationships across India, the USA, EMEA, APAC, and the Middle East.
+                        His strategic insights have consistently driven organizational growth of 25–27%
+                        year-over-year.
+                        Arun is passionate about data, with a strong focus on metrics, analytics, and predictive
+                        approaches in decisionmaking and strategy execution.
+                        Having collaborated closely with leadership teams including CXOs, COOs, CTOs, and CFOs, Arun
+                        has contributed to
+                        building, scaling, and adapting strategies in rapidly evolving business environments.
+                        He also brings hands-on experience in implementing technology solutions, automating
+                        processes, and driving
+                        operational efficiencies.</p>
+                </div>
+            </div>
         </div>
 
         <style>
@@ -3120,9 +3371,6 @@
             }
         </style>
 
-
-        </div>
-
         <div class="services-cta-wrap">
             <a class="services-cta" href="#consultation-form">
                 <span>Schedule a <b>FREE CONSULTAION</b></span>
@@ -3146,7 +3394,7 @@
                 <strong>Values</strong>
             </h1>
 
-            <div  class="frameworks-grid" aria-label="Framework list">
+            <div class="frameworks-grid" aria-label="Framework list">
                 <!-- Dremio Quickstart Kit -->
                 <div id="dremio" class="framework-card" aria-label="Dremio <br Quickstart Kit">
 
@@ -3898,7 +4146,7 @@
                                 style="color:#fff;">+91-8800650909</span></span>
                         <span style="color:#ffd700;font-weight:500;"><span
                                 style="color:#fff;">info@neurogig.com</span></span>
-                                <a href="https://www.linkedin.com/company/neurongig/" title="LinkedIn">in</a>
+                        <a href="https://www.linkedin.com/company/neurongig/" title="LinkedIn">in</a>
                     </div>
                     <span style="margin-top:12px;color:#A0A0A0;font-size:15px;">Sector 16C, Greater Noida
                         West<br>UP-201306</span>
@@ -3939,7 +4187,7 @@
     </footer>
     <!-- Footer Section End -->
 
-    
+
 </body>
 
 </html>
